@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the NAACC Commerce feature.
+ */
+
+include_once 'naacc_commerce.features.inc';

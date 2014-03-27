@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the NAACC Base feature.
+ */
+
+include_once 'naacc_base.features.inc';

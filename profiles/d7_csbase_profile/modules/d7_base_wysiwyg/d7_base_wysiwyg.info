@@ -1,0 +1,16 @@
+name = Base wysiwyg
+description = wysiwyg configuration
+core = 7.x
+package = Features
+version = unknown
+project = d7_base_wysiwyg
+dependencies[] = ckeditor_link
+dependencies[] = features
+dependencies[] = media
+dependencies[] = wysiwyg
+datestamp = 1360004182
+features[features_api][] = api:2
+features[filter][] = full_html
+features[user_permission][] = access ckeditor link
+features[user_permission][] = administer ckeditor link
+features[wysiwyg][] = full_html

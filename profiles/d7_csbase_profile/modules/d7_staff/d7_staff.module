@@ -1,0 +1,14 @@
+<?php
+/**
+ * @file
+ * Code for the Staff feature.
+ */
+
+include_once 'd7_staff.features.inc';
+
+function d7_staff_preprocess_node(&$variables) {
+// Blog Nodes (use machine name of any content type to target)
+  if ($variables['type'] == 'staff') {
+    drupal_add_css(drupal_get_path('module', 'd7_staff') .'/d7_staff.css');
+  }
+}

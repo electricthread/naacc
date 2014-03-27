@@ -1,0 +1,22 @@
+/* -------------------------
+  Events
+------------------------- */
+/* Node View */
+.openlayers-views-map {
+  border: 3px solid;
+  float: right;
+  margin: 0 0 1% 2%;
+}
+.field-name-field-location .field-items {
+  font-style: italic;
+}
+.group_left_content_group {
+  float: left;
+  width: 52%;
+}
+.openlayers-popup a {
+  color: #CCC;
+}
+.country {
+  display: none;
+}

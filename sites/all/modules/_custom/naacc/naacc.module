@@ -1,0 +1,38 @@
+<?php
+/**
+ * @file
+ * Module for defining random custom Seed Company hooks
+ */
+
+/**
+ * Implements hook_form_alter().
+ */
+function naacc_form_alter(&$form, &$form_state, $form_id) {
+  // Set First Name and Last Name fields to be required.
+  if (!empty($form_state['build_info']['base_form_id'])) {
+    if ($form_state['build_info']['base_form_id'] == 'mailchimp_lists_user_subscribe_form') {
+      foreach ($form['mailchimp_lists'] as $field_id => $field_content) {
+        if (substr($field_id, 0, 9) == 'mailchimp') {
+          $form['mailchimp_lists'][$field_id]['mergevars']['EMAIL']['#attributes']['placeholder'] = t('Email address');
+        }
+      }
+    }
+  }
+}
+/**
+ * Implements commerce_paypal_wps_order_form_data_alter().
+ */
+function naacc_commerce_paypal_wps_order_form_data_alter(&$data, $order) {
+  $profile = user_load($order->uid);
+  $order_wrapper = entity_metadata_wrapper('commerce_order', $order->order_id);
+  $billing_address = $order_wrapper->commerce_customer_billing->commerce_customer_address->value();
+  $data['first_name'] = $billing_address['first_name'];
+  $data['last_name'] = $billing_address['last_name'];
+  $data['address1'] = $billing_address['thoroughfare'];
+  if (isset($billing_address['premise'])) {
+    $data['address2'] = $billing_address['premise'];
+  }
+  $data['city'] = $billing_address['locality'];
+  $data['state'] = $billing_address['administrative_area'];
+  $data['zip'] = $billing_address['postal_code'];
+}
