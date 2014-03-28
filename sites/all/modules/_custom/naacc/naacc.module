@@ -5,6 +5,25 @@
  */
 
 /**
+ * Implements hook_menu().
+ */
+function naacc_menu() {
+  $items['home'] = array(
+    'title' => 'Home',
+    'page callback' => 'get_homepage',
+    'access arguments' => array('access content'),
+    'type' => MENU_SUGGESTED_ITEM,
+  );
+
+  return $items;
+}
+
+function get_homepage()
+{
+  return '';
+}
+
+/**
  * Implements hook_form_alter().
  */
 function naacc_form_alter(&$form, &$form_state, $form_id) {

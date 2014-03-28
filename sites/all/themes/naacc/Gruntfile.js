@@ -29,7 +29,8 @@ module.exports = function(grunt) {
 			compile: {
 				files: {
 					'assets/js/app.js': 'assets/coffee/app.coffee',
-					'assets/js/front.js': 'assets/coffee/front.coffee'
+					'assets/js/front.js': 'assets/coffee/front.coffee',
+					'assets/js/members.js': 'assets/coffee/members.coffee'
 				}
 			}
 		},

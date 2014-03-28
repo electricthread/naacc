@@ -392,14 +392,14 @@ function naacc_base_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'site_mail';
-  $strongarm->value = 'no-reply@tennmediators.org';
+  $strongarm->value = 'no-reply@nashvilleaacc.org';
   $export['site_mail'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'site_name';
-  $strongarm->value = 'Tennessee Association of Professional Mediators';
+  $strongarm->value = 'Nashville Area Association of Christian Counselors';
   $export['site_name'] = $strongarm;
 
   $strongarm = new stdClass();
