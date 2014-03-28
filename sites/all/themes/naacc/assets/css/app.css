@@ -262,9 +262,9 @@ h5 {
 body:after {
   content: "mobile";
   visibility: hidden; }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1024px) {
     body:after {
-      content: "tablet";
+      content: "desk";
       visibility: hidden; } }
 
 header, .page, footer, .full {
@@ -283,6 +283,23 @@ header ul, header li, footer ul, footer li {
   list-style: none;
   margin: 0;
   padding: 0; }
+
+#block-system-main-menu .expanded {
+  position: relative; }
+  #block-system-main-menu .expanded ul {
+    display: none; }
+    @media screen and (min-width: 1024px) {
+      #block-system-main-menu .expanded ul {
+        display: block;
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        visibility: hidden; } }
+  #block-system-main-menu .expanded.open ul {
+    display: block;
+    opacity: 1;
+    visibility: visible; }
 
 #main-content {
   min-height: 300px; }

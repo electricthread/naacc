@@ -10,6 +10,9 @@ function naacc_preprocess_html(&$vars) {
 */
 function naacc_preprocess_page(&$vars,$hook) {
   $path = drupal_get_path('theme', 'naacc');
+  // menu needs - bootstrap/hoverIntent
+  drupal_add_js($path .'/assets/js/vendor/hoverIntent.min.js', array('group' => JS_LIBRARY));
+  drupal_add_js($path .'/assets/js/vendor/bootstrap.min.js', array('group' => JS_LIBRARY));
   // if it is a node
   // if (isset($vars['node'])) {
   //   $node = $vars['node'];

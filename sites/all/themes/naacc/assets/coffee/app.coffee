@@ -4,27 +4,33 @@ size = window.getComputedStyle(document.body,':after').getPropertyValue('content
 (($) ->
   # Document.ready
   $ ->
+
+    # Top Level Menu Item Click function
+    topLevelClick = () ->
+      $('a[data-toggle="dropdown"]').click ->
+        window.location.href = $(this).attr('href')
+
     # Bootstrap Dropdown
-    # $('#block-system-main-menu > ul > .expanded > ul').prev('a').attr('data-toggle', 'dropdown')
-    # $('a[data-toggle="dropdown"]').dropdown()
-    # # Mobile
-    # if size == "mobile" || size == '"mobile"'
-    #   $('#login, #block-views-users-block').prependTo('header nav')
+    $('#block-system-main-menu .expanded ul').prev('a').attr('data-toggle', 'dropdown')
+    $('a[data-toggle="dropdown"]').dropdown()
 
-    # # Tablet or Up
-    # if size == "tablet" || size == '"tablet"'
-    #   # Bootstrap Drop-down converted to hover
-    #   $('a[data-toggle="dropdown"]').parent().hoverIntent (->
-    #     $('header').toggleClass 'desk-open'
-    #     $(this).children('a').click()
-    #   ), ->
-    #     $('.expanded .expanded.first ul').removeClass 'hide'
-    #     $('header').toggleClass 'desk-open'
-    #     $(this).children('a').click()
+    # Tablet or Up
+    if size == "desk" || size == '"desk"'  # latter required by Firefox
+      # Bootstrap Drop-down converted to hover
+      $('a[data-toggle="dropdown"]').parent().hoverIntent (->
+        $(this).addClass 'open'
+        topLevelClick()
+      ), ->
+        $(this).removeClass 'open'
+    # if mobile
+    else
+      # Force Click on Open Top Level
+      $('#block-system-main-menu').on 'show.bs.dropdown', ->
+        topLevelClick()
 
-    # # Mobile Menu Tap
-    # $("#menu").click ->
-    #   $(this).toggleClass "open"
-    #   $("header nav").toggleClass "open"
+    # Mobile Menu Tap
+    $(".navbar-toggle").click ->
+      $(this).toggleClass "open"
+      $('#block-system-main-menu').toggleClass "open"
 
 ) jQuery
