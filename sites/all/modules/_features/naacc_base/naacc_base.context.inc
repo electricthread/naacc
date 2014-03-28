@@ -77,10 +77,10 @@ function naacc_base_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'mailchimp_lists-email_signup' => array(
-          'module' => 'mailchimp_lists',
-          'delta' => 'email_signup',
-          'region' => 'preface_first',
+        'system-main-menu' => array(
+          'module' => 'system',
+          'delta' => 'main-menu',
+          'region' => 'header',
           'weight' => '-10',
         ),
       ),
