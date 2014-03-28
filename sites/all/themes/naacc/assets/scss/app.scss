@@ -1,0 +1,50 @@
+@import "bourbon/bourbon";
+@import "grid-settings";
+@import "neat/neat";
+@import "defaults";
+
+// Font Usage
+// font-family: 'Lato', sans-serif;
+
+@include editorstyles;
+//
+//  Layout & General
+//
+body {
+  &:after {
+      content: "mobile";
+      visibility: hidden;
+    @include tablet {
+      content: "tablet";
+      visibility: hidden;
+    }
+  }
+}
+header, .page, footer, .full {
+  @include outer-container;
+  position: relative;
+}
+header, footer {
+  ul, li {
+    list-style: none;
+    margin: 0;
+    padding:0;
+  }
+}
+//
+// Header
+//
+
+
+//
+// Content
+//
+#main-content {
+  min-height: 300px;
+}
+
+// Sidebar
+
+//
+// Footer
+//

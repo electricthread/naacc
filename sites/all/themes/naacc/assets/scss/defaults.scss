@@ -1,0 +1,384 @@
+// Colors
+$base: #333;
+$light: #666;
+$green: #a7cd39;
+$blue: #228ba2;
+$footer: #8d8d8d;
+$red:#cf4242;
+
+// Sitewide fonts
+// @font-face {
+//   font-family: 'seedco';
+//   src:url('../fonts/seedco.eot');
+//   src:url('../fonts/seedco.eot?#iefix') format('embedded-opentype'),
+//     url('../fonts/seedco.woff') format('woff'),
+//     url('../fonts/seedco.ttf') format('truetype'),
+//     url('../fonts/seedco.svg#seedco') format('svg');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+@mixin sprite($pos) {
+  background: url(../images/sprite.png) no-repeat scroll 0 0;
+  background-position: $pos;
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+@mixin btn {
+  background-color: $green;
+  border-radius: 6px;
+  box-shadow: 0px 4px 0px 0px #799929;
+  color: #fff;
+  display: block;
+  font-size: .9em;
+  letter-spacing: 1px;
+  max-width: 200px;
+  padding: 5px 10px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+  &:hover {
+    box-shadow: 0 5px 0px 0px #799929;
+    color: #fff;
+    top: -2px;
+  }
+  &:active {
+    box-shadow:0px 0px 4px #7f7f7f inset;
+    top:0;
+  }
+}
+@mixin red {
+  background-color: #c43e4e;
+  box-shadow: 0px 5px 0px 0px #932c38;
+  &:hover {
+    box-shadow: 0px 6px 0px 0px #932c38;
+  }
+  &:active {
+    box-shadow:0px 0px 4px #7f7f7f inset;
+  }
+}
+
+input[type="submit"] {
+  @include btn;
+  @include red;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  padding:10px;
+}
+
+@mixin spinner {
+  /* spinner */
+  #loader {
+    @include transition(all .5s);
+    height: 0px;
+    left: 50%;
+    opacity: 1;
+    position: absolute;
+    top:50px;
+    width: 0px;
+  }
+  #loader > div {
+    @include transform-origin(10px 35px);
+    @include transform(rotate(0deg));
+    @include animation(loader 0.8s infinite);
+    border-radius: 5px;
+    bottom: 15px;
+    height: 20px;
+    left: -10px;
+    position: absolute;
+    width: 6px;
+  }
+  #loader > div:nth-child(2) {
+    @include transform(rotate(45deg));
+    @include animation-delay(0.1s);
+  }
+  #loader > div:nth-child(3) {
+    @include transform(rotate(90deg));
+    @include animation-delay(0.2s);
+  }
+  #loader > div:nth-child(4) {
+    @include transform(rotate(135deg));
+    @include animation-delay(0.3s);
+  }
+  #loader > div:nth-child(5) {
+    @include transform(rotate(180deg));
+    @include animation-delay(0.4s);
+  }
+  #loader > div:nth-child(6) {
+    @include transform(rotate(225deg));
+    @include animation-delay(0.5s);
+  }
+  #loader > div:nth-child(7) {
+    @include transform(rotate(270deg));
+    @include animation-delay(0.6s);
+  }
+  #loader > div:nth-child(8) {
+    @include transform(rotate(315deg));
+    @include animation-delay(0.7s);
+  }
+  @include keyframes(loader) {
+    0% {
+      @include transform-origin(10px 35px);
+      background: transparent;
+      left: -10px;
+    }
+    30% {
+      background: #cec6b2;
+    }
+    100% {
+      @include transform-origin(-10px 35px);
+      background: transparent;
+      left: 10px;
+    }
+  }
+  /* end spinner */
+}
+
+// Mixin will pull into app.css & editor.css, which can be used for consistent wysiwyg styling
+@mixin editorstyles {
+
+  body {
+    color: $base;
+    font-family: "Lato", sans-serif;
+    font-size: 100%;
+    line-height: 2em;
+  }
+
+  /* Tables */
+  table, thead, td, tr, th {
+    border: none;
+  }
+  tr {
+    border-bottom: 1px solid #ccc;
+  }
+  td, th {
+    padding: 7px 20px;
+  }
+
+  // General Content Styles
+  .page, .page p {
+    color: $light;
+    font: .95em/2em 'Open Sans', sans-serif;
+  }
+  a {
+    color: #ccc;
+    &:hover {
+      color: #aaa;
+    }
+  }
+  .page p {
+    margin-bottom: 2em;
+  }
+
+  // Typography Basics - from Gridless http://thatcoolguy.github.com/gridless-boilerplate/
+  h1, h2, h3, h4, h5, h6 {
+    color: $base;
+    font-size: 1em;
+    font-weight: normal;
+  }
+  h1 {
+    font: 600 2em/1.1471em 'Open Sans', sans-serif;
+    margin: 7px 0 0.3824em;
+  }
+
+  h2 {
+    font: 1.8em/1.2381em 'Lato', sans-serif;
+    margin: 0 0 0.419em;
+  }
+
+  h3 {
+    color: #444;
+    font: 1.3em/1em 'Lato', sans-serif;
+    margin: 0 0 1em;
+  }
+  h4 {
+    border-bottom: 1px solid #eaeaea;
+    font: 600 .9em/1em 'Lato', sans-serif;
+    margin: 0 0 18px;
+    padding-bottom: 12px;
+    text-transform: uppercase;
+  }
+  h5 {
+    border-bottom: 1px solid #eaeaea;
+    font: 600 .8em/.9em 'Lato', sans-serif;
+    margin: 0 0 15px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+  }
+  .page blockquote, blockquote {
+    border-left: 3px solid #333;
+    clear: both;
+    color: $base;
+    position: relative;
+    padding: 0 0 0 3%;
+    margin: 3% 6% 5% 0;
+    p {
+      color: $base;
+      font-weight: 700;
+      margin:0;
+    }
+  }
+  .btn, button {
+    @include btn;
+  }
+  .outline {
+    background-color:transparent;
+    border:3px solid $green;
+    box-shadow:none;
+    color: $green;
+    font-weight: 900;
+    position: static;
+    @include transition (all .3s);
+    &:hover {
+      background-color:$green;
+      box-shadow:none;
+      color: #fff;
+    }
+  }
+}
+
+
+
+//
+//  Drupal-specific defaults
+//
+.sidebar .block {
+    clear: both;
+    margin-bottom: 20px;
+}
+// Default view list styles - mothership may override these classes by default
+.view-content ul, .view-content ol {
+  margin: 0;
+  padding: 0;
+}
+.item-list ul li.views-row, .views-row {
+  list-style: none;
+  margin:0;
+  padding: 0;
+  position: relative;
+}
+// tabs
+ul.primary {
+  height: 25px;
+  margin-left: 0;
+  padding-left: 1%;
+  li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    a {
+      border-radius: 3px 3px 0 0;
+      color: $base;
+      font-size: .8em;
+      padding: 6px;
+    }
+  }
+}
+// Forms
+form small, form .description {
+  color: #5f5f5f;
+}
+.marker, .form-required {
+  color: $red;
+}
+label, label.required {
+  display: block;
+  font-weight: 700;
+}
+label.required:after {
+  content: "*";
+  color: #c41230;
+  margin-left: 3px;
+}
+input[type="text"], input[type="password"], input[type="email"] {
+  border: 2px solid #ccc;
+  border-radius: 3px;
+  color: #999;
+  margin: 10px 0;
+  max-width: 100%;
+  padding: 11px 15px 11px;
+}
+textarea {
+  border:none;
+  border-radius:5px 5px 0 0;
+  padding: 9px;
+}
+
+// responsive images, videos
+img, object, video {
+  height: auto;
+  max-width: 100%;
+}
+
+// Overrides for Media module to make fitVids work
+.media-youtube-outer-wrapper, .media-youtube-preview-wrapper, .media-vimeo-outer-wrapper, .media-vimeo-preview-wrapper {
+    height: auto !important;
+    width: auto !important;
+}
+
+.down-arrow {
+  &:after {
+    border:5px solid;
+    border-bottom-color:transparent;
+    border-left-color:transparent;
+    border-right-color:transparent;
+    content: " ";
+    left: 5px;
+    display: inline-block;
+    position: relative;
+    top: 2px;
+  }
+}
+
+.show {
+  display: block !important;
+  opacity: 1;
+  visibility: visible;
+}
+.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+// Chosen overrides
+.chosen-container-single .chosen-single {
+  background:#fff;
+  border-color: #ccc;
+  border-radius: 4px;
+  box-shadow: 0 0 2px #aaa inset;
+  color: #aaa;
+  font-size: 1.3em;
+  padding:15px 10px 39px;
+}
+.chosen-container-single .chosen-single div {
+  b {
+    background:none;
+  }
+  &:after {
+    border:12px solid #686868;
+    border-bottom-color:transparent;
+    border-left:9px solid transparent;
+    border-right:9px solid transparent;
+    content: " ";
+    position: relative;
+    right: 16px;
+    top: -21px;
+  }
+}
+
+.more-link {
+  text-align: center;
+  a {
+    color:$green;
+    text-decoration: none;
+    text-transform: capitalize;
+    &:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+  }
+}
