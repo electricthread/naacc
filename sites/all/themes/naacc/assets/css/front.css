@@ -3,8 +3,15 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+@font-face {
+  font-family: 'naacc';
+  src: url("../fonts/naacc.eot");
+  src: url("../fonts/naacc.eot?#iefix") format("embedded-opentype"), url("../fonts/naacc.woff") format("woff"), url("../fonts/naacc.ttf") format("truetype"), url("../fonts/naacc.svg#naacc") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
 input[type="submit"] {
-  background-color: #a7cd39;
+  background-color: #85cf66;
   border-radius: 6px;
   box-shadow: 0px 4px 0px 0px #799929;
   color: #fff;
@@ -17,13 +24,14 @@ input[type="submit"] {
   text-decoration: none;
   text-transform: uppercase;
   width: 100%;
-  background-color: #c43e4e;
+  background-color: #1596c4;
   box-shadow: 0px 5px 0px 0px #932c38;
   border: none;
   cursor: pointer;
   margin-top: 10px;
   padding: 10px; }
   input[type="submit"]:hover {
+    background-color: #62964d;
     box-shadow: 0 5px 0px 0px #799929;
     color: #fff;
     top: -2px; }
@@ -31,6 +39,7 @@ input[type="submit"] {
     box-shadow: 0px 0px 4px #7f7f7f inset;
     top: 0; }
   input[type="submit"]:hover {
+    background-color: #0e7296;
     box-shadow: 0px 6px 0px 0px #932c38; }
   input[type="submit"]:active {
     box-shadow: 0px 0px 4px #7f7f7f inset; }
@@ -59,7 +68,7 @@ ul.primary {
     padding: 0; }
     ul.primary li a {
       border-radius: 3px 3px 0 0;
-      color: #333333;
+      color: #777777;
       font-size: .8em;
       padding: 6px; }
 
@@ -111,7 +120,7 @@ img, object, video {
   top: 2px; }
 
 .show {
-  display: block !important;
+  display: block;
   opacity: 1;
   visibility: visible; }
 
@@ -143,7 +152,7 @@ img, object, video {
 .more-link {
   text-align: center; }
   .more-link a {
-    color: #a7cd39;
+    color: #85cf66;
     text-decoration: none;
     text-transform: capitalize; }
     .more-link a:hover {

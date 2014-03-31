@@ -10,6 +10,9 @@ function naacc_preprocess_html(&$vars) {
 */
 function naacc_preprocess_page(&$vars,$hook) {
   $path = drupal_get_path('theme', 'naacc');
+  // Google Fonts
+  drupal_add_css('http://fonts.googleapis.com/css?family=Esteban','external');
+  drupal_add_css('http://fonts.googleapis.com/css?family=Lato:300,400,700,900','external');
   // menu needs - bootstrap/hoverIntent
   drupal_add_js($path .'/assets/js/vendor/hoverIntent.min.js', array('group' => JS_LIBRARY));
   drupal_add_js($path .'/assets/js/vendor/bootstrap.min.js', array('group' => JS_LIBRARY));

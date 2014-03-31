@@ -25,9 +25,8 @@
           return topLevelClick();
         });
       }
-      return $(".navbar-toggle").click(function() {
-        $(this).toggleClass("open");
-        return $('#block-system-main-menu').toggleClass("open");
+      return $("#menu").click(function() {
+        return $(this).next().toggleClass("show");
       });
     });
   })(jQuery);

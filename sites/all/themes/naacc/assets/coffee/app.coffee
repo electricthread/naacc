@@ -29,8 +29,7 @@ size = window.getComputedStyle(document.body,':after').getPropertyValue('content
         topLevelClick()
 
     # Mobile Menu Tap
-    $(".navbar-toggle").click ->
-      $(this).toggleClass "open"
-      $('#block-system-main-menu').toggleClass "open"
+    $("#menu").click ->
+      $(this).next().toggleClass "show"
 
 ) jQuery
