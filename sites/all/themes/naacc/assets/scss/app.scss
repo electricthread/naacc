@@ -41,6 +41,8 @@ header, footer {
 //
 header {
   background-color: $blue;
+  position: relative;
+  z-index: 2;
   .outer-container {
     padding:0;
   }

@@ -324,7 +324,9 @@ header ul, header li, footer ul, footer li {
   padding: 0; }
 
 header {
-  background-color: #1596c4; }
+  background-color: #1596c4;
+  position: relative;
+  z-index: 2; }
   header .outer-container {
     padding: 0; }
   header ul, header li {
