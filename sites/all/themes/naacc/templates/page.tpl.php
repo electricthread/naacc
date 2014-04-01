@@ -26,18 +26,29 @@
     <?php endif; ?>
   </div>
 </header>
-
-<div class="page">
-  <div id="title-area">
+<?php if($page['hero']): ?>
+  <div id="hero">
+    <?php print render($page['hero']); ?>
     <div class="outer-container">
-      <?php print render($title_prefix); ?>
-      <?php if ($title): ?>
-        <h1><?php print $title; ?></h1>
-      <?php endif; ?>
-      <?php print render($title_suffix); ?>
-      <a href="/join" class="btn">Join the Community</a>
+      <h2>The Nashville Area Association of Christian Counselors is an organization for Christian professionals who work in counseling, ministry, psychiatry, psychology, social work, and other related career fields.</h2>
+      <a class="btn grn" href="/join">Become a Member</a>
     </div>
   </div>
+<?php endif; ?>
+
+<div class="page">
+  <?php if (!$is_front): ?>
+    <div id="title-area">
+      <div class="outer-container">
+        <?php print render($title_prefix); ?>
+        <?php if ($title): ?>
+          <h1><?php print $title; ?></h1>
+        <?php endif; ?>
+        <?php print render($title_suffix); ?>
+        <a href="/join" class="btn">Join the Community</a>
+      </div>
+    </div>
+  <?php endif; ?>
   <div class="outer-container">
     <div role="main" id="main-content" class="<?php if ($page['sidebar']): ?>with-side<?php endif; ?>">
 

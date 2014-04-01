@@ -167,3 +167,32 @@ img, object, video {
     .more-link a:hover {
       color: #fff;
       text-decoration: underline; }
+
+#hero {
+  position: relative; }
+  #hero .outer-container {
+    z-index: 1; }
+    #hero .outer-container h2 {
+      color: #fff; }
+
+#block-views-members-block-1 {
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 0; }
+  #block-views-members-block-1 ul, #block-views-members-block-1 li {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+  #block-views-members-block-1 li {
+    display: inline-block;
+    height: 127px;
+    width: 230px; }
+  #block-views-members-block-1 .view-footer {
+    background: url(../images/blue-trans.png);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%; }

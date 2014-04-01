@@ -226,25 +226,6 @@ function naacc_profiles_views_default_views() {
     3 => 0,
     4 => 0,
   );
-  /* Filter criterion: Broken/missing handler */
-  $handler->display->display_options['filters']['field_type_of_mediation_2_value']['id'] = 'field_type_of_mediation_2_value';
-  $handler->display->display_options['filters']['field_type_of_mediation_2_value']['table'] = 'field_data_field_type_of_mediation_2';
-  $handler->display->display_options['filters']['field_type_of_mediation_2_value']['field'] = 'field_type_of_mediation_2_value';
-  $handler->display->display_options['filters']['field_type_of_mediation_2_value']['operator'] = 'or';
-  $handler->display->display_options['filters']['field_type_of_mediation_2_value']['value'] = array();
-  $handler->display->display_options['filters']['field_type_of_mediation_2_value']['group'] = 1;
-  $handler->display->display_options['filters']['field_type_of_mediation_2_value']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_type_of_mediation_2_value']['expose']['operator_id'] = 'field_type_of_mediation_2_value_op';
-  $handler->display->display_options['filters']['field_type_of_mediation_2_value']['expose']['label'] = 'Type of Mediation';
-  $handler->display->display_options['filters']['field_type_of_mediation_2_value']['expose']['operator'] = 'field_type_of_mediation_2_value_op';
-  $handler->display->display_options['filters']['field_type_of_mediation_2_value']['expose']['identifier'] = 'field_type_of_mediation_2_value';
-  $handler->display->display_options['filters']['field_type_of_mediation_2_value']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    5 => 0,
-    3 => 0,
-    4 => 0,
-  );
   /* Filter criterion: User: First Name (field_first_name) */
   $handler->display->display_options['filters']['field_first_name_value']['id'] = 'field_first_name_value';
   $handler->display->display_options['filters']['field_first_name_value']['table'] = 'field_data_field_first_name';
@@ -399,24 +380,6 @@ function naacc_profiles_views_default_views() {
   $handler->display->display_options['filters']['field_last_name_value']['expose']['operator'] = 'field_last_name_value_op';
   $handler->display->display_options['filters']['field_last_name_value']['expose']['identifier'] = 'field_last_name_value';
   $handler->display->display_options['filters']['field_last_name_value']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    5 => 0,
-    3 => 0,
-    4 => 0,
-  );
-  /* Filter criterion: Broken/missing handler */
-  $handler->display->display_options['filters']['field_type_of_mediation_2_value']['id'] = 'field_type_of_mediation_2_value';
-  $handler->display->display_options['filters']['field_type_of_mediation_2_value']['table'] = 'field_data_field_type_of_mediation_2';
-  $handler->display->display_options['filters']['field_type_of_mediation_2_value']['field'] = 'field_type_of_mediation_2_value';
-  $handler->display->display_options['filters']['field_type_of_mediation_2_value']['operator'] = 'or';
-  $handler->display->display_options['filters']['field_type_of_mediation_2_value']['value'] = array();
-  $handler->display->display_options['filters']['field_type_of_mediation_2_value']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_type_of_mediation_2_value']['expose']['operator_id'] = 'field_type_of_mediation_2_value_op';
-  $handler->display->display_options['filters']['field_type_of_mediation_2_value']['expose']['label'] = 'Type of Mediation';
-  $handler->display->display_options['filters']['field_type_of_mediation_2_value']['expose']['operator'] = 'field_type_of_mediation_2_value_op';
-  $handler->display->display_options['filters']['field_type_of_mediation_2_value']['expose']['identifier'] = 'field_type_of_mediation_2_value';
-  $handler->display->display_options['filters']['field_type_of_mediation_2_value']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
     5 => 0,
@@ -692,6 +655,68 @@ function naacc_profiles_views_default_views() {
     'entity_view_1' => 0,
   );
   $handler->display->display_options['segment_size'] = '100';
+
+  /* Display: Home Images */
+  $handler = $view->new_display('block', 'Home Images', 'block_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['use_ajax'] = FALSE;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['style_options']['wrapper_class'] = '';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  /* Footer: Global: Text area */
+  $handler->display->display_options['footer']['area']['id'] = 'area';
+  $handler->display->display_options['footer']['area']['table'] = 'views';
+  $handler->display->display_options['footer']['area']['field'] = 'area';
+  $handler->display->display_options['footer']['area']['content'] = '<span class="overlay"></span>';
+  $handler->display->display_options['footer']['area']['format'] = 'full_html';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: User: Profile Photo */
+  $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
+  $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['label'] = '';
+  $handler->display->display_options['fields']['field_image']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_image']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_image']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_image']['settings'] = array(
+    'image_style' => '230x127',
+    'image_link' => '',
+  );
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Global: Random */
+  $handler->display->display_options['sorts']['random']['id'] = 'random';
+  $handler->display->display_options['sorts']['random']['table'] = 'views';
+  $handler->display->display_options['sorts']['random']['field'] = 'random';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: User: Active */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'users';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '1';
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: User: Roles */
+  $handler->display->display_options['filters']['rid_1']['id'] = 'rid_1';
+  $handler->display->display_options['filters']['rid_1']['table'] = 'users_roles';
+  $handler->display->display_options['filters']['rid_1']['field'] = 'rid';
+  $handler->display->display_options['filters']['rid_1']['value'] = array(
+    5 => '5',
+  );
+  $handler->display->display_options['filters']['rid_1']['group'] = 1;
   $export['members'] = $view;
 
   return $export;
