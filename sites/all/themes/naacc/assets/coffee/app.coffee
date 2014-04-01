@@ -28,6 +28,6 @@
 
     # Mobile Menu Tap
     $("#menu").click ->
-      $(this).toggleClass("show").next().toggleClass "show"
+      $(this).toggleClass("show").next().next().toggleClass "show"
 
 ) jQuery

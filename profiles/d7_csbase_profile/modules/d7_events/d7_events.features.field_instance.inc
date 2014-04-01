@@ -45,6 +45,8 @@ function d7_events_field_default_field_instances() {
     'label' => 'Event Description',
     'required' => 0,
     'settings' => array(
+      'commerce_user_profile_pane' => 0,
+      'commerce_user_profile_pane_required' => 0,
       'display_summary' => 1,
       'text_processing' => 1,
       'user_register_form' => FALSE,
@@ -101,6 +103,8 @@ function d7_events_field_default_field_instances() {
     'label' => 'When',
     'required' => 0,
     'settings' => array(
+      'commerce_user_profile_pane' => 0,
+      'commerce_user_profile_pane_required' => 0,
       'default_value' => 'now',
       'default_value2' => 'blank',
       'default_value_code' => '',
@@ -167,6 +171,8 @@ function d7_events_field_default_field_instances() {
     'label' => 'Where',
     'required' => 0,
     'settings' => array(
+      'commerce_user_profile_pane' => 0,
+      'commerce_user_profile_pane_required' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -214,6 +220,8 @@ function d7_events_field_default_field_instances() {
     'label' => 'Location Geofield',
     'required' => 1,
     'settings' => array(
+      'commerce_user_profile_pane' => 0,
+      'commerce_user_profile_pane_required' => 0,
       'local_solr' => array(
         'enabled' => FALSE,
         'lat_field' => 'lat',
@@ -279,6 +287,8 @@ function d7_events_field_default_field_instances() {
         'target' => 'user',
         'title' => '',
       ),
+      'commerce_user_profile_pane' => 0,
+      'commerce_user_profile_pane_required' => 0,
       'display' => array(
         'url_cutoff' => '',
       ),
@@ -326,6 +336,8 @@ function d7_events_field_default_field_instances() {
     'label' => 'Time',
     'required' => 0,
     'settings' => array(
+      'commerce_user_profile_pane' => 0,
+      'commerce_user_profile_pane_required' => 0,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),

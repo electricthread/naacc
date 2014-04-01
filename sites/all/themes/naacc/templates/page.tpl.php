@@ -17,6 +17,11 @@
     </figure>
     <?php if($page['header']): ?>
       <span id="menu">m</span>
+      <ul id="social">
+        <li><a href="/user">Login</a></li>
+        <li><a class="social" target="_blank" href="https://twitter.com/NashvilleAACC">t</a></li>
+        <li><a class="social" target="_blank" href="https://facebook.com">f</a></li>
+      </ul>
       <?php print render($page['header']); ?>
     <?php endif; ?>
   </div>

@@ -83,6 +83,18 @@ function naacc_base_context_default_contexts() {
           'region' => 'header',
           'weight' => '-10',
         ),
+        'block-1' => array(
+          'module' => 'block',
+          'delta' => '1',
+          'region' => 'sidebar',
+          'weight' => '-10',
+        ),
+        'views-events-events_sidebar' => array(
+          'module' => 'views',
+          'delta' => 'events-events_sidebar',
+          'region' => 'sidebar',
+          'weight' => '-9',
+        ),
       ),
     ),
   );

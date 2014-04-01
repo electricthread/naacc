@@ -22,7 +22,7 @@
         });
       }
       return $("#menu").click(function() {
-        return $(this).toggleClass("show").next().toggleClass("show");
+        return $(this).toggleClass("show").next().next().toggleClass("show");
       });
     });
   })(jQuery);

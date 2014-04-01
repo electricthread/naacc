@@ -35,7 +35,7 @@ $red:#cf4242;
   display: block;
   font:500 1em 'Lato', sans-serif;
   letter-spacing: 1px;
-  max-width: 200px;
+  max-width: 250px;
   padding: 10px;
   position: relative;
   text-align: center;
@@ -202,10 +202,10 @@ input[type="submit"] {
     margin: 7px 0 0.3824em;
     @include tablet {
       float: left;
-      width: 69%;
+      width: 64%;
     }
     @include desk {
-      width: 75%;
+      width: 73%;
     }
   }
 
