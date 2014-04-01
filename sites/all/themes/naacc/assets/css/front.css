@@ -12,35 +12,36 @@
 
 input[type="submit"] {
   background-color: #85cf66;
-  border-radius: 6px;
-  box-shadow: 0px 4px 0px 0px #799929;
+  border-radius: 3px;
+  box-shadow: 0px 5px 0px 0px #62964d;
   color: #fff;
   display: block;
-  font-size: .9em;
+  font: 500 1em 'Lato', sans-serif;
   letter-spacing: 1px;
   max-width: 200px;
-  padding: 5px 10px;
+  padding: 10px;
   position: relative;
+  text-align: center;
   text-decoration: none;
-  text-transform: uppercase;
   width: 100%;
   background-color: #1596c4;
-  box-shadow: 0px 5px 0px 0px #932c38;
+  box-shadow: 0px 5px 0px 0px #0e7296;
   border: none;
   cursor: pointer;
   margin-top: 10px;
   padding: 10px; }
   input[type="submit"]:hover {
     background-color: #62964d;
-    box-shadow: 0 5px 0px 0px #799929;
+    box-shadow: 0 6px 0px 0px #447037;
     color: #fff;
+    text-decoration: none;
     top: -2px; }
   input[type="submit"]:active {
     box-shadow: 0px 0px 4px #7f7f7f inset;
     top: 0; }
   input[type="submit"]:hover {
     background-color: #0e7296;
-    box-shadow: 0px 6px 0px 0px #932c38; }
+    box-shadow: 0px 7px 0px 0px #005672; }
   input[type="submit"]:active {
     box-shadow: 0px 0px 4px #7f7f7f inset; }
 
@@ -59,7 +60,7 @@ input[type="submit"] {
   position: relative; }
 
 ul.primary {
-  height: 25px;
+  height: 27px;
   margin-left: 0;
   padding-left: 1%; }
   ul.primary li {
@@ -73,14 +74,20 @@ ul.primary {
       padding: 6px; }
 
 form small, form .description {
-  color: #5f5f5f; }
+  color: #5f5f5f;
+  display: block; }
 
 .marker, .form-required {
   color: #cf4242; }
 
 label, label.required {
+  color: #333;
   display: block;
-  font-weight: 700; }
+  font: 900 12px 'Lato', sans-serif;
+  margin: 20px 0 5px;
+  text-transform: uppercase; }
+  label.required, label.required.required {
+    color: #cf4242; }
 
 label.required:after {
   content: "*";
@@ -88,8 +95,10 @@ label.required:after {
   margin-left: 3px; }
 
 input[type="text"], input[type="password"], input[type="email"] {
-  border: 2px solid #ccc;
+  background-color: #f6f6f6;
+  border: none;
   border-radius: 3px;
+  box-shadow: 0 -4px 0 #d1d1d1;
   color: #999;
   margin: 10px 0;
   max-width: 100%;

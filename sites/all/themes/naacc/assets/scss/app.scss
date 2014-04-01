@@ -58,9 +58,12 @@ header {
   display: block;
   float: right;
   font: 2em 'naacc';
-  margin: 3%;
+  padding: 3%;
   @include tablet {
     display: none;
+  }
+  &.show {
+    background-color:#333;
   }
 }
 #block-system-main-menu {
@@ -69,7 +72,7 @@ header {
   display: none;
   padding:4%;
   position: absolute;
-  top:62px;
+  top:56px;
   left: 0;
   width: 100%;
   z-index: 1;
@@ -78,7 +81,7 @@ header {
     clear: none;
     display: block;
     float: right;
-    margin: 1.4% 3%;
+    margin: 1.4% 0 1%;
     padding:0;
     position: static;
     width: auto;
@@ -86,12 +89,13 @@ header {
       display: inline-block;
       &.last a {
         border:none;
+        padding: 7px 0 7px 18px;
       }
     }
     a {
       border-right:1px solid #1388b1;
       display: block;
-      padding:0 18px;
+      padding:7px 18px;
     }
   }
   &.show {
@@ -101,19 +105,44 @@ header {
     position:relative;
     ul {
       display: none;
-      @include desk {
+      @include tablet {
+        background-color:#333;
+        border-bottom: 3px solid #444;
+        border-radius:5px;
         display: block;
         left: 0;
         opacity: 0;
         position: absolute;
-        top:0;
+        top:35px;
         visibility: hidden;
+        z-index: 1;
+        @include transition(all .5s);
+        &:before {
+          border:10px solid #333;
+          border-left-color:transparent;
+          border-right-color:transparent;
+          border-top-color:transparent;
+          content: " ";
+          display: block;
+          left: 50%;
+          margin-left: -10px;
+          position: absolute;
+          top:-20px;
+        }
+      }
+      a {
+        padding:7px 18px;
       }
     }
     &.open ul {
       display: block;
+      margin-left: 10px;
       opacity: 1;
       visibility: visible;
+      @include tablet {
+        margin-left: 0;
+        top:38px;
+      }
     }
   }
   ul, li {
@@ -121,9 +150,14 @@ header {
     margin: 0;
     padding:0;
   }
+  li {
+    @include tablet {
+      padding:0 0 8px;
+    }
+  }
   a {
     color: #fff;
-    font: 300 1em/1.5em 'Lato', sans-serif;
+    font: 300 1em/1em 'Lato', sans-serif;
   }
 }
 
@@ -137,15 +171,84 @@ header {
     display: none;
     @include tablet {
       display: block;
+      float: right;
+      margin:1% 0;
     }
   }
 }
 #main-content {
-  margin: 25px 0;
+  margin: 35px 0;
   min-height: 300px;
+  &.with-side {
+    @include desk {
+      @include span-columns(8);
+    }
+  }
 }
 
 // Sidebar
+.sidebar {
+  border-top:1px solid #e4e4e4;
+  @include desk {
+    @include span-columns(4);
+    border-top:none;
+    border-left:1px solid #e4e4e4;
+    margin: 35px 0;
+    min-height: 500px;
+    padding-left:3%;
+  }
+  > div {
+    font: .9em 'Lato', sans-serif;
+    margin-bottom: 20px;
+    @include desk {
+      border-bottom:1px solid #e5e5e5;
+      padding:0 12% 5% 0;
+      &:last-child {
+        border-bottom:none;
+      }
+    }
+    p {
+      margin: 0 0 .6em;
+    }
+  }
+  h2 {
+    color: #333;
+    font: 700 1.2em 'Lato', sans-serif;
+  }
+  h3 {
+    font: 700 1.1em 'Lato', sans-serif;
+    margin-bottom: 3px;
+    text-transform: none;
+  }
+  ul, li {
+    list-style:none;
+    margin: 0;
+    padding:0;
+  }
+  li {
+    border-top:1px solid #e5e5e5;
+    margin-bottom: 18px;
+    padding-top:13px;
+    &:first-child {
+      border:none;
+    }
+  }
+}
+#block-views-events-events-sidebar {
+  > ul li {
+    &:before {
+      color: #e9e8e8;
+      content: "c";
+      display: block;
+      float: left;
+      font: 2.5em "naacc";
+      margin-right: 5%;
+    }
+  }
+  .views-field-field-date {
+    font-size: .9em;
+  }
+}
 
 //
 // Footer

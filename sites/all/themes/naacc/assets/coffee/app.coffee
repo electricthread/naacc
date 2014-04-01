@@ -1,5 +1,3 @@
-# determine media query by body:after css content (app.scss line 13-22)
-size = window.getComputedStyle(document.body,':after').getPropertyValue('content')
 # namespace jQuery
 (($) ->
   # Document.ready
@@ -15,7 +13,7 @@ size = window.getComputedStyle(document.body,':after').getPropertyValue('content
     $('a[data-toggle="dropdown"]').dropdown()
 
     # Tablet or Up
-    if size == "desk" || size == '"desk"'  # latter required by Firefox
+    if $('.sidebar').css('float') == 'left'
       # Bootstrap Drop-down converted to hover
       $('a[data-toggle="dropdown"]').parent().hoverIntent (->
         $(this).addClass 'open'
@@ -30,6 +28,6 @@ size = window.getComputedStyle(document.body,':after').getPropertyValue('content
 
     # Mobile Menu Tap
     $("#menu").click ->
-      $(this).next().toggleClass "show"
+      $(this).toggleClass("show").next().toggleClass "show"
 
 ) jQuery

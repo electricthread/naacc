@@ -1,8 +1,4 @@
 (function() {
-  var size;
-
-  size = window.getComputedStyle(document.body, ':after').getPropertyValue('content');
-
   (function($) {
     return $(function() {
       var topLevelClick;
@@ -13,7 +9,7 @@
       };
       $('#block-system-main-menu .expanded ul').prev('a').attr('data-toggle', 'dropdown');
       $('a[data-toggle="dropdown"]').dropdown();
-      if (size === "desk" || size === '"desk"') {
+      if ($('.sidebar').css('float') === 'left') {
         $('a[data-toggle="dropdown"]').parent().hoverIntent((function() {
           $(this).addClass('open');
           return topLevelClick();
@@ -26,7 +22,7 @@
         });
       }
       return $("#menu").click(function() {
-        return $(this).next().toggleClass("show");
+        return $(this).toggleClass("show").next().toggleClass("show");
       });
     });
   })(jQuery);

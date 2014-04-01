@@ -34,7 +34,7 @@
     </div>
   </div>
   <div class="outer-container">
-    <div role="main" id="main-content">
+    <div role="main" id="main-content" class="<?php if ($page['sidebar']): ?>with-side<?php endif; ?>">
 
       <?php if ($action_links): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
@@ -60,17 +60,12 @@
 
     </div><!-- /main-->
 
-    <?php if ($page['sidebar_first']): ?>
-      <div class="sidebar-first">
-      <?php print render($page['sidebar_first']); ?>
+    <?php if ($page['sidebar']): ?>
+      <div class="sidebar">
+      <?php print render($page['sidebar']); ?>
       </div>
     <?php endif; ?>
 
-    <?php if ($page['sidebar_second']): ?>
-      <div class="sidebar-second">
-        <?php print render($page['sidebar_second']); ?>
-      </div>
-    <?php endif; ?>
   </div><!--outer-container-->
 </div><!-- /page-->
 
