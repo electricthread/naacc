@@ -9,19 +9,37 @@
 
 // Hero
 #hero {
+  overflow: hidden;
   position: relative;
-  .outer-container {
+  .wrap {
+    background: url(../images/blue-trans.png);
+    position: relative;
+    text-align: center;
     z-index: 1;
+  }
+  .outer-container {
+    padding: 5% 6% 6%;
     h2 {
       color: #fff;
+      font-size: 1.9em;
+      margin-bottom: 30px;
     }
+    a {
+      font-size: 1.2em;
+      margin: 0 auto;
+      max-width: 310px;
+      padding: 17px;
+    }
+  }
+  strong {
+    color: #fff;
   }
 }
 #block-views-members-block-1 {
-  left: 0;
+  left: -2%;
   position: absolute;
   top:0;
-  width: 100%;
+  width: 119%;
   z-index: 0;
   ul, li {
     list-style: none;
@@ -29,16 +47,14 @@
     padding: 0;
   }
   li {
-    display: inline-block;
+    display: block;
+    float: left;
     height: 127px;
     width: 230px;
+    @include transition(all 1s);
   }
-  .view-footer {
-    background: url(../images/blue-trans.png);
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-  }
+}
+.page {
+  background-color: #fff;
+  position: relative;
 }

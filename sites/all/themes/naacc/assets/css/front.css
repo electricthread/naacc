@@ -169,30 +169,46 @@ img, object, video {
       text-decoration: underline; }
 
 #hero {
+  overflow: hidden;
   position: relative; }
-  #hero .outer-container {
+  #hero .wrap {
+    background: url(../images/blue-trans.png);
+    position: relative;
+    text-align: center;
     z-index: 1; }
+  #hero .outer-container {
+    padding: 5% 6% 6%; }
     #hero .outer-container h2 {
-      color: #fff; }
+      color: #fff;
+      font-size: 1.9em;
+      margin-bottom: 30px; }
+    #hero .outer-container a {
+      font-size: 1.2em;
+      margin: 0 auto;
+      max-width: 310px;
+      padding: 17px; }
+  #hero strong {
+    color: #fff; }
 
 #block-views-members-block-1 {
-  left: 0;
+  left: -2%;
   position: absolute;
   top: 0;
-  width: 100%;
+  width: 119%;
   z-index: 0; }
   #block-views-members-block-1 ul, #block-views-members-block-1 li {
     list-style: none;
     margin: 0;
     padding: 0; }
   #block-views-members-block-1 li {
-    display: inline-block;
+    display: block;
+    float: left;
     height: 127px;
-    width: 230px; }
-  #block-views-members-block-1 .view-footer {
-    background: url(../images/blue-trans.png);
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%; }
+    width: 230px;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    transition: all 1s; }
+
+.page {
+  background-color: #fff;
+  position: relative; }

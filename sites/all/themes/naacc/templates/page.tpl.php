@@ -29,10 +29,12 @@
 <?php if($page['hero']): ?>
   <div id="hero">
     <?php print render($page['hero']); ?>
-    <div class="outer-container">
-      <h2>The Nashville Area Association of Christian Counselors is an organization for Christian professionals who work in counseling, ministry, psychiatry, psychology, social work, and other related career fields.</h2>
-      <a class="btn grn" href="/join">Become a Member</a>
-    </div>
+    <div class="wrap">
+      <div class="outer-container">
+        <h2>The <strong>Nashville Area Association of Christian Counselors</strong> is an organization for Christian professionals who work in counseling, ministry, psychiatry, psychology, social work, and other related career fields.</h2>
+        <a class="btn grn" href="/join">Become a Member</a>
+      </div><!--outer-container-->
+    </div><!--wrap-->
   </div>
 <?php endif; ?>
 
