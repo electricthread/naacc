@@ -1,0 +1,32 @@
+@import "bourbon/bourbon";
+@import "grid-settings";
+@import "neat/neat";
+@import "defaults";
+
+// Font Usage
+// font-family: 'Esteban', serif;
+// font-family: 'Lato', sans-serif;
+
+#views-exposed-form-members-page {
+  .views-exposed-widget {
+    width: 210px;
+  }
+  #edit-field-state-value {
+    width: 106px;
+  }
+  #edit-field-state-value-wrapper {
+    width: 122px;
+  }
+  #edit-field-specialties-value-wrapper {
+    padding-right: 0;
+    width: 370px;
+  }
+  .views-submit-button {
+    margin: 4.5% 0;
+    padding: 0;
+    width: 45px;
+    input {
+      font: 1.2em 'naacc';
+    }
+  }
+}

@@ -46,6 +46,53 @@ function naacc_base_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'no_sidebar';
+  $context->description = 'No sidebar by path';
+  $context->tag = 'theme';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'members' => 'members',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'region' => array(
+      'naacc' => array(
+        'disable' => array(
+          'sidebar' => 'sidebar',
+          'page_top' => 0,
+          'page_bottom' => 0,
+          'header' => 0,
+          'hero' => 0,
+          'content' => 0,
+          'footer' => 0,
+          'help' => 0,
+          'highlighted' => 0,
+        ),
+      ),
+      'seven' => array(
+        'disable' => array(
+          'content' => 0,
+          'help' => 0,
+          'page_top' => 0,
+          'page_bottom' => 0,
+          'sidebar_first' => 0,
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('No sidebar by path');
+  t('theme');
+  $export['no_sidebar'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'not_front';
   $context->description = 'Not Front';
   $context->tag = 'theme';
@@ -114,12 +161,6 @@ function naacc_base_context_default_contexts() {
           'module' => 'system',
           'delta' => 'main-menu',
           'region' => 'header',
-          'weight' => '-10',
-        ),
-        'block-1' => array(
-          'module' => 'block',
-          'delta' => '1',
-          'region' => 'sidebar',
           'weight' => '-10',
         ),
         'views-events-events_sidebar' => array(

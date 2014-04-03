@@ -200,6 +200,38 @@ function naacc_profiles_field_default_field_bases() {
     'type' => 'text',
   );
 
+  // Exported field_base: 'field_degree'
+  $field_bases['field_degree'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_degree',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
+    'foreign keys' => array(
+      'format' => array(
+        'columns' => array(
+          'format' => 'format',
+        ),
+        'table' => 'filter_format',
+      ),
+    ),
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
   // Exported field_base: 'field_fax'
   $field_bases['field_fax'] = array(
     'active' => 1,
@@ -239,6 +271,38 @@ function naacc_profiles_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_first_name',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
+    'foreign keys' => array(
+      'format' => array(
+        'columns' => array(
+          'format' => 'format',
+        ),
+        'table' => 'filter_format',
+      ),
+    ),
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
+  // Exported field_base: 'field_hourly_rate'
+  $field_bases['field_hourly_rate'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_hourly_rate',
     'field_permissions' => array(
       'type' => 0,
     ),
@@ -329,6 +393,38 @@ function naacc_profiles_field_default_field_bases() {
     'type' => 'text',
   );
 
+  // Exported field_base: 'field_license'
+  $field_bases['field_license'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_license',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
+    'foreign keys' => array(
+      'format' => array(
+        'columns' => array(
+          'format' => 'format',
+        ),
+        'table' => 'filter_format',
+      ),
+    ),
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
   // Exported field_base: 'field_phone'
   $field_bases['field_phone'] = array(
     'active' => 1,
@@ -361,6 +457,80 @@ function naacc_profiles_field_default_field_bases() {
     'type' => 'text',
   );
 
+  // Exported field_base: 'field_specialties'
+  $field_bases['field_specialties'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_specialties',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
+    'foreign keys' => array(),
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'Addictions' => 'Addictions',
+        'Adolescents' => 'Adolescents',
+        'Adoption' => 'Adoption',
+        'Adjustment' => 'Adjustment',
+        'Anxiety Disorders' => 'Anxiety Disorders',
+        'Attachment Disorders' => 'Attachment Disorders',
+        'Attention Deficit / Hyperactivity Disorders' => 'Attention Deficit / Hyperactivity Disorders',
+        'Children / Adolescents' => 'Children / Adolescents',
+        'Co-Dependency' => 'Co-Dependency',
+        'College Students' => 'College Students',
+        'Communication / Conflict Resolution / Anger Mgmt' => 'Communication / Conflict Resolution / Anger Mgmt',
+        'Consultant' => 'Consultant',
+        'Couples' => 'Couples',
+        'Cross Cultural Living / TCK\'s' => 'Cross Cultural Living / TCK\'s',
+        'Depression' => 'Depression',
+        'Divorce Recovery / Singles' => 'Divorce Recovery / Singles',
+        'Domestic Violence' => 'Domestic Violence',
+        'Eating Disorders' => 'Eating Disorders',
+        'EMDR' => 'EMDR',
+        'Families / Step Families' => 'Families / Step Families',
+        'FASD' => 'FASD',
+        'Grief Issues' => 'Grief Issues',
+        'Group Work' => 'Group Work',
+        'Individuals' => 'Individuals',
+        'Infidelity' => 'Infidelity',
+        'Marriage / Premarital / Relationships' => 'Marriage / Premarital / Relationships',
+        'Medication Management' => 'Medication Management',
+        'Men\'s Issues' => 'Men\'s Issues',
+        'Mentoring / Supervision' => 'Mentoring / Supervision',
+        'Mobile Counseling Services' => 'Mobile Counseling Services',
+        'Mood Disorders' => 'Mood Disorders',
+        'Music Business / Artist Distress' => 'Music Business / Artist Distress',
+        'Parenting' => 'Parenting',
+        'Play Therapy' => 'Play Therapy',
+        'Post Abortion Recovery' => 'Post Abortion Recovery',
+        'Pre-marital' => 'Pre-marital',
+        'PTSD' => 'PTSD',
+        'Sex Addictions / Intimacy Disorders' => 'Sex Addictions / Intimacy Disorders',
+        'Sexual Abuse' => 'Sexual Abuse',
+        'Sexual Addictions' => 'Sexual Addictions',
+        'Sexual Issues' => 'Sexual Issues',
+        'Sexual Issues (Heterosexual Couples)' => 'Sexual Issues (Heterosexual Couples)',
+        'Spiritual Concerns / Pastoral Counseling' => 'Spiritual Concerns / Pastoral Counseling',
+        'Suicide' => 'Suicide',
+        'Trauma' => 'Trauma',
+        'Unwanted Same Sex Attraction' => 'Unwanted Same Sex Attraction',
+        'Women\'s Issues' => 'Women\'s Issues',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
   // Exported field_base: 'field_state'
   $field_bases['field_state'] = array(
     'active' => 1,
@@ -381,57 +551,57 @@ function naacc_profiles_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
-        'AL' => 'Alabama',
-        'AK' => 'Alaska',
-        'AZ' => 'Arizona',
-        'AR' => 'Arkansas',
-        'CA' => 'California',
-        'CO' => 'Colorado',
-        'CT' => 'Connecticut',
-        'DE' => 'Delaware',
-        'DC' => 'District Of Columbia',
-        'FL' => 'Florida',
-        'GA' => 'Georgia',
-        'HI' => 'Hawaii',
-        'ID' => 'Idaho',
-        'IL' => 'Illinois',
-        'IN' => 'Indiana',
-        'IA' => 'Iowa',
-        'KS' => 'Kansas',
-        'KY' => 'Kentucky',
-        'LA' => 'Louisiana',
-        'ME' => 'Maine',
-        'MD' => 'Maryland',
-        'MA' => 'Massachusetts',
-        'MI' => 'Michigan',
-        'MN' => 'Minnesota',
-        'MS' => 'Mississippi',
-        'MO' => 'Missouri',
-        'MT' => 'Montana',
-        'NE' => 'Nebraska',
-        'NV' => 'Nevada',
-        'NH' => 'New Hampshire',
-        'NJ' => 'New Jersey',
-        'NM' => 'New Mexico',
-        'NY' => 'New York',
-        'NC' => 'North Carolina',
-        'ND' => 'North Dakota',
-        'OH' => 'Ohio',
-        'OK' => 'Oklahoma',
-        'OR' => 'Oregon',
-        'PA' => 'Pennsylvania',
-        'RI' => 'Rhode Island',
-        'SC' => 'South Carolina',
-        'SD' => 'South Dakota',
-        'TN' => 'Tennessee',
-        'TX' => 'Texas',
-        'UT' => 'Utah',
-        'VT' => 'Vermont',
-        'VA' => 'Virginia',
-        'WA' => 'Washington',
-        'WV' => 'West Virginia',
-        'WI' => 'Wisconsin',
-        'WY' => 'Wyoming',
+        'AK' => 'AK',
+        'AL' => 'AL',
+        'AR' => 'AR',
+        'AZ' => 'AZ',
+        'CA' => 'CA',
+        'CO' => 'CO',
+        'CT' => 'CT',
+        'DC' => 'DC',
+        'DE' => 'DE',
+        'FL' => 'FL',
+        'GA' => 'GA',
+        'HI' => 'HI',
+        'IA' => 'IA',
+        'ID' => 'ID',
+        'IL' => 'IL',
+        'IN' => 'IN',
+        'KS' => 'KS',
+        'KY' => 'KY',
+        'LA' => 'LA',
+        'MA' => 'MA',
+        'MD' => 'MD',
+        'ME' => 'ME',
+        'MI' => 'MI',
+        'MN' => 'MN',
+        'MO' => 'MO',
+        'MS' => 'MS',
+        'MT' => 'MT',
+        'NC' => 'NC',
+        'ND' => 'ND',
+        'NE' => 'NE',
+        'NH' => 'NH',
+        'NJ' => 'NJ',
+        'NM' => 'NM',
+        'NV' => 'NV',
+        'NY' => 'NY',
+        'OH' => 'OH',
+        'OK' => 'OK',
+        'OR' => 'OR',
+        'PA' => 'PA',
+        'RI' => 'RI',
+        'SC' => 'SC',
+        'SD' => 'SD',
+        'TN' => 'TN',
+        'TX' => 'TX',
+        'UT' => 'UT',
+        'VA' => 'VA',
+        'VT' => 'VT',
+        'WA' => 'WA',
+        'WI' => 'WI',
+        'WV' => 'WV',
+        'WY' => 'WY',
       ),
       'allowed_values_function' => '',
     ),

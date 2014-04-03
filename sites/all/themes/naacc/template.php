@@ -41,9 +41,11 @@ function naacc_views_pre_render(&$view) {
       drupal_add_css($path .'/assets/js/vendor/chosen_v1.1.0/chosen.min.css', array('group' => CSS_DEFAULT));
       drupal_add_js($path .'/assets/js/vendor/chosen_v1.1.0/chosen.jquery.min.js', array('group' => JS_LIBRARY));
       drupal_add_js($path .'/assets/js/members.js', array('group' => JS_THEME));
+      drupal_add_css($path .'/assets/css/members.css', array('group' => CSS_THEME));
     }
   }
 }
+
 /*
 function naacc_preprocess_region(&$vars,$hook) {
   //  kpr($vars['content']);

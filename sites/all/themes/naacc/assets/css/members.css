@@ -169,49 +169,18 @@ img, object, video {
       color: #fff;
       text-decoration: underline; }
 
-#hero {
-  overflow: hidden;
-  position: relative; }
-  #hero .wrap {
-    background: url(../images/blue-trans.png);
-    position: relative;
-    text-align: center;
-    z-index: 1; }
-  #hero .outer-container {
-    padding: 5% 6% 6%; }
-    #hero .outer-container h2 {
-      color: #fff;
-      font-size: 1.9em;
-      margin-bottom: 30px; }
-    #hero .outer-container a {
-      font-size: 1.2em;
-      margin: 0 auto;
-      max-width: 310px;
-      padding: 17px; }
-  #hero strong {
-    color: #fff; }
-
-#block-views-members-block-1 {
-  left: -2%;
-  position: absolute;
-  top: 0;
-  width: 119%;
-  z-index: 0; }
-  #block-views-members-block-1 img {
-    opacity: 0; }
-  #block-views-members-block-1 ul, #block-views-members-block-1 li {
-    list-style: none;
-    margin: 0;
-    padding: 0; }
-  #block-views-members-block-1 li {
-    display: block;
-    float: left;
-    height: 127px;
-    width: 230px;
-    -webkit-transition: all 1s;
-    -moz-transition: all 1s;
-    transition: all 1s; }
-
-.page {
-  background-color: #fff;
-  position: relative; }
+#views-exposed-form-members-page .views-exposed-widget {
+  width: 210px; }
+#views-exposed-form-members-page #edit-field-state-value {
+  width: 106px; }
+#views-exposed-form-members-page #edit-field-state-value-wrapper {
+  width: 122px; }
+#views-exposed-form-members-page #edit-field-specialties-value-wrapper {
+  padding-right: 0;
+  width: 370px; }
+#views-exposed-form-members-page .views-submit-button {
+  margin: 4.5% 0;
+  padding: 0;
+  width: 45px; }
+  #views-exposed-form-members-page .views-submit-button input {
+    font: 1.2em 'naacc'; }

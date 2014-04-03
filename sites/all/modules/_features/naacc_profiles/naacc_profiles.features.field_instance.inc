@@ -23,6 +23,12 @@ function naacc_profiles_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 20,
       ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 20,
+      ),
     ),
     'entity_type' => 'user',
     'field_name' => 'field_address',
@@ -75,6 +81,12 @@ function naacc_profiles_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 22,
+      ),
+      'full' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -136,7 +148,14 @@ function naacc_profiles_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 11,
+        'weight' => 10,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 10,
       ),
     ),
     'entity_type' => 'user',
@@ -190,6 +209,13 @@ function naacc_profiles_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 8,
+      ),
+      'full' => array(
         'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
@@ -253,6 +279,12 @@ function naacc_profiles_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 15,
       ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 15,
+      ),
     ),
     'entity_type' => 'user',
     'field_name' => 'field_city',
@@ -311,6 +343,13 @@ function naacc_profiles_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 4,
       ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 4,
+      ),
     ),
     'entity_type' => 'user',
     'field_name' => 'field_company',
@@ -355,6 +394,71 @@ function naacc_profiles_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'user-user-field_degree'
+  $field_instances['user-user-field_degree'] = array(
+    'bundle' => 'user',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 11,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 11,
+      ),
+    ),
+    'entity_type' => 'user',
+    'field_name' => 'field_degree',
+    'label' => 'Degree',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'filtered_html' => array(
+              'weight' => -9,
+            ),
+            'full_html' => array(
+              'weight' => -10,
+            ),
+            'plain_text' => array(
+              'weight' => -8,
+            ),
+          ),
+        ),
+      ),
+      'commerce_user_profile_pane' => 1,
+      'commerce_user_profile_pane_required' => 0,
+      'text_processing' => 0,
+      'user_register_form' => 0,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 30,
+    ),
+  );
+
   // Exported field_instance: 'user-user-field_fax'
   $field_instances['user-user-field_fax'] = array(
     'bundle' => 'user',
@@ -363,6 +467,13 @@ function naacc_profiles_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 7,
+      ),
+      'full' => array(
         'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
@@ -425,6 +536,13 @@ function naacc_profiles_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
         'weight' => 1,
       ),
     ),
@@ -471,6 +589,71 @@ function naacc_profiles_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'user-user-field_hourly_rate'
+  $field_instances['user-user-field_hourly_rate'] = array(
+    'bundle' => 'user',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 13,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 13,
+      ),
+    ),
+    'entity_type' => 'user',
+    'field_name' => 'field_hourly_rate',
+    'label' => 'Hourly Rate',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'filtered_html' => array(
+              'weight' => -9,
+            ),
+            'full_html' => array(
+              'weight' => -10,
+            ),
+            'plain_text' => array(
+              'weight' => -8,
+            ),
+          ),
+        ),
+      ),
+      'commerce_user_profile_pane' => 1,
+      'commerce_user_profile_pane_required' => 0,
+      'text_processing' => 0,
+      'user_register_form' => 0,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 32,
+    ),
+  );
+
   // Exported field_instance: 'user-user-field_image'
   $field_instances['user-user-field_image'] = array(
     'bundle' => 'user',
@@ -478,6 +661,16 @@ function naacc_profiles_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => 'medium',
+        ),
+        'type' => 'image',
+        'weight' => 1,
+      ),
+      'full' => array(
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
@@ -531,6 +724,13 @@ function naacc_profiles_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 2,
       ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
     ),
     'entity_type' => 'user',
     'field_name' => 'field_last_name',
@@ -575,6 +775,71 @@ function naacc_profiles_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'user-user-field_license'
+  $field_instances['user-user-field_license'] = array(
+    'bundle' => 'user',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 12,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 12,
+      ),
+    ),
+    'entity_type' => 'user',
+    'field_name' => 'field_license',
+    'label' => 'License',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'filtered_html' => array(
+              'weight' => -9,
+            ),
+            'full_html' => array(
+              'weight' => -10,
+            ),
+            'plain_text' => array(
+              'weight' => -8,
+            ),
+          ),
+        ),
+      ),
+      'commerce_user_profile_pane' => 1,
+      'commerce_user_profile_pane_required' => 0,
+      'text_processing' => 0,
+      'user_register_form' => 0,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 31,
+    ),
+  );
+
   // Exported field_instance: 'user-user-field_phone'
   $field_instances['user-user-field_phone'] = array(
     'bundle' => 'user',
@@ -583,6 +848,13 @@ function naacc_profiles_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 6,
+      ),
+      'full' => array(
         'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
@@ -633,6 +905,45 @@ function naacc_profiles_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'user-user-field_specialties'
+  $field_instances['user-user-field_specialties'] = array(
+    'bundle' => 'user',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 14,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 14,
+      ),
+    ),
+    'entity_type' => 'user',
+    'field_name' => 'field_specialties',
+    'label' => 'Specialties',
+    'required' => 0,
+    'settings' => array(
+      'commerce_user_profile_pane' => 1,
+      'commerce_user_profile_pane_required' => 0,
+      'user_register_form' => 0,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'multiselect',
+      'settings' => array(),
+      'type' => 'multiselect',
+      'weight' => 33,
+    ),
+  );
+
   // Exported field_instance: 'user-user-field_state'
   $field_instances['user-user-field_state'] = array(
     'bundle' => 'user',
@@ -641,6 +952,12 @@ function naacc_profiles_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 16,
+      ),
+      'full' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -673,6 +990,13 @@ function naacc_profiles_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
+      'full' => array(
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
@@ -737,6 +1061,13 @@ function naacc_profiles_field_default_field_instances() {
         'type' => 'link_default',
         'weight' => 9,
       ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 9,
+      ),
     ),
     'entity_type' => 'user',
     'field_name' => 'field_website',
@@ -769,7 +1100,7 @@ function naacc_profiles_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 33,
+      'weight' => 29,
     ),
   );
 
@@ -781,6 +1112,12 @@ function naacc_profiles_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 18,
+      ),
+      'full' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -838,11 +1175,15 @@ function naacc_profiles_field_default_field_instances() {
   t('Cell');
   t('City');
   t('Company');
+  t('Degree');
   t('Fax');
   t('First Name');
+  t('Hourly Rate');
   t('Last Name');
+  t('License');
   t('Phone');
   t('Profile Photo');
+  t('Specialties');
   t('State');
   t('Title');
   t('Website');
