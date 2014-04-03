@@ -26,7 +26,7 @@
     <?php endif; ?>
   </div>
 </header>
-<?php if($page['hero']): ?>
+<?php if($page['hero'] || $is_front): ?>
   <div id="hero">
     <?php print render($page['hero']); ?>
     <div class="wrap">
