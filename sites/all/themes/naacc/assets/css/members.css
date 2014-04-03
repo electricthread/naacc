@@ -184,3 +184,61 @@ img, object, video {
   width: 45px; }
   #views-exposed-form-members-page .views-submit-button input {
     font: 1.2em 'naacc'; }
+
+.member-list, .member-list li {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.member-list {
+  font-size: .9em; }
+  .member-list li {
+    margin-bottom: 42px;
+    overflow: hidden; }
+  .member-list strong {
+    font: 700 1em 'Lato', sans-serif; }
+  .member-list p {
+    margin: 0 0 9px; }
+  .member-list .top {
+    border-bottom: 1px solid #ccc;
+    overflow: hidden;
+    padding-bottom: 1px;
+    margin-bottom: 20px; }
+    .member-list .top > a {
+      display: none; }
+      @media screen and (min-width: 1024px) {
+        .member-list .top > a {
+          display: block;
+          float: right;
+          font: 1em 'Lato', sans-serif;
+          line-height: 2.2em; } }
+  .member-list h2 {
+    font-size: 1.4em;
+    text-transform: uppercase; }
+    @media screen and (min-width: 1024px) {
+      .member-list h2 {
+        float: left;
+        margin-right: .5%; } }
+  .member-list h3 {
+    color: #777777;
+    font-size: 1em; }
+    @media screen and (min-width: 1024px) {
+      .member-list h3 {
+        float: left;
+        line-height: 2.1em; } }
+  @media screen and (min-width: 1024px) {
+    .member-list .left {
+      border-right: 2px solid #ccc;
+      float: left;
+      margin-right: 3%;
+      padding-right: 2%;
+      width: 67%; } }
+  .member-list .left p {
+    float: left;
+    width: 70%; }
+  .member-list .left strong {
+    margin-right: 1%; }
+  .member-list img {
+    float: left;
+    margin-right: 2%;
+    border: 5px solid #dfdfdf; }

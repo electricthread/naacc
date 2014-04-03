@@ -30,3 +30,79 @@
     }
   }
 }
+.member-list, .member-list li {
+  list-style: none;
+  margin: 0;
+  padding:0;
+}
+.member-list {
+  // General
+  font-size: .9em;
+  li {
+    margin-bottom: 42px;
+    overflow: hidden;
+  }
+  strong {
+    font: 700 1em 'Lato', sans-serif;
+  }
+  p {
+    margin: 0 0 9px;
+  }
+  // Top
+  .top {
+    border-bottom: 1px solid #ccc;
+    overflow: hidden;
+    padding-bottom: 1px;
+    margin-bottom: 20px;
+    > a {
+      display: none;
+      @include desk {
+        display: block;
+        float: right;
+        font: 1em 'Lato', sans-serif;
+        line-height:2.2em;
+      }
+    }
+  }
+  h2 {
+    font-size: 1.4em;
+    text-transform: uppercase;
+    @include desk {
+      float: left;
+      margin-right: .5%;
+    }
+  }
+  h3 {
+    color: $base;
+    font-size: 1em;
+    @include desk {
+      float: left;
+      line-height: 2.1em;
+    }
+  }
+  // Left
+  .left {
+    @include desk {
+      border-right: 2px solid #ccc;
+      float: left;
+      margin-right: 3%;
+      padding-right: 2%;
+      width: 67%;
+    }
+    p {
+      float: left;
+      width: 70%;
+    }
+    strong {
+      margin-right: 1%;
+    }
+  }
+  img {
+    float: left;
+    margin-right: 2%;
+    border: 5px solid #dfdfdf;
+  }
+  // Right
+  .right {
+  }
+}
