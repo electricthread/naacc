@@ -133,7 +133,7 @@ function naacc_profiles_views_default_views() {
   $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
-    'image_style' => 'thumbnail',
+    'image_style' => '170x170',
     'image_link' => 'content',
   );
   /* Field: User: Degree */
@@ -420,6 +420,7 @@ function naacc_profiles_views_default_views() {
   $handler = $view->new_display('page', 'Members Page', 'page');
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['style_options']['class'] = 'member-list';
   $handler->display->display_options['style_options']['wrapper_class'] = '';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
