@@ -20,6 +20,7 @@ module.exports = function(grunt) {
 		sass: {
 			dist: {
 				files: {
+					'assets/css/editor.css': 'assets/scss/editor.scss',
 					'assets/css/app.css': 'assets/scss/app.scss',
 					'assets/css/front.css': 'assets/scss/front.scss',
 					'assets/css/members.css': 'assets/scss/members.scss'
