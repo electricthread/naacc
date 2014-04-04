@@ -184,6 +184,10 @@ input[type="submit"] {
       text-decoration: underline;
     }
   }
+  li a.active {
+    color: #fff;
+    font-weight: 500;
+  }
   .page p {
     margin-bottom: 2.5em;
   }
