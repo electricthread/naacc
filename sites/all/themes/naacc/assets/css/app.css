@@ -150,7 +150,7 @@ img, object, video {
 .chosen-container-single .chosen-single div b {
   background: none; }
 .chosen-container-single .chosen-single div:after {
-  border: 12px solid #686868;
+  border: 12px solid #1596c4;
   border-bottom-color: transparent;
   border-left: 9px solid transparent;
   border-right: 9px solid transparent;
@@ -466,7 +466,7 @@ header {
     top: 5px; }
 
 #views-exposed-form-members-page .views-exposed-widget.views-submit-button {
-  margin: 4.5% 0;
+  margin: 5% 0;
   padding: 0;
   width: 45px; }
   #views-exposed-form-members-page .views-exposed-widget.views-submit-button input {
