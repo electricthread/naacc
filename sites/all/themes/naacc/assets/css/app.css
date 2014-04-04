@@ -465,6 +465,51 @@ header {
     position: relative;
     top: 5px; }
 
+#views-exposed-form-members-page .views-exposed-widget.views-submit-button {
+  margin: 4.5% 0;
+  padding: 0;
+  width: 45px; }
+  #views-exposed-form-members-page .views-exposed-widget.views-submit-button input {
+    font: 1.2em 'naacc'; }
+
+#pre-content {
+  margin-top: -25px;
+  position: relative;
+  z-index: 10; }
+  #pre-content .outer-container {
+    background-color: #f4be69;
+    border-bottom: 6px solid #c79d56;
+    border-radius: 6px;
+    color: #fff;
+    padding: 2% 3%; }
+  #pre-content h2 {
+    color: #fff;
+    font: 900 1.5em 'Lato', sans-serif;
+    margin-bottom: 3px; }
+  #pre-content p {
+    line-height: 1.4em;
+    margin: 0; }
+  #pre-content label {
+    color: #fff;
+    margin: 8px 0 3px; }
+  #pre-content .chosen-results {
+    color: #777777; }
+  #pre-content #edit-field-state-value {
+    width: 215px; }
+  #pre-content #edit-field-specialties-value {
+    width: 215px; }
+  #pre-content .views-exposed-form .views-exposed-widget {
+    padding: 0;
+    margin-right: 1%; }
+  #pre-content .views-exposed-form .views-submit-button {
+    margin: 22px 0; }
+
+@media screen and (min-width: 1024px) {
+  #block-block-2 {
+    float: left;
+    margin-right: 3%;
+    width: 40%; } }
+
 #title-area {
   background-color: #53c7f2;
   padding: 10px 0; }

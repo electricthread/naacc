@@ -50,6 +50,18 @@ function naacc_views_pre_render(&$view) {
   }
 }
 
+/**
+* Alter Views exposed form filters
+*/
+function naacc_preprocess_views_exposed_form(&$vars) {
+  // If its the project form
+  if ($vars['form']['#id'] == 'views-exposed-form-members-page') {
+    if ($vars['is_front']) {
+      // Remove unnecessary homepage filters
+      unset($vars['widgets']['filter-combine'], $vars['widgets']['filter-field_city_value']);
+    }
+  }
+}
 /*
 function naacc_preprocess_region(&$vars,$hook) {
   //  kpr($vars['content']);

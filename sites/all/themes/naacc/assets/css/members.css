@@ -178,12 +178,6 @@ img, object, video {
 #views-exposed-form-members-page #edit-field-specialties-value-wrapper {
   padding-right: 0;
   width: 370px; }
-#views-exposed-form-members-page .views-submit-button {
-  margin: 4.5% 0;
-  padding: 0;
-  width: 45px; }
-  #views-exposed-form-members-page .views-submit-button input {
-    font: 1.2em 'naacc'; }
 
 .member-list, .member-list li {
   list-style: none;

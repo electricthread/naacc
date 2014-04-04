@@ -38,6 +38,14 @@
   </div>
 <?php endif; ?>
 
+<?php if($page['pre_content']): ?>
+  <div id="pre-content">
+    <div class="outer-container">
+      <?php print render($page['pre_content']); ?>
+    </div><!--outer-container-->
+  </div>
+<?php endif; ?>
+
 <div class="page">
   <?php if (!$is_front): ?>
     <div id="title-area">

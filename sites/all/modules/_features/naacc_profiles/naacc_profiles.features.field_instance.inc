@@ -148,7 +148,7 @@ function naacc_profiles_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 7,
+        'weight' => 8,
       ),
       'full' => array(
         'label' => 'above',
@@ -212,7 +212,7 @@ function naacc_profiles_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 10,
       ),
       'full' => array(
         'label' => 'inline',
@@ -339,7 +339,7 @@ function naacc_profiles_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 13,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -404,7 +404,7 @@ function naacc_profiles_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'full' => array(
         'label' => 'above',
@@ -468,7 +468,7 @@ function naacc_profiles_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 11,
       ),
       'full' => array(
         'label' => 'inline',
@@ -533,7 +533,7 @@ function naacc_profiles_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -598,7 +598,7 @@ function naacc_profiles_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 6,
+        'weight' => 7,
       ),
       'full' => array(
         'label' => 'above',
@@ -665,7 +665,7 @@ function naacc_profiles_field_default_field_instances() {
           'image_style' => 'medium',
         ),
         'type' => 'image',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -783,7 +783,7 @@ function naacc_profiles_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'full' => array(
         'label' => 'above',
@@ -847,7 +847,7 @@ function naacc_profiles_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 12,
       ),
       'full' => array(
         'label' => 'inline',
@@ -911,7 +911,7 @@ function naacc_profiles_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'full' => array(
         'label' => 'above',
@@ -989,7 +989,7 @@ function naacc_profiles_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -1053,7 +1053,7 @@ function naacc_profiles_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 9,
       ),
       'full' => array(
         'label' => 'hidden',

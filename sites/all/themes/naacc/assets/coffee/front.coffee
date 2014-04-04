@@ -17,4 +17,7 @@
     $("#block-views-members-block-1 img").each (i) ->
       $(this).delay((i++) * 100).fadeTo 1000, 1
 
+    # Chosen
+    $("select").chosen()
+
 ) jQuery

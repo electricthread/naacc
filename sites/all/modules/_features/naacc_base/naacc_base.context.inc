@@ -32,6 +32,18 @@ function naacc_base_context_default_contexts() {
           'region' => 'hero',
           'weight' => '-10',
         ),
+        'block-2' => array(
+          'module' => 'block',
+          'delta' => '2',
+          'region' => 'pre_content',
+          'weight' => '-10',
+        ),
+        'views--exp-members-page' => array(
+          'module' => 'views',
+          'delta' => '-exp-members-page',
+          'region' => 'pre_content',
+          'weight' => '-9',
+        ),
       ),
     ),
   );

@@ -489,7 +489,7 @@ function naacc_profiles_views_default_views() {
   $handler->display->display_options['filters']['field_city_value']['group'] = 1;
   $handler->display->display_options['filters']['field_city_value']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_city_value']['expose']['operator_id'] = 'field_city_value_op';
-  $handler->display->display_options['filters']['field_city_value']['expose']['label'] = 'City';
+  $handler->display->display_options['filters']['field_city_value']['expose']['label'] = 'Search by City';
   $handler->display->display_options['filters']['field_city_value']['expose']['operator'] = 'field_city_value_op';
   $handler->display->display_options['filters']['field_city_value']['expose']['identifier'] = 'field_city_value';
   $handler->display->display_options['filters']['field_city_value']['expose']['remember_roles'] = array(
@@ -506,7 +506,7 @@ function naacc_profiles_views_default_views() {
   $handler->display->display_options['filters']['field_state_value']['group'] = 1;
   $handler->display->display_options['filters']['field_state_value']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_state_value']['expose']['operator_id'] = 'field_state_value_op';
-  $handler->display->display_options['filters']['field_state_value']['expose']['label'] = 'State';
+  $handler->display->display_options['filters']['field_state_value']['expose']['label'] = 'Sort by State';
   $handler->display->display_options['filters']['field_state_value']['expose']['operator'] = 'field_state_value_op';
   $handler->display->display_options['filters']['field_state_value']['expose']['identifier'] = 'field_state_value';
   $handler->display->display_options['filters']['field_state_value']['expose']['remember_roles'] = array(
@@ -556,7 +556,7 @@ function naacc_profiles_views_default_views() {
   $handler->display->display_options['filters']['field_specialties_value']['field'] = 'field_specialties_value';
   $handler->display->display_options['filters']['field_specialties_value']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_specialties_value']['expose']['operator_id'] = 'field_specialties_value_op';
-  $handler->display->display_options['filters']['field_specialties_value']['expose']['label'] = 'Specialties';
+  $handler->display->display_options['filters']['field_specialties_value']['expose']['label'] = 'Sort by Specialties';
   $handler->display->display_options['filters']['field_specialties_value']['expose']['operator'] = 'field_specialties_value_op';
   $handler->display->display_options['filters']['field_specialties_value']['expose']['identifier'] = 'field_specialties_value';
   $handler->display->display_options['filters']['field_specialties_value']['expose']['remember_roles'] = array(

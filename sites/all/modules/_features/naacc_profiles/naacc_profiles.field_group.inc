@@ -55,5 +55,37 @@ function naacc_profiles_field_group_info() {
   );
   $export['group_member_info|user|user|form'] = $field_group;
 
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_title_section|user|user|default';
+  $field_group->group_name = 'group_title_section';
+  $field_group->entity_type = 'user';
+  $field_group->bundle = 'user';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Title Section',
+    'weight' => '0',
+    'children' => array(
+      0 => 'field_first_name',
+      1 => 'field_title',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Title Section',
+      'instance_settings' => array(
+        'classes' => 'group-title-section field-group-div',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_title_section|user|user|default'] = $field_group;
+
   return $export;
 }

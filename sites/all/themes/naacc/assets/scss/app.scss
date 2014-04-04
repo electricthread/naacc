@@ -195,6 +195,66 @@ header {
 //
 // Content
 //
+// Pre-Content
+#views-exposed-form-members-page .views-exposed-widget.views-submit-button {
+  margin: 4.5% 0;
+  padding: 0;
+  width: 45px;
+  input {
+    font: 1.2em 'naacc';
+  }
+}
+#pre-content {
+  margin-top: -25px;
+  position: relative;
+  z-index: 10;
+  .outer-container {
+    background-color:#f4be69;
+    border-bottom: 6px solid #c79d56;
+    border-radius:6px;
+    color: #fff;
+    padding:2% 3%;
+  }
+  h2 {
+    color: #fff;
+    font: 900 1.5em 'Lato', sans-serif;
+    margin-bottom: 3px;
+  }
+  p {
+    line-height: 1.4em;
+    margin: 0;
+  }
+  label {
+    color: #fff;
+    margin: 8px 0 3px;
+  }
+  .chosen-results {
+    color: $base;
+  }
+  #edit-field-state-value {
+    width: 215px;
+  }
+  #edit-field-specialties-value {
+    width: 215px;
+  }
+  .views-exposed-form .views-exposed-widget {
+    padding:0;
+    margin-right: 1%;
+  }
+  .views-exposed-form .views-submit-button {
+    margin: 22px 0;
+  }
+}
+
+#block-block-2 {
+  @include desk {
+    float: left;
+    margin-right: 3%;
+    width: 40%;
+  }
+}
+
+// Main Content
 #title-area {
   background-color: #53c7f2;
   padding:10px 0;
