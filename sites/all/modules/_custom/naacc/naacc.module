@@ -38,7 +38,7 @@ function naacc_form_alter(&$form, &$form_state, $form_id) {
     }
   }
   if ($form_id == 'views_exposed_form') {
-    $form['combine']['#attributes']['placeholder'] = t('First or Last name');
+    $form['combine']['#attributes']['placeholder'] = t('First or Last Name');
     $form['field_city_value']['#attributes']['placeholder'] = t('City Name');
   }
 }
