@@ -16,14 +16,6 @@ function naacc_preprocess_page(&$vars,$hook) {
   // menu needs - bootstrap/hoverIntent
   drupal_add_js($path .'/assets/js/vendor/hoverIntent.min.js', array('group' => JS_LIBRARY));
   drupal_add_js($path .'/assets/js/vendor/bootstrap.min.js', array('group' => JS_LIBRARY));
-  // if it is a node
-  // if (isset($vars['node'])) {
-  //   $node = $vars['node'];
-  //   // Project nodes
-  //   if ($node->type == 'project') {
-  //     $vars['project'] = '';
-  //   }
-  // }
   // If front
   if ($vars['is_front'] == TRUE) {
     drupal_add_css($path .'/assets/js/vendor/chosen_v1.1.0/chosen.min.css', array('group' => CSS_DEFAULT));
@@ -31,6 +23,18 @@ function naacc_preprocess_page(&$vars,$hook) {
     drupal_add_js($path .'/assets/js/vendor/chosen_v1.1.0/chosen.jquery.min.js', array('group' => JS_LIBRARY));
     drupal_add_js($path .'/assets/js/front.js', array('group' => JS_THEME));
   }
+  // if profile (have to do this here because drupal_set_title doesn't work in preprocess user profile)
+  if ($vars['theme_hook_suggestions'][0] == 'page__user') {
+    drupal_set_title('');
+    // used to print title
+    $vars['profile'] = '';
+  }
+}
+
+// User Profile Page Only
+function naacc_preprocess_user_profile(&$vars) {
+  $path = drupal_get_path('theme', 'naacc');
+  drupal_add_css($path .'/assets/css/profile.css', array('group' => CSS_THEME));
 }
 
 // Views Pre-Render Function

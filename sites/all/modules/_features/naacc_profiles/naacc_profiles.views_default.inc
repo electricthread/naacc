@@ -571,99 +571,6 @@ function naacc_profiles_views_default_views() {
   $handler->display->display_options['menu']['title'] = 'Members';
   $handler->display->display_options['menu']['name'] = 'main-menu';
 
-  /* Display: Address FIeld on Profile */
-  $handler = $view->new_display('entity_view', 'Address FIeld on Profile', 'entity_view_1');
-  $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['defaults']['pager'] = FALSE;
-  $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
-  $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
-  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
-  $handler->display->display_options['defaults']['style_options'] = FALSE;
-  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['row_plugin'] = 'fields';
-  $handler->display->display_options['defaults']['row_options'] = FALSE;
-  $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: User: Address */
-  $handler->display->display_options['fields']['field_address']['id'] = 'field_address';
-  $handler->display->display_options['fields']['field_address']['table'] = 'field_data_field_address';
-  $handler->display->display_options['fields']['field_address']['field'] = 'field_address';
-  $handler->display->display_options['fields']['field_address']['label'] = '';
-  $handler->display->display_options['fields']['field_address']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_address']['element_label_colon'] = FALSE;
-  /* Field: User: Address 2 */
-  $handler->display->display_options['fields']['field_address_2']['id'] = 'field_address_2';
-  $handler->display->display_options['fields']['field_address_2']['table'] = 'field_data_field_address_2';
-  $handler->display->display_options['fields']['field_address_2']['field'] = 'field_address_2';
-  $handler->display->display_options['fields']['field_address_2']['label'] = '';
-  $handler->display->display_options['fields']['field_address_2']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_address_2']['element_label_colon'] = FALSE;
-  /* Field: User: City */
-  $handler->display->display_options['fields']['field_city']['id'] = 'field_city';
-  $handler->display->display_options['fields']['field_city']['table'] = 'field_data_field_city';
-  $handler->display->display_options['fields']['field_city']['field'] = 'field_city';
-  $handler->display->display_options['fields']['field_city']['label'] = '';
-  $handler->display->display_options['fields']['field_city']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_city']['element_label_colon'] = FALSE;
-  /* Field: User: State */
-  $handler->display->display_options['fields']['field_state']['id'] = 'field_state';
-  $handler->display->display_options['fields']['field_state']['table'] = 'field_data_field_state';
-  $handler->display->display_options['fields']['field_state']['field'] = 'field_state';
-  $handler->display->display_options['fields']['field_state']['label'] = '';
-  $handler->display->display_options['fields']['field_state']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_state']['element_label_colon'] = FALSE;
-  /* Field: User: Zip Code */
-  $handler->display->display_options['fields']['field_zip_code']['id'] = 'field_zip_code';
-  $handler->display->display_options['fields']['field_zip_code']['table'] = 'field_data_field_zip_code';
-  $handler->display->display_options['fields']['field_zip_code']['field'] = 'field_zip_code';
-  $handler->display->display_options['fields']['field_zip_code']['label'] = '';
-  $handler->display->display_options['fields']['field_zip_code']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_zip_code']['element_label_colon'] = FALSE;
-  /* Field: Global: Custom text */
-  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['table'] = 'views';
-  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '[field_address]</br>
-[field_address_2]</br>
-[field_city], [field_state] [field_zip_code]';
-  $handler->display->display_options['fields']['nothing']['element_type'] = '0';
-  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['nothing']['element_wrapper_type'] = '0';
-  $handler->display->display_options['fields']['nothing']['element_default_classes'] = FALSE;
-  /* Field: User: E-mail */
-  $handler->display->display_options['fields']['mail']['id'] = 'mail';
-  $handler->display->display_options['fields']['mail']['table'] = 'users';
-  $handler->display->display_options['fields']['mail']['field'] = 'mail';
-  $handler->display->display_options['defaults']['sorts'] = FALSE;
-  $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: User: Uid */
-  $handler->display->display_options['arguments']['uid']['id'] = 'uid';
-  $handler->display->display_options['arguments']['uid']['table'] = 'users';
-  $handler->display->display_options['arguments']['uid']['field'] = 'uid';
-  $handler->display->display_options['arguments']['uid']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['uid']['default_argument_type'] = 'user';
-  $handler->display->display_options['arguments']['uid']['default_argument_options']['user'] = FALSE;
-  $handler->display->display_options['arguments']['uid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['uid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['uid']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
-  $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: User: Active */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'users';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = '1';
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  $handler->display->display_options['entity_type'] = 'user';
-  $handler->display->display_options['bundles'] = array(
-    0 => 'user',
-  );
-
   /* Display: Member Export */
   $handler = $view->new_display('page', 'Member Export', 'page_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
@@ -902,6 +809,131 @@ function naacc_profiles_views_default_views() {
   $handler->display->display_options['filters']['field_image_fid']['table'] = 'field_data_field_image';
   $handler->display->display_options['filters']['field_image_fid']['field'] = 'field_image_fid';
   $handler->display->display_options['filters']['field_image_fid']['operator'] = 'not empty';
+
+  /* Display: Address Block */
+  $handler = $view->new_display('block', 'Address Block', 'block_2');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: User: Company */
+  $handler->display->display_options['fields']['field_company']['id'] = 'field_company';
+  $handler->display->display_options['fields']['field_company']['table'] = 'field_data_field_company';
+  $handler->display->display_options['fields']['field_company']['field'] = 'field_company';
+  $handler->display->display_options['fields']['field_company']['label'] = '';
+  $handler->display->display_options['fields']['field_company']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_company']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_company']['alter']['text'] = '<strong>[field_company]</strong><br />';
+  $handler->display->display_options['fields']['field_company']['element_label_colon'] = FALSE;
+  /* Field: User: Address 2 */
+  $handler->display->display_options['fields']['field_address_2']['id'] = 'field_address_2';
+  $handler->display->display_options['fields']['field_address_2']['table'] = 'field_data_field_address_2';
+  $handler->display->display_options['fields']['field_address_2']['field'] = 'field_address_2';
+  $handler->display->display_options['fields']['field_address_2']['label'] = '';
+  $handler->display->display_options['fields']['field_address_2']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_address_2']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_address_2']['alter']['text'] = ', [field_address_2]';
+  $handler->display->display_options['fields']['field_address_2']['element_label_colon'] = FALSE;
+  /* Field: User: City */
+  $handler->display->display_options['fields']['field_city']['id'] = 'field_city';
+  $handler->display->display_options['fields']['field_city']['table'] = 'field_data_field_city';
+  $handler->display->display_options['fields']['field_city']['field'] = 'field_city';
+  $handler->display->display_options['fields']['field_city']['label'] = '';
+  $handler->display->display_options['fields']['field_city']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_city']['element_label_colon'] = FALSE;
+  /* Field: User: State */
+  $handler->display->display_options['fields']['field_state']['id'] = 'field_state';
+  $handler->display->display_options['fields']['field_state']['table'] = 'field_data_field_state';
+  $handler->display->display_options['fields']['field_state']['field'] = 'field_state';
+  $handler->display->display_options['fields']['field_state']['label'] = '';
+  $handler->display->display_options['fields']['field_state']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_state']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_state']['alter']['text'] = ', [field_state]';
+  $handler->display->display_options['fields']['field_state']['element_label_colon'] = FALSE;
+  /* Field: User: Zip Code */
+  $handler->display->display_options['fields']['field_zip_code']['id'] = 'field_zip_code';
+  $handler->display->display_options['fields']['field_zip_code']['table'] = 'field_data_field_zip_code';
+  $handler->display->display_options['fields']['field_zip_code']['field'] = 'field_zip_code';
+  $handler->display->display_options['fields']['field_zip_code']['label'] = '';
+  $handler->display->display_options['fields']['field_zip_code']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_zip_code']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_zip_code']['alter']['text'] = ' [field_zip_code]';
+  $handler->display->display_options['fields']['field_zip_code']['element_label_colon'] = FALSE;
+  /* Field: User: Address */
+  $handler->display->display_options['fields']['field_address']['id'] = 'field_address';
+  $handler->display->display_options['fields']['field_address']['table'] = 'field_data_field_address';
+  $handler->display->display_options['fields']['field_address']['field'] = 'field_address';
+  $handler->display->display_options['fields']['field_address']['label'] = '';
+  $handler->display->display_options['fields']['field_address']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_address']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_address']['alter']['text'] = '<p>[field_company]
+[field_address][field_address_2]<br />
+[field_city][field_state][field_zip_code]</p>';
+  $handler->display->display_options['fields']['field_address']['element_label_colon'] = FALSE;
+  /* Field: User: Phone */
+  $handler->display->display_options['fields']['field_phone']['id'] = 'field_phone';
+  $handler->display->display_options['fields']['field_phone']['table'] = 'field_data_field_phone';
+  $handler->display->display_options['fields']['field_phone']['field'] = 'field_phone';
+  $handler->display->display_options['fields']['field_phone']['label'] = '';
+  $handler->display->display_options['fields']['field_phone']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_phone']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_phone']['alter']['text'] = '<p><strong>Primary Phone: </strong>[field_phone]</p>';
+  $handler->display->display_options['fields']['field_phone']['element_label_colon'] = FALSE;
+  /* Field: User: Website */
+  $handler->display->display_options['fields']['field_website']['id'] = 'field_website';
+  $handler->display->display_options['fields']['field_website']['table'] = 'field_data_field_website';
+  $handler->display->display_options['fields']['field_website']['field'] = 'field_website';
+  $handler->display->display_options['fields']['field_website']['label'] = '';
+  $handler->display->display_options['fields']['field_website']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_website']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_website']['alter']['text'] = '<p><strong>Web: </strong>[field_website]</p>';
+  $handler->display->display_options['fields']['field_website']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_website']['click_sort_column'] = 'url';
+  /* Field: Right - Address */
+  $handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
+  $handler->display->display_options['fields']['nothing_1']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing_1']['ui_name'] = 'Right - Address';
+  $handler->display->display_options['fields']['nothing_1']['label'] = '';
+  $handler->display->display_options['fields']['nothing_1']['alter']['text'] = '[field_address]
+[field_phone]
+[field_website]';
+  $handler->display->display_options['fields']['nothing_1']['element_type'] = '0';
+  $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['nothing_1']['element_wrapper_type'] = 'div';
+  $handler->display->display_options['fields']['nothing_1']['element_wrapper_class'] = 'right';
+  $handler->display->display_options['fields']['nothing_1']['element_default_classes'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: User: Uid */
+  $handler->display->display_options['arguments']['uid']['id'] = 'uid';
+  $handler->display->display_options['arguments']['uid']['table'] = 'users';
+  $handler->display->display_options['arguments']['uid']['field'] = 'uid';
+  $handler->display->display_options['arguments']['uid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['uid']['default_argument_type'] = 'user';
+  $handler->display->display_options['arguments']['uid']['default_argument_options']['user'] = FALSE;
+  $handler->display->display_options['arguments']['uid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['uid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['uid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: User: Active */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'users';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '1';
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
   $export['members'] = $view;
 
   return $export;

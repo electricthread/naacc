@@ -46,6 +46,12 @@
         <?php if ($title): ?>
           <h1><?php print $title; ?></h1>
         <?php endif; ?>
+        <?php if (isset($profile)): ?>
+          <div class="profile-title">
+            <h2>Our Counselors</h2>
+            <a id="counselors" href="/members">View All Counselors</a>
+          </div>
+        <?php endif; ?>
         <?php print render($title_suffix); ?>
         <a href="/join" class="btn">Join the Community</a>
       </div>

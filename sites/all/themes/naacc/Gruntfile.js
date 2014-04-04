@@ -23,7 +23,8 @@ module.exports = function(grunt) {
 					'assets/css/editor.css': 'assets/scss/editor.scss',
 					'assets/css/app.css': 'assets/scss/app.scss',
 					'assets/css/front.css': 'assets/scss/front.scss',
-					'assets/css/members.css': 'assets/scss/members.scss'
+					'assets/css/members.css': 'assets/scss/members.scss',
+					'assets/css/profile.css': 'assets/scss/profile.scss'
 				}
 			}
 		},
