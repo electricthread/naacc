@@ -37,6 +37,10 @@ function naacc_form_alter(&$form, &$form_state, $form_id) {
       }
     }
   }
+  if ($form_id == 'views_exposed_form') {
+    $form['combine']['#attributes']['placeholder'] = t('First or Last name');
+    $form['field_city_value']['#attributes']['placeholder'] = t('City Name');
+  }
 }
 /**
  * Implements commerce_paypal_wps_order_form_data_alter().

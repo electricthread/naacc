@@ -15,12 +15,12 @@
   @include desk {
     width: 73%;
   }
-}
-h2 {
-  color: #fff;
-  float: left;
-  font-size: 2.2em;
-  margin: 7px 0 0.3824em;
+  h2 {
+    color: #fff;
+    float: left;
+    font-size: 2.2em;
+    margin: 7px 0 0.3824em;
+  }
 }
 #title-area #counselors {
   border-left: 1px solid #49afd5;
@@ -39,6 +39,9 @@ h1 {
 }
 .profile {
   font-size: .95em;
+}
+.group-title-section {
+  overflow: hidden;
 }
 .field-name-field-title {
   color: $blue;
@@ -59,7 +62,9 @@ h1 {
   .field-item {
     display: inline-block;
     &:after {
+      color: #000;
       content: "/";
+      display: inline;
       margin:0 3%;
     }
   }
