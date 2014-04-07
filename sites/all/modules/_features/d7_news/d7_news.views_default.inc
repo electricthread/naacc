@@ -23,7 +23,6 @@ function d7_news_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Latest News';
-  $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['use_more_always'] = TRUE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -159,16 +158,6 @@ function d7_news_views_default_views() {
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Field: Broken/missing handler */
-  $handler->display->display_options['fields']['comment_count']['id'] = 'comment_count';
-  $handler->display->display_options['fields']['comment_count']['table'] = 'node_comment_statistics';
-  $handler->display->display_options['fields']['comment_count']['field'] = 'comment_count';
-  $handler->display->display_options['fields']['comment_count']['label'] = '';
-  $handler->display->display_options['fields']['comment_count']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['comment_count']['alter']['text'] = 'Comments ([comment_count])';
-  $handler->display->display_options['fields']['comment_count']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['comment_count']['alter']['path'] = 'node/[nid]#comments';
-  $handler->display->display_options['fields']['comment_count']['element_label_colon'] = FALSE;
   /* Field: Content: Edit link */
   $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
   $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
@@ -306,11 +295,14 @@ function d7_news_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'node_rss';
   $handler->display->display_options['path'] = 'news.xml';
   $handler->display->display_options['displays'] = array(
-    'default' => 'default',
-    'news_page' => 'news_page',
-    'news_front' => 'news_front',
+    'default' => 0,
+    'news_page' => 0,
+    'page_1' => 0,
+    'news_front' => 0,
     'news_sidebar' => 0,
     'entity_view_1' => 0,
+    'block_1' => 0,
+    'block_2' => 0,
   );
 
   /* Display: Latest 4 - Front */

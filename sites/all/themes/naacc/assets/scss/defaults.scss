@@ -188,6 +188,10 @@ input[type="submit"] {
     color: #fff;
     font-weight: 500;
   }
+  .page a.active {
+    color: $dkblue;
+    font-weight: 700;
+  }
   .page p {
     margin-bottom: 2.5em;
   }
@@ -408,15 +412,7 @@ img, object, video {
   }
 }
 
-.more-link {
-  text-align: center;
-  a {
-    color:$green;
-    text-decoration: none;
-    text-transform: capitalize;
-    &:hover {
-      color: #fff;
-      text-decoration: underline;
-    }
-  }
+.back-link {
+  @include btn;
+  margin: 20px 0;
 }
