@@ -42,12 +42,23 @@ function naacc_preprocess_user_profile(&$vars) {
 // Views Pre-Render Function
 function naacc_views_pre_render(&$view) {
   $path = drupal_get_path('theme', 'naacc');
-  if($view->name == 'members') {
+  if ($view->name == 'members') {
     if ($view->current_display == 'page') {
       drupal_add_css($path .'/assets/js/vendor/chosen_v1.1.0/chosen.min.css', array('group' => CSS_DEFAULT));
       drupal_add_js($path .'/assets/js/vendor/chosen_v1.1.0/chosen.jquery.min.js', array('group' => JS_LIBRARY));
       drupal_add_js($path .'/assets/js/members.js', array('group' => JS_THEME));
       drupal_add_css($path .'/assets/css/members.css', array('group' => CSS_THEME));
+    }
+  }
+  if ($view->name == 'sponsors') {
+    // General (Black and white to color)
+    drupal_add_js($path .'/assets/js/vendor/jquery.BlackAndWhite.js', array('group' => JS_LIBRARY));
+    drupal_add_js($path .'/assets/js/sponsors.js', array('group' => JS_THEME));
+    // Homepage Carousel
+    if ($view->current_display == 'block') {
+      drupal_add_css($path .'/assets/js/vendor/owl.carousel/owl-carousel/owl.carousel.css', array('group' => CSS_DEFAULT));
+      drupal_add_css($path .'/assets/js/vendor/owl.carousel/owl-carousel/owl.theme.css', array('group' => CSS_DEFAULT));
+      drupal_add_js($path .'/assets/js/vendor/owl.carousel/owl-carousel/owl.carousel.min.js', array('group' => JS_LIBRARY));
     }
   }
 }

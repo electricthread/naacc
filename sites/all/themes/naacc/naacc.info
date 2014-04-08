@@ -29,6 +29,7 @@ regions[header] = Header
 regions[hero] = Hero
 regions[pre_content] = Pre Content
 regions[content] = Content
+regions[post_content] = Post Content
 regions[sidebar] = Sidebar
 regions[footer] = Footer
 regions[help] = Help

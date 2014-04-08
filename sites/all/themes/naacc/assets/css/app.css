@@ -817,3 +817,17 @@ footer {
 
 #edit-commerce-payment-payment-method {
   display: none; }
+
+.page-sponsors #main-content .item-list {
+  margin-bottom: 30px; }
+.page-sponsors #main-content ul, .page-sponsors #main-content li {
+  list-style: none;
+  margin: 0; }
+.page-sponsors #main-content li {
+  display: inline-block;
+  margin-right: 5%;
+  max-width: 220px; }
+
+.views-field-field-sponsor-photo a {
+  display: block;
+  position: relative; }

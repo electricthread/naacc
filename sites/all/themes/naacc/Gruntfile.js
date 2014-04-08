@@ -34,7 +34,8 @@ module.exports = function(grunt) {
 					'assets/js/app.js': 'assets/coffee/app.coffee',
 					'assets/js/front.js': 'assets/coffee/front.coffee',
 					'assets/js/members.js': 'assets/coffee/members.coffee',
-					'assets/js/checkout.js': 'assets/coffee/checkout.coffee'
+					'assets/js/checkout.js': 'assets/coffee/checkout.coffee',
+					'assets/js/sponsors.js': 'assets/coffee/sponsors.coffee'
 				}
 			}
 		},

@@ -212,6 +212,9 @@ img, object, video {
   #hero strong {
     color: #fff; }
 
+#main-content, .sidebar {
+  min-height: 0; }
+
 #block-views-members-block-1 {
   left: -20%;
   position: absolute;
@@ -244,3 +247,32 @@ img, object, video {
 .page {
   background-color: #fff;
   position: relative; }
+
+#block-views-sponsors-block h2 {
+  color: #1596c4;
+  display: block;
+  font-size: 1.4em;
+  margin-bottom: 22px;
+  padding-bottom: 12px;
+  text-transform: uppercase; }
+#block-views-sponsors-block ul, #block-views-sponsors-block li {
+  margin: 0;
+  padding: 0; }
+#block-views-sponsors-block .owl-carousel {
+  margin: 0 3%; }
+#block-views-sponsors-block li {
+  list-style: none;
+  margin-right: 40px; }
+
+.owl-buttons {
+  display: none; }
+  @media screen and (min-width: 1024px) {
+    .owl-buttons {
+      display: block; } }
+  .owl-buttons div {
+    position: absolute;
+    top: 78px; }
+    .owl-buttons div.owl-prev {
+      left: -50px; }
+    .owl-buttons div.owl-next {
+      right: -30px; }

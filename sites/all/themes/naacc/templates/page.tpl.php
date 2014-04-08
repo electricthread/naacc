@@ -101,6 +101,14 @@
   </div><!--outer-container-->
 </div><!-- /page-->
 
+<?php if($page['post_content']): ?>
+  <div id="post-content">
+    <div class="outer-container">
+      <?php print render($page['post_content']); ?>
+    </div><!--outer-container-->
+  </div>
+<?php endif; ?>
+
 <footer role="contentinfo">
   <?php
     $menu = menu_navigation_links('main-menu');

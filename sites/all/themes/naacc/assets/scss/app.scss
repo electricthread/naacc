@@ -584,3 +584,23 @@ footer {
 #edit-commerce-payment-payment-method {
   display: none;
 }
+
+// Sponsors
+.page-sponsors #main-content {
+  .item-list {
+    margin-bottom: 30px;
+  }
+  ul, li {
+    list-style: none;
+    margin: 0;
+  }
+  li {
+    display: inline-block;
+    margin-right: 5%;
+    max-width: 220px;
+  }
+}
+.views-field-field-sponsor-photo a {
+  display:block;
+  position:relative;
+}

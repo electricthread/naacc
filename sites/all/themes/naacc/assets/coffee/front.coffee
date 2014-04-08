@@ -20,4 +20,23 @@
     # Chosen
     $("select").chosen()
 
+    # Carousel
+    $(".owl-carousel").owlCarousel
+        # Responsive
+        responsive: true,
+        responsiveRefreshRate : 200,
+        responsiveBaseWidth: window,
+        # Autoplay
+        autoPlay : true,
+        stopOnHover : true,
+        # Lazy load
+        lazyLoad : true,
+        lazyFollow : true,
+        lazyEffect : "fade",
+        # Navigation
+        navigation : true,
+        navigationText : ["prev","next"],
+        rewindNav : true,
+        scrollPerPage : false,
+
 ) jQuery

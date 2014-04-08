@@ -44,6 +44,12 @@ function naacc_base_context_default_contexts() {
           'region' => 'pre_content',
           'weight' => '-9',
         ),
+        'views-sponsors-block' => array(
+          'module' => 'views',
+          'delta' => 'sponsors-block',
+          'region' => 'post_content',
+          'weight' => '-10',
+        ),
       ),
     ),
   );
@@ -65,6 +71,7 @@ function naacc_base_context_default_contexts() {
     'path' => array(
       'values' => array(
         'members' => 'members',
+        'sponsors' => 'sponsors',
       ),
     ),
   );
@@ -77,6 +84,7 @@ function naacc_base_context_default_contexts() {
           'page_bottom' => 0,
           'header' => 0,
           'hero' => 0,
+          'pre_content' => 0,
           'content' => 0,
           'footer' => 0,
           'help' => 0,
