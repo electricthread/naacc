@@ -24,10 +24,13 @@
 }
 #title-area #counselors {
   border-left: 1px solid #49afd5;
-  display: block;
+  display: none;
   float: left;
   margin: 3% 2%;
   padding-left: 2%;
+  @include tablet {
+    display:block;
+  }
 }
 h1 {
   color: $dkblue;
@@ -54,14 +57,19 @@ h1 {
   clear: both;
   float: left;
   margin-right: 2%;
+  width: 45%;
+  @include tablet {
+    width: auto;
+  }
   img {
     border:5px solid #dfdfdf;
     display: block;
   }
 }
 .field-name-field-specialties {
+  overflow: hidden;
   .field-item {
-    display: inline-block;
+    float: left;
     &:after {
       color: #000;
       content: "/";

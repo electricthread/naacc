@@ -168,6 +168,27 @@ function naacc_base_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'mailchimp_api_key';
+  $strongarm->value = '82bfd37ef37e7384e6f384969e8fe738-us5';
+  $export['mailchimp_api_key'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'mailchimp_batch_limit';
+  $strongarm->value = '100';
+  $export['mailchimp_batch_limit'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'mailchimp_use_secure';
+  $strongarm->value = 1;
+  $export['mailchimp_use_secure'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_attributes_accesskey_default';
   $strongarm->value = '';
   $export['menu_attributes_accesskey_default'] = $strongarm;

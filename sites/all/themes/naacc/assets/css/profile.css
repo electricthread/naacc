@@ -184,6 +184,12 @@ img, object, video {
     box-shadow: 0px 0px 4px #7f7f7f inset;
     top: 0; }
 
+.drupal-messages {
+  margin-bottom: 22px; }
+
+.messages {
+  border-radius: 4px; }
+
 @media screen and (min-width: 768px) {
   .profile-title {
     float: left;
@@ -199,10 +205,13 @@ img, object, video {
 
 #title-area #counselors {
   border-left: 1px solid #49afd5;
-  display: block;
+  display: none;
   float: left;
   margin: 3% 2%;
   padding-left: 2%; }
+  @media screen and (min-width: 768px) {
+    #title-area #counselors {
+      display: block; } }
 
 h1 {
   color: #0e7296;
@@ -228,18 +237,24 @@ h1 {
 .field-name-field-image {
   clear: both;
   float: left;
-  margin-right: 2%; }
+  margin-right: 2%;
+  width: 45%; }
+  @media screen and (min-width: 768px) {
+    .field-name-field-image {
+      width: auto; } }
   .field-name-field-image img {
     border: 5px solid #dfdfdf;
     display: block; }
 
-.field-name-field-specialties .field-item {
-  display: inline-block; }
-  .field-name-field-specialties .field-item:after {
-    color: #000;
-    content: "/";
-    display: inline;
-    margin: 0 3%; }
+.field-name-field-specialties {
+  overflow: hidden; }
+  .field-name-field-specialties .field-item {
+    float: left; }
+    .field-name-field-specialties .field-item:after {
+      color: #000;
+      content: "/";
+      display: inline;
+      margin: 0 3%; }
 
 label {
   margin-top: 15px; }

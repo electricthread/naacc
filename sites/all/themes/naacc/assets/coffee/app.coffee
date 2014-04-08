@@ -13,7 +13,7 @@
     $('a[data-toggle="dropdown"]').dropdown()
 
     # Tablet or Up
-    if $('.sidebar').css('float') == 'left'
+    if $('#menu').is(':hidden')
       # Bootstrap Drop-down converted to hover
       $('a[data-toggle="dropdown"]').parent().hoverIntent (->
         $(this).addClass 'open'

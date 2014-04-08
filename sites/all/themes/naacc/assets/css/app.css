@@ -185,6 +185,12 @@ img, object, video {
     box-shadow: 0px 0px 4px #7f7f7f inset;
     top: 0; }
 
+.drupal-messages {
+  margin-bottom: 22px; }
+
+.messages {
+  border-radius: 4px; }
+
 body {
   color: #777777;
   font-family: "Lato", sans-serif;
@@ -354,6 +360,12 @@ header {
   z-index: 2; }
   header .outer-container {
     padding: 0; }
+    @media screen and (min-width: 768px) {
+      header .outer-container {
+        padding: 0 4% 0 0; } }
+    @media screen and (min-width: 1024px) {
+      header .outer-container {
+        padding: 0; } }
   header ul, header li {
     list-style: none;
     margin: 0;
@@ -414,9 +426,11 @@ header {
       width: auto; }
       #block-system-main-menu li {
         display: inline-block; }
-        #block-system-main-menu li.last a {
+        #block-system-main-menu li a[href="/contact"] {
           border: none;
           padding: 7px 0 7px 18px; }
+        #block-system-main-menu li.last {
+          display: none; }
       #block-system-main-menu a {
         border-right: 1px solid #1388b1;
         display: block;
@@ -461,6 +475,8 @@ header {
       @media screen and (min-width: 768px) {
         #block-system-main-menu .expanded ul a {
           padding: 7px 18px; } }
+      #block-system-main-menu .expanded ul .last {
+        display: inline-block; }
     #block-system-main-menu .expanded.open ul {
       display: block;
       margin-left: 10px;
@@ -492,8 +508,10 @@ header {
 #views-exposed-form-members-page .views-exposed-widget.views-submit-button {
   margin: 5% 0;
   padding: 0;
-  position: relative;
-  width: 45px; }
+  position: relative; }
+  @media screen and (min-width: 768px) {
+    #views-exposed-form-members-page .views-exposed-widget.views-submit-button {
+      width: 45px; } }
   #views-exposed-form-members-page .views-exposed-widget.views-submit-button input {
     font: 1.2em 'naacc'; }
   #views-exposed-form-members-page .views-exposed-widget.views-submit-button .ajax-progress {
@@ -505,15 +523,24 @@ header {
       background: url(../images/ajax-loader.gif) no-repeat scroll 0 0; }
 
 #pre-content {
-  margin-top: -25px;
   position: relative;
+  text-align: center;
   z-index: 10; }
+  @media screen and (min-width: 1024px) {
+    #pre-content {
+      margin-top: -25px;
+      text-align: left; } }
   #pre-content .outer-container {
     background-color: #f4be69;
     border-bottom: 6px solid #c79d56;
-    border-radius: 6px;
     color: #fff;
-    padding: 2% 3%; }
+    padding: 2% 9%; }
+    @media screen and (min-width: 768px) {
+      #pre-content .outer-container {
+        padding: 2% 3%; } }
+    @media screen and (min-width: 1024px) {
+      #pre-content .outer-container {
+        border-radius: 6px; } }
   #pre-content h2 {
     color: #fff;
     font: 900 1.5em 'Lato', sans-serif;
@@ -521,20 +548,41 @@ header {
   #pre-content p {
     line-height: 1.4em;
     margin: 0; }
+  #pre-content .chosen-single {
+    text-align: left; }
   #pre-content label {
     color: #fff;
     margin: 8px 0 3px; }
   #pre-content .chosen-results {
-    color: #777777; }
+    color: #777777;
+    text-align: left; }
   #pre-content #edit-field-state-value {
     width: 215px; }
   #pre-content #edit-field-specialties-value {
     width: 215px; }
   #pre-content .views-exposed-form .views-exposed-widget {
+    float: none;
     padding: 0;
     margin-right: 1%; }
+    @media screen and (min-width: 768px) {
+      #pre-content .views-exposed-form .views-exposed-widget {
+        float: left; } }
   #pre-content .views-exposed-form .views-submit-button {
-    margin: 22px 0; }
+    margin: 22px 57px; }
+    @media screen and (min-width: 768px) {
+      #pre-content .views-exposed-form .views-submit-button {
+        margin: 22px 0; } }
+
+#block-views-exp-members-page {
+  margin: 20px 0; }
+  @media screen and (min-width: 768px) {
+    #block-views-exp-members-page {
+      margin: 20px auto;
+      width: 503px; } }
+  @media screen and (min-width: 1024px) {
+    #block-views-exp-members-page {
+      margin: 0;
+      width: auto; } }
 
 @media screen and (min-width: 1024px) {
   #block-block-2 {
@@ -554,8 +602,10 @@ header {
         margin: 1% 0; } }
 
 #main-content {
-  margin: 35px 0;
-  min-height: 300px; }
+  margin: 35px 0; }
+  @media screen and (min-width: 768px) {
+    #main-content {
+      min-height: 300px; } }
   @media screen and (min-width: 1024px) {
     #main-content.with-side {
       display: block;
@@ -585,10 +635,18 @@ header {
   .sidebar > div {
     font: .9em 'Lato', sans-serif;
     margin-bottom: 20px; }
+    @media screen and (min-width: 768px) {
+      .sidebar > div {
+        float: left;
+        margin-right: 1%;
+        width: 49%; } }
     @media screen and (min-width: 1024px) {
       .sidebar > div {
         border-bottom: 1px solid #e5e5e5;
-        padding: 0 12% 5% 0; }
+        float: none;
+        margin-right: 0;
+        padding: 0 12% 5% 0;
+        width: auto; }
         .sidebar > div:last-child {
           border-bottom: none; } }
     .sidebar > div p {
@@ -621,6 +679,45 @@ header {
 #block-views-events-events-sidebar .views-field-field-date {
   font-size: .9em; }
 
+footer {
+  border-top: 1px solid #e0e0e0;
+  color: #999;
+  font-size: .9em;
+  min-height: 110px;
+  padding-top: 20px; }
+  @media screen and (min-width: 1024px) {
+    footer ul {
+      float: left; } }
+  footer li {
+    display: inline-block;
+    list-style: none;
+    padding: 0; }
+    footer li.expanded {
+      padding: 0; }
+      footer li.expanded ul {
+        display: none; }
+    footer li:after {
+      content: "/"; }
+    footer li.last:after {
+      content: ""; }
+  footer a {
+    color: #999;
+    font: 1em 'Lato', sans-serif;
+    padding: 0 4px; }
+    footer a.active {
+      color: #6f6f6f; }
+  @media screen and (min-width: 1024px) {
+    footer p {
+      float: right;
+      margin: 0; } }
+
+.news ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+.news li {
+  margin-bottom: 50px; }
+
 .node-news-article.node-teaser {
   position: relative; }
   .node-news-article.node-teaser h2 a {
@@ -635,14 +732,21 @@ header {
   display: inline-block;
   margin: 0 7px 0 0; }
 
-.node-readmore {
+.inline .node-readmore {
+  display: none;
   padding: 0;
   position: absolute;
   right: 0;
   top: 6px; }
-  .node-readmore a {
+  @media screen and (min-width: 768px) {
+    .inline .node-readmore {
+      display: block; } }
+  .inline .node-readmore a {
     font: .9em 'Lato', sans-serif;
     text-transform: capitalize; }
-    .node-readmore a:after {
+    .inline .node-readmore a:after {
       content: "»";
       margin-left: 3px; }
+
+#mailchimp-lists-user-subscribe-form-general-signup label {
+  display: none; }

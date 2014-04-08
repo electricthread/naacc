@@ -67,6 +67,15 @@ function naacc_base_user_default_permissions() {
     'module' => 'user_settings_access',
   );
 
+  // Exported permission: 'administer mailchimp'.
+  $permissions['administer mailchimp'] = array(
+    'name' => 'administer mailchimp',
+    'roles' => array(
+      'developer' => 'developer',
+    ),
+    'module' => 'mailchimp',
+  );
+
   // Exported permission: 'administer main-menu menu items'.
   $permissions['administer main-menu menu items'] = array(
     'name' => 'administer main-menu menu items',

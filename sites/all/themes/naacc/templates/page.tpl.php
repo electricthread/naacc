@@ -102,6 +102,7 @@
 </div><!-- /page-->
 
 <footer role="contentinfo">
-  <?php print render($page['footer']); ?>
+  <?php print drupal_render(menu_tree('main-menu')); ?>
+  <p>&copy;<?php print date('Y'); ?> Nashville Area Association of Christian Counselors</p>
 </footer>
 

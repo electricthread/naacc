@@ -184,6 +184,12 @@ img, object, video {
     box-shadow: 0px 0px 4px #7f7f7f inset;
     top: 0; }
 
+.drupal-messages {
+  margin-bottom: 22px; }
+
+.messages {
+  border-radius: 4px; }
+
 #hero {
   overflow: hidden;
   position: relative; }
@@ -207,11 +213,19 @@ img, object, video {
     color: #fff; }
 
 #block-views-members-block-1 {
-  left: -2%;
+  left: -20%;
   position: absolute;
   top: 0;
-  width: 119%;
+  width: 147%;
   z-index: 0; }
+  @media screen and (min-width: 768px) {
+    #block-views-members-block-1 {
+      left: -2%;
+      width: 121%; } }
+  @media screen and (min-width: 1024px) {
+    #block-views-members-block-1 {
+      left: -2%;
+      width: 119%; } }
   #block-views-members-block-1 img {
     opacity: 0; }
   #block-views-members-block-1 ul, #block-views-members-block-1 li {

@@ -184,6 +184,12 @@ img, object, video {
     box-shadow: 0px 0px 4px #7f7f7f inset;
     top: 0; }
 
+.drupal-messages {
+  margin-bottom: 22px; }
+
+.messages {
+  border-radius: 4px; }
+
 #block-views-exp-members-page {
   background-color: #f4be69;
   border-bottom: 6px solid #c79d56;
@@ -194,16 +200,41 @@ img, object, video {
     color: #fff; }
 
 #views-exposed-form-members-page .views-exposed-widget {
-  width: 210px; }
+  float: none;
+  padding: 0; }
+  @media screen and (min-width: 768px) {
+    #views-exposed-form-members-page .views-exposed-widget {
+      float: left;
+      padding: .5em 1em 0 0;
+      width: 210px; } }
+  #views-exposed-form-members-page .views-exposed-widget input[type="text"], #views-exposed-form-members-page .views-exposed-widget input[type="submit"] {
+    max-width: none;
+    width: 100%; }
+    @media screen and (min-width: 768px) {
+      #views-exposed-form-members-page .views-exposed-widget input[type="text"], #views-exposed-form-members-page .views-exposed-widget input[type="submit"] {
+        max-width: 100%;
+        width: auto; } }
 #views-exposed-form-members-page #edit-field-state-value {
-  width: 126px; }
+  width: 100%; }
+  @media screen and (min-width: 768px) {
+    #views-exposed-form-members-page #edit-field-state-value {
+      width: 126px; } }
 #views-exposed-form-members-page #edit-field-state-value-wrapper {
-  width: 142px; }
+  width: 100%; }
+  @media screen and (min-width: 768px) {
+    #views-exposed-form-members-page #edit-field-state-value-wrapper {
+      width: 142px; } }
 #views-exposed-form-members-page #edit-field-specialties-value {
-  width: 280px; }
+  width: 100%; }
+  @media screen and (min-width: 768px) {
+    #views-exposed-form-members-page #edit-field-specialties-value {
+      width: 280px; } }
 #views-exposed-form-members-page #edit-field-specialties-value-wrapper {
   padding-right: 0;
-  width: 290px; }
+  width: 100%; }
+  @media screen and (min-width: 768px) {
+    #views-exposed-form-members-page #edit-field-specialties-value-wrapper {
+      width: 290px; } }
 
 .member-list, .member-list li {
   list-style: none;
@@ -253,9 +284,10 @@ img, object, video {
       margin-right: 3%;
       padding-right: 2%;
       width: 67%; } }
-  .member-list .left p {
-    float: left;
-    width: 70%; }
+  @media screen and (min-width: 1024px) {
+    .member-list .left p {
+      float: left;
+      width: 70%; } }
   .member-list .left strong {
     margin-right: 1%; }
   .member-list img {

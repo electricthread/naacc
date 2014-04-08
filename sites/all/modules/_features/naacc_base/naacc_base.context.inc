@@ -175,6 +175,12 @@ function naacc_base_context_default_contexts() {
           'region' => 'header',
           'weight' => '-10',
         ),
+        'mailchimp_lists-general_signup' => array(
+          'module' => 'mailchimp_lists',
+          'delta' => 'general_signup',
+          'region' => 'sidebar',
+          'weight' => '-10',
+        ),
         'views-events-events_sidebar' => array(
           'module' => 'views',
           'delta' => 'events-events_sidebar',

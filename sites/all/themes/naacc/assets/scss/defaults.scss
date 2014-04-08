@@ -416,3 +416,9 @@ img, object, video {
   @include btn;
   margin: 20px 0;
 }
+.drupal-messages {
+    margin-bottom: 22px;
+}
+.messages {
+    border-radius: 4px;
+}

@@ -19,20 +19,46 @@
 }
 #views-exposed-form-members-page {
   .views-exposed-widget {
-    width: 210px;
+    float: none;
+    padding: 0;
+    @include tablet {
+      float: left;
+      padding:.5em 1em 0 0;
+      width: 210px;
+    }
+    input[type="text"], input[type="submit"] {
+      max-width: none;
+      width: 100%;
+      @include tablet {
+        max-width: 100%;
+        width: auto;
+      }
+    }
   }
   #edit-field-state-value {
-    width: 126px;
+    width: 100%;
+    @include tablet {
+      width: 126px;
+    }
   }
   #edit-field-state-value-wrapper {
-    width: 142px;
+    width: 100%;
+    @include tablet {
+      width: 142px;
+    }
   }
   #edit-field-specialties-value {
-    width: 280px;
+    width: 100%;
+    @include tablet {
+      width: 280px;
+    }
   }
   #edit-field-specialties-value-wrapper {
     padding-right: 0;
-    width: 290px;
+    width: 100%;
+    @include tablet {
+      width: 290px;
+    }
   }
 }
 .member-list, .member-list li {
@@ -95,8 +121,10 @@
       width: 67%;
     }
     p {
-      float: left;
-      width: 70%;
+      @include desk {
+        float: left;
+        width: 70%;
+      }
     }
     strong {
       margin-right: 1%;

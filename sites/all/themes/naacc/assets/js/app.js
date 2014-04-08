@@ -9,7 +9,7 @@
       };
       $('#block-system-main-menu .expanded ul').prev('a').attr('data-toggle', 'dropdown');
       $('a[data-toggle="dropdown"]').dropdown();
-      if ($('.sidebar').css('float') === 'left') {
+      if ($('#menu').is(':hidden')) {
         $('a[data-toggle="dropdown"]').parent().hoverIntent((function() {
           $(this).addClass('open');
           return topLevelClick();

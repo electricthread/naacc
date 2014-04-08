@@ -45,6 +45,12 @@ header {
   z-index: 2;
   .outer-container {
     padding:0;
+    @include tablet {
+      padding:0 4% 0 0;
+    }
+    @include desk {
+      padding:0;
+    }
   }
   ul, li {
     list-style: none;
@@ -107,9 +113,12 @@ header {
     width: auto;
     li {
       display: inline-block;
-      &.last a {
+      & a[href="/contact"] {
         border:none;
         padding: 7px 0 7px 18px;
+      }
+      &.last {
+        display: none;
       }
     }
     a {
@@ -158,6 +167,9 @@ header {
           padding:7px 18px;
         }
       }
+      .last {
+        display: inline-block;
+      }
     }
     &.open ul {
       display: block;
@@ -200,7 +212,9 @@ header {
   margin: 5% 0;
   padding: 0;
   position: relative;
-  width: 45px;
+  @include tablet {
+    width: 45px;
+  }
   input {
     font: 1.2em 'naacc';
   }
@@ -215,15 +229,24 @@ header {
   }
 }
 #pre-content {
-  margin-top: -25px;
   position: relative;
+  text-align: center;
   z-index: 10;
+  @include desk {
+    margin-top: -25px;
+    text-align: left;
+  }
   .outer-container {
     background-color:#f4be69;
     border-bottom: 6px solid #c79d56;
-    border-radius:6px;
     color: #fff;
-    padding:2% 3%;
+    padding:2% 9%;
+    @include tablet {
+      padding:2% 3%;
+    }
+    @include desk {
+      border-radius:6px;
+    }
   }
   h2 {
     color: #fff;
@@ -234,12 +257,16 @@ header {
     line-height: 1.4em;
     margin: 0;
   }
+  .chosen-single {
+    text-align: left;
+  }
   label {
     color: #fff;
     margin: 8px 0 3px;
   }
   .chosen-results {
     color: $base;
+    text-align: left;
   }
   #edit-field-state-value {
     width: 215px;
@@ -248,11 +275,29 @@ header {
     width: 215px;
   }
   .views-exposed-form .views-exposed-widget {
+    float: none;
     padding:0;
     margin-right: 1%;
+    @include tablet {
+      float: left;
+    }
   }
   .views-exposed-form .views-submit-button {
-    margin: 22px 0;
+    margin: 22px 57px;
+    @include tablet {
+      margin: 22px 0;
+    }
+  }
+}
+#block-views-exp-members-page {
+  margin: 20px 0;
+  @include tablet {
+    margin: 20px auto;
+    width: 503px;
+  }
+  @include desk {
+    margin: 0;
+    width: auto;
   }
 }
 
@@ -279,7 +324,9 @@ header {
 }
 #main-content {
   margin: 35px 0;
-  min-height: 300px;
+  @include tablet {
+    min-height: 300px;
+  }
   &.with-side {
     @include desk {
       @include span-columns(8);
@@ -303,9 +350,17 @@ header {
   > div {
     font: .9em 'Lato', sans-serif;
     margin-bottom: 20px;
+    @include tablet {
+      float: left;
+      margin-right: 1%;
+      width: 49%;
+    }
     @include desk {
       border-bottom:1px solid #e5e5e5;
+      float: none;
+      margin-right: 0;
       padding:0 12% 5% 0;
+      width: auto;
       &:last-child {
         border-bottom:none;
       }
@@ -356,13 +411,65 @@ header {
 //
 // Footer
 //
-
+footer {
+  border-top: 1px solid #e0e0e0;
+  color: #999;
+  font-size: .9em;
+  min-height: 110px;
+  padding-top: 20px;
+  ul {
+    @include desk {
+      float: left;
+    }
+  }
+  li {
+    display: inline-block;
+    list-style:none;
+    padding: 0;
+    &.expanded {
+      padding:0;
+      ul {
+        display: none;
+      }
+    }
+    &:after {
+      content: "/";
+    }
+    &.last:after {
+      content: "";
+    }
+  }
+  a {
+    color: #999;
+    font: 1em 'Lato', sans-serif;
+    padding:0 4px;
+    &.active {
+      color: #6f6f6f;
+    }
+  }
+  p {
+    @include desk {
+      float:right;
+      margin: 0;
+    }
+  }
+}
 
 //
-//
+// Specific Sections
 //
 
 // News
+.news {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    margin-bottom: 50px;
+  }
+}
 .node-news-article.node-teaser {
   position: relative;
   h2 a {
@@ -378,11 +485,15 @@ header {
   display: inline-block;
   margin: 0 7px 0 0;
 }
-.node-readmore {
+.inline .node-readmore {
+  display: none;
   padding:0;
   position: absolute;
   right: 0;
   top: 6px;
+  @include tablet {
+    display: block;
+  }
   a {
     font:.9em 'Lato', sans-serif;
     text-transform: capitalize;
@@ -391,4 +502,9 @@ header {
       margin-left:3px;
     }
   }
+}
+
+// Mailing list
+#mailchimp-lists-user-subscribe-form-general-signup label {
+  display: none;
 }

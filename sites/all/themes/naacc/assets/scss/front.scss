@@ -36,11 +36,19 @@
   }
 }
 #block-views-members-block-1 {
-  left: -2%;
+  left: -20%;
   position: absolute;
   top:0;
-  width: 119%;
+  width: 147%;
   z-index: 0;
+  @include tablet {
+    left: -2%;
+    width: 121%;
+  }
+  @include desk {
+    left: -2%;
+    width: 119%;
+  }
   img {
     opacity: 0;
   }
