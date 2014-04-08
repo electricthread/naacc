@@ -271,16 +271,17 @@ input[type="submit"] {
       color: #fff;
     }
   }
+  table {
+    width: 100%;
+  }
 }
-
-
 
 //
 //  Drupal-specific defaults
 //
 .sidebar .block {
-    clear: both;
-    margin-bottom: 20px;
+  clear: both;
+  margin-bottom: 20px;
 }
 // Default view list styles - mothership may override these classes by default
 .view-content ul, .view-content ol {

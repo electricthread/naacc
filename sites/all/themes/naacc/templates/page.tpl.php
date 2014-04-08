@@ -102,7 +102,10 @@
 </div><!-- /page-->
 
 <footer role="contentinfo">
-  <?php print drupal_render(menu_tree('main-menu')); ?>
+  <?php
+    $menu = menu_navigation_links('main-menu');
+    print theme('links__system_main_menu', array('links' => $menu));
+  ?>
   <p>&copy;<?php print date('Y'); ?> Nashville Area Association of Christian Counselors</p>
 </footer>
 

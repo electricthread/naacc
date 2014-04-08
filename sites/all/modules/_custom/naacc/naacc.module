@@ -43,21 +43,10 @@ function naacc_form_alter(&$form, &$form_state, $form_id) {
     $form['field_state_value']['#options']['All'] = t("Any State");
     $form['field_specialties_value']['#options']['All'] = t("Any Specialty");
   }
-}
-/**
- * Implements commerce_paypal_wps_order_form_data_alter().
- */
-function naacc_commerce_paypal_wps_order_form_data_alter(&$data, $order) {
-  $profile = user_load($order->uid);
-  $order_wrapper = entity_metadata_wrapper('commerce_order', $order->order_id);
-  $billing_address = $order_wrapper->commerce_customer_billing->commerce_customer_address->value();
-  $data['first_name'] = $billing_address['first_name'];
-  $data['last_name'] = $billing_address['last_name'];
-  $data['address1'] = $billing_address['thoroughfare'];
-  if (isset($billing_address['premise'])) {
-    $data['address2'] = $billing_address['premise'];
+  if ($form_id == 'commerce_checkout_form_checkout') {
+    $path = drupal_get_path('theme', 'naacc');
+    drupal_add_css($path .'/assets/js/vendor/chosen_v1.1.0/chosen.min.css', array('group' => CSS_DEFAULT));
+    drupal_add_js($path .'/assets/js/vendor/chosen_v1.1.0/chosen.jquery.min.js', array('group' => JS_LIBRARY));
+    drupal_add_js($path .'/assets/js/checkout.js', array('group' => JS_THEME));
   }
-  $data['city'] = $billing_address['locality'];
-  $data['state'] = $billing_address['administrative_area'];
-  $data['zip'] = $billing_address['postal_code'];
 }

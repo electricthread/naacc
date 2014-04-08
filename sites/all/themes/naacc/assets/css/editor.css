@@ -325,3 +325,6 @@ h5 {
     background-color: #85cf66;
     box-shadow: none;
     color: #fff; }
+
+table {
+  width: 100%; }

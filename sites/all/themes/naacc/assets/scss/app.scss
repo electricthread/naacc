@@ -508,3 +508,79 @@ footer {
 #mailchimp-lists-user-subscribe-form-general-signup label {
   display: none;
 }
+
+// Checkout
+.views-field-edit-quantity input[type="text"] {
+  width: 70px;
+}
+.commerce-line-item-views-form table {
+  margin-bottom: 10px;
+}
+.commerce-line-item-actions {
+  input {
+    float: left;
+    & + input {
+      float: right;
+    }
+  }
+  #edit-submit {
+    background:none;
+    box-shadow: none;
+    color: $base;
+    padding:0;
+    position: static;
+    text-align:left;
+    &:hover {
+      color: #333;
+    }
+  }
+}
+.checkout-continue {
+  float: right;
+  & + span + span {
+    display: none;
+  }
+}
+#edit-buttons .checkout-cancel {
+  background:none;
+  box-shadow: none;
+  color: $base;
+  float: left;
+  margin: 20px 10px;
+  padding:0;
+  position: static;
+  text-align:left;
+  &:hover {
+    color: #333;
+  }
+}
+.commerce-order-handler-area-order-total .commerce-price-formatted-components {
+  color:#333;
+  width: 100%;
+}
+#user_user_form_group_member_info {
+  border: none;
+  legend {
+    display: none;
+  }
+}
+#multiselect_btns_field_specialties + div label {
+  display: none;
+}
+.commerce-credit-card-expiration {
+  overflow: hidden;
+  position: relative;
+  padding: 45px 0 0;
+  & > div, & > span {
+    display: inline-block;
+    margin-left: 2px;
+  }
+  label {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+#edit-commerce-payment-payment-method {
+  display: none;
+}

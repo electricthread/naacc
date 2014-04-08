@@ -64,6 +64,7 @@ function naacc_preprocess_views_exposed_form(&$vars) {
     }
   }
 }
+
 /*
 function naacc_preprocess_region(&$vars,$hook) {
   //  kpr($vars['content']);
@@ -141,11 +142,5 @@ function naacc_preprocess_maintenance_page(){
   //  kpr($vars['content']);
 }
 */
-/*
-function naacc_form_alter(&$form, &$form_state, $form_id) {
-  //if ($form_id == '') {
-  //....
-  //}
-}
-*/
+
 

@@ -325,6 +325,9 @@ h5 {
     box-shadow: none;
     color: #fff; }
 
+table {
+  width: 100%; }
+
 body:after {
   content: "mobile";
   visibility: hidden; }
@@ -749,4 +752,68 @@ footer {
       margin-left: 3px; }
 
 #mailchimp-lists-user-subscribe-form-general-signup label {
+  display: none; }
+
+.views-field-edit-quantity input[type="text"] {
+  width: 70px; }
+
+.commerce-line-item-views-form table {
+  margin-bottom: 10px; }
+
+.commerce-line-item-actions input {
+  float: left; }
+  .commerce-line-item-actions input + input {
+    float: right; }
+.commerce-line-item-actions #edit-submit {
+  background: none;
+  box-shadow: none;
+  color: #777777;
+  padding: 0;
+  position: static;
+  text-align: left; }
+  .commerce-line-item-actions #edit-submit:hover {
+    color: #333; }
+
+.checkout-continue {
+  float: right; }
+  .checkout-continue + span + span {
+    display: none; }
+
+#edit-buttons .checkout-cancel {
+  background: none;
+  box-shadow: none;
+  color: #777777;
+  float: left;
+  margin: 20px 10px;
+  padding: 0;
+  position: static;
+  text-align: left; }
+  #edit-buttons .checkout-cancel:hover {
+    color: #333; }
+
+.commerce-order-handler-area-order-total .commerce-price-formatted-components {
+  color: #333;
+  width: 100%; }
+
+#user_user_form_group_member_info {
+  border: none; }
+  #user_user_form_group_member_info legend {
+    display: none; }
+
+#multiselect_btns_field_specialties + div label {
+  display: none; }
+
+.commerce-credit-card-expiration {
+  overflow: hidden;
+  position: relative;
+  padding: 45px 0 0; }
+  .commerce-credit-card-expiration > div, .commerce-credit-card-expiration > span {
+    display: inline-block;
+    margin-left: 2px; }
+  .commerce-credit-card-expiration label {
+    position: absolute;
+    top: 0;
+    left: 0; }
+
+#edit-commerce-payment-payment-method {
   display: none; }

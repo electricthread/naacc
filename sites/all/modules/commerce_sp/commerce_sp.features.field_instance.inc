@@ -152,6 +152,12 @@ function commerce_sp_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 21,
       ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 21,
+      ),
     ),
     'entity_type' => 'user',
     'field_name' => 'field_commerce_sp_skip_expire',
@@ -180,6 +186,12 @@ function commerce_sp_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 17,
+      ),
+      'full' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
