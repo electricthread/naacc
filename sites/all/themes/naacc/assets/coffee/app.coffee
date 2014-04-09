@@ -13,12 +13,11 @@
     $('a[data-toggle="dropdown"]').dropdown()
 
     # Tablet or Up
-    if $('#menu').is(':hidden')
+    if $(".social").css('top') == '4px'
       # Bootstrap Drop-down converted to hover
       $('a[data-toggle="dropdown"]').parent().hoverIntent (->
         $(this).addClass 'open'
-        if $(".social").css('top') == '4px'
-          topLevelClick()
+        topLevelClick()
       ), ->
         $(this).removeClass 'open'
     # if mobile

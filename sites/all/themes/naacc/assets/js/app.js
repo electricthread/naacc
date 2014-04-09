@@ -9,12 +9,10 @@
       };
       $('#block-system-main-menu .expanded ul').prev('a').attr('data-toggle', 'dropdown');
       $('a[data-toggle="dropdown"]').dropdown();
-      if ($('#menu').is(':hidden')) {
+      if ($(".social").css('top') === '4px') {
         $('a[data-toggle="dropdown"]').parent().hoverIntent((function() {
           $(this).addClass('open');
-          if ($(".social").css('top') === '4px') {
-            return topLevelClick();
-          }
+          return topLevelClick();
         }), function() {
           return $(this).removeClass('open');
         });
