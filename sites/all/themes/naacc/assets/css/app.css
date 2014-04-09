@@ -400,7 +400,7 @@ header {
   display: block;
   float: right;
   font: 2em 'naacc';
-  padding: 3%; }
+  padding: 12px; }
   @media screen and (min-width: 768px) {
     #menu {
       display: none; } }
@@ -429,7 +429,7 @@ header {
       width: auto; }
       #block-system-main-menu li {
         display: inline-block; }
-        #block-system-main-menu li a[href="/contact"] {
+        #block-system-main-menu li a[href="/contact"], #block-system-main-menu li #last-link {
           border: none;
           padding: 7px 0 7px 18px; }
         #block-system-main-menu li.last {
