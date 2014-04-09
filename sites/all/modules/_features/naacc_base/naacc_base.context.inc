@@ -72,6 +72,7 @@ function naacc_base_context_default_contexts() {
       'values' => array(
         'members' => 'members',
         'sponsors' => 'sponsors',
+        'events' => 'events',
       ),
     ),
   );
@@ -86,6 +87,7 @@ function naacc_base_context_default_contexts() {
           'hero' => 0,
           'pre_content' => 0,
           'content' => 0,
+          'post_content' => 0,
           'footer' => 0,
           'help' => 0,
           'highlighted' => 0,

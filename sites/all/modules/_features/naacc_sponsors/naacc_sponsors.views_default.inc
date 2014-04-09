@@ -67,7 +67,7 @@ function naacc_sponsors_views_default_views() {
   $handler->display->display_options['fields']['field_sponsor_photo']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_sponsor_photo']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_sponsor_photo']['settings'] = array(
-    'image_style' => 'medium',
+    'image_style' => '140x140',
     'image_link' => '',
   );
   /* Sort criterion: Content: Post date */

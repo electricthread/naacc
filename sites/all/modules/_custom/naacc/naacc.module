@@ -37,12 +37,18 @@ function naacc_form_alter(&$form, &$form_state, $form_id) {
       }
     }
   }
+  // Placeholders for exposed member form
   if ($form_id == 'views_exposed_form') {
     $form['combine']['#attributes']['placeholder'] = t('First or Last Name');
     $form['field_city_value']['#attributes']['placeholder'] = t('City Name');
     $form['field_state_value']['#options']['All'] = t("Any State");
     $form['field_specialties_value']['#options']['All'] = t("Any Specialty");
   }
+  // Commerce Product Form Alter
+  if (commerce_form_callback($form_id, $form_state) == "commerce_cart_add_to_cart_form") {
+    $form['submit']['#attributes']['title'] = $form['submit']['#attributes']['value'] = t('Donate');
+  }
+  // Checkout form
   if ($form_id == 'commerce_checkout_form_checkout') {
     $path = drupal_get_path('theme', 'naacc');
     drupal_add_css($path .'/assets/js/vendor/chosen_v1.1.0/chosen.min.css', array('group' => CSS_DEFAULT));

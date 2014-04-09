@@ -9,6 +9,48 @@
  */
 function naacc_commerce_default_rules_configuration() {
   $items = array();
+  $items['rules_donation_as_price_checkout_'] = entity_import('rules_config', '{ "rules_donation_as_price_checkout_" : {
+      "LABEL" : "Donation as Price (checkout)",
+      "PLUGIN" : "reaction rule",
+      "OWNER" : "rules",
+      "REQUIRES" : [
+        "commerce_order",
+        "rules",
+        "commerce_line_item",
+        "commerce_product_reference"
+      ],
+      "ON" : { "commerce_product_calculate_sell_price" : [] },
+      "IF" : [
+        { "commerce_order_contains_product_type" : {
+            "commerce_order" : [ "commerce-line-item:order" ],
+            "product_type" : { "value" : { "donation" : "donation" } },
+            "operator" : "\\u003E=",
+            "value" : "1"
+          }
+        },
+        { "entity_has_field" : { "entity" : [ "commerce-line-item" ], "field" : "field_donation_field" } },
+        { "NOT data_is_empty" : { "data" : [ "commerce-line-item:field-donation-field" ] } }
+      ],
+      "DO" : [
+        { "data_calc" : {
+            "USING" : {
+              "input_1" : [ "commerce-line-item:field-donation-field" ],
+              "op" : "*",
+              "input_2" : "100"
+            },
+            "PROVIDE" : { "result" : { "result" : "Calculation result" } }
+          }
+        },
+        { "commerce_line_item_unit_price_amount" : {
+            "commerce_line_item" : [ "commerce_line_item" ],
+            "amount" : [ "result" ],
+            "component_name" : "base_price",
+            "round_mode" : "1"
+          }
+        }
+      ]
+    }
+  }');
   $items['rules_email_user_1_month_before_expire'] = entity_import('rules_config', '{ "rules_email_user_1_month_before_expire" : {
       "LABEL" : "Email User 1 Month before Expire",
       "PLUGIN" : "action set",

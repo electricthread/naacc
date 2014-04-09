@@ -262,7 +262,8 @@ img, object, video {
   margin: 0 3%; }
 #block-views-sponsors-block li {
   list-style: none;
-  margin-right: 40px; }
+  margin-right: 40px;
+  padding: 8% 12%; }
 
 .owl-buttons {
   display: none; }

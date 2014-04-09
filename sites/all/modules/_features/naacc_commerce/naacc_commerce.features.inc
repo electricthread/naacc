@@ -9,6 +9,13 @@
  */
 function naacc_commerce_commerce_product_default_types() {
   $items = array(
+    'donation' => array(
+      'type' => 'donation',
+      'name' => 'Donation',
+      'description' => 'Add a <em>donation</em> product to the website.',
+      'help' => '',
+      'revision' => 1,
+    ),
     'product' => array(
       'type' => 'product',
       'name' => 'Product',
@@ -41,6 +48,14 @@ function naacc_commerce_views_api($module = NULL, $api = NULL) {
  */
 function naacc_commerce_node_info() {
   $items = array(
+    'donation' => array(
+      'name' => t('Donation'),
+      'base' => 'node_content',
+      'description' => t('Add a <em>Donation</em> to the website'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
     'membership' => array(
       'name' => t('Membership'),
       'base' => 'node_content',
