@@ -10,6 +10,7 @@ $max-width: 960px;
 // Mobile First
 $tablet: new-breakpoint(min-width 768px 12);
 $desktop: new-breakpoint(min-width 1024px 12);
+$desklg: new-breakpoint(min-width 1025px 12);
 
 // Mobile Only
 $mobile: new-breakpoint(max-width 768px 8);
@@ -22,6 +23,12 @@ $mobile: new-breakpoint(max-width 768px 8);
 
 @mixin desk {
   @include media($desktop) {
+    @content;
+  }
+}
+
+@mixin desklg {
+  @include media($desklg) {
     @content;
   }
 }

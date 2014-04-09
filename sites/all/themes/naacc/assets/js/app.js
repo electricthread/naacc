@@ -12,7 +12,9 @@
       if ($('#menu').is(':hidden')) {
         $('a[data-toggle="dropdown"]').parent().hoverIntent((function() {
           $(this).addClass('open');
-          return topLevelClick();
+          if ($(".social").css('top') === '4px') {
+            return topLevelClick();
+          }
         }), function() {
           return $(this).removeClass('open');
         });

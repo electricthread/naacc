@@ -17,7 +17,8 @@
       # Bootstrap Drop-down converted to hover
       $('a[data-toggle="dropdown"]').parent().hoverIntent (->
         $(this).addClass 'open'
-        topLevelClick()
+        if $(".social").css('top') == '4px'
+          topLevelClick()
       ), ->
         $(this).removeClass 'open'
     # if mobile
