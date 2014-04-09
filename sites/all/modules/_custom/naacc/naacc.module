@@ -46,7 +46,9 @@ function naacc_form_alter(&$form, &$form_state, $form_id) {
   }
   // Commerce Product Form Alter
   if (commerce_form_callback($form_id, $form_state) == "commerce_cart_add_to_cart_form") {
-    $form['submit']['#attributes']['title'] = $form['submit']['#attributes']['value'] = t('Donate');
+    if (isset($form['line_item_fields']['field_donation_field'])) {
+      $form['submit']['#attributes']['title'] = $form['submit']['#attributes']['value'] = t('Donate');
+    }
   }
   // Checkout form
   if ($form_id == 'commerce_checkout_form_checkout') {
