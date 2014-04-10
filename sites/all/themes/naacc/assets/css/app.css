@@ -210,6 +210,9 @@ td, th {
 strong {
   color: #333; }
 
+#admin-menu strong {
+  color: #fff; }
+
 .page, .page p {
   color: #777777;
   font: 1em/1.5em 'Esteban', serif; }
