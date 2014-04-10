@@ -14,7 +14,6 @@ function d7_events_user_default_permissions() {
   $permissions['administer openlayers'] = array(
     'name' => 'administer openlayers',
     'roles' => array(
-      'client' => 'client',
       'developer' => 'developer',
     ),
     'module' => 'openlayers_ui',
