@@ -903,6 +903,7 @@ function naacc_profiles_field_default_field_instances() {
   // Exported field_instance: 'user-user-field_specialties'
   $field_instances['user-user-field_specialties'] = array(
     'bundle' => 'user',
+    'default_value' => array(),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -932,9 +933,9 @@ function naacc_profiles_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 0,
-      'module' => 'multiselect',
+      'module' => 'options',
       'settings' => array(),
-      'type' => 'multiselect',
+      'type' => 'options_select',
       'weight' => 33,
     ),
   );
