@@ -17,6 +17,7 @@ function naacc_commerce_default_rules_configuration() {
         "commerce_order",
         "rules",
         "commerce_line_item",
+        "commerce_rules_extra",
         "commerce_product_reference"
       ],
       "ON" : { "commerce_product_calculate_sell_price" : [] },
@@ -46,6 +47,12 @@ function naacc_commerce_default_rules_configuration() {
             "amount" : [ "result" ],
             "component_name" : "base_price",
             "round_mode" : "1"
+          }
+        },
+        { "commerce_rules_extra_change_pane" : {
+            "pane_id" : "commerce_user_profile_pane",
+            "page_id" : "\\u003Csame\\u003E",
+            "enabled" : 0
           }
         }
       ]
