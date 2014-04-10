@@ -7,7 +7,6 @@ project = d7_basic_page
 dependencies[] = d7_base_feature
 dependencies[] = features
 dependencies[] = strongarm
-dependencies[] = wysiwyg
 datestamp = 1360006580
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2

@@ -27,7 +27,6 @@ dependencies[] = openlayers_views
 dependencies[] = strongarm
 dependencies[] = text
 dependencies[] = views
-dependencies[] = wysiwyg
 datestamp = 1366384501
 features[context][] = events_block
 features[ctools][] = context:context:3

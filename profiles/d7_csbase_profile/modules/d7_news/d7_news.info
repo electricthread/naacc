@@ -15,7 +15,6 @@ dependencies[] = node
 dependencies[] = strongarm
 dependencies[] = taxonomy
 dependencies[] = views
-dependencies[] = wysiwyg
 datestamp = 1350404793
 features[context][] = home_news_block
 features[context][] = news_block

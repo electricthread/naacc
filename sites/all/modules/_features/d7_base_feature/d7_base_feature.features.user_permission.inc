@@ -647,7 +647,7 @@ function d7_base_feature_user_default_permissions() {
       'client' => 'client',
       'developer' => 'developer',
     ),
-    'module' => 'media',
+    'module' => 'media_bulk_upload',
   );
 
   // Exported permission: 'manage features'.
