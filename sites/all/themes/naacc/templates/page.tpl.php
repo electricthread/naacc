@@ -19,6 +19,7 @@
       <span id="menu">m</span>
       <ul id="social">
         <li><a href="/user">Login</a></li>
+        <li class="logout"><a href="/user/logout">Logout</a></li>
         <li><a class="social" target="_blank" href="https://twitter.com/NashvilleAACC">t</a></li>
         <li><a class="social" target="_blank" href="https://facebook.com">f</a></li>
       </ul>

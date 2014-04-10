@@ -196,8 +196,19 @@ header {
       top:4px;
     }
   }
+  .logout {
+    display: none;
+  }
 }
-
+.logged-in #social {
+  width: 17%;
+  li:first-child {
+    display: none;
+  }
+  .logout {
+    display: inline-block;
+  }
+}
 //
 // Content
 //

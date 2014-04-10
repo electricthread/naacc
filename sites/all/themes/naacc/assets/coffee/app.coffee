@@ -12,7 +12,7 @@
     $('#block-system-main-menu .expanded ul').prev('a').attr('data-toggle', 'dropdown')
     $('a[data-toggle="dropdown"]').dropdown()
 
-    # Tablet or Up
+    # Desklg +
     if $(".social").css('top') == '4px'
       # Bootstrap Drop-down converted to hover
       $('a[data-toggle="dropdown"]').parent().hoverIntent (->

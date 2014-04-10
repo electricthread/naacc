@@ -67,6 +67,7 @@ function d7_base_feature_user_default_permissions() {
     'roles' => array(
       'client' => 'client',
       'developer' => 'developer',
+      'member' => 'member',
     ),
     'module' => 'overlay',
   );
@@ -833,6 +834,7 @@ function d7_base_feature_user_default_permissions() {
     'roles' => array(
       'client' => 'client',
       'developer' => 'developer',
+      'member' => 'member',
     ),
     'module' => 'system',
   );

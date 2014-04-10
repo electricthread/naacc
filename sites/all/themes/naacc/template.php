@@ -24,8 +24,10 @@ function naacc_preprocess_page(&$vars,$hook) {
     drupal_add_js($path .'/assets/js/front.js', array('group' => JS_THEME));
   }
   // if profile (have to do this here because drupal_set_title doesn't work in preprocess user profile)
+  // if logged in
   if ($vars['logged_in'] == TRUE) {
-    if ($vars['theme_hook_suggestions'][0] == 'page__user') {
+    // if on page_user but not edit page
+    if (in_array('page__user', $vars['theme_hook_suggestions']) && !in_array('page__user__edit', $vars['theme_hook_suggestions'])) {
       drupal_set_title('');
       // used to print title
       $vars['profile'] = '';

@@ -504,6 +504,15 @@ header {
     @media screen and (min-width: 1025px) {
       #social .social {
         top: 4px; } }
+  #social .logout {
+    display: none; }
+
+.logged-in #social {
+  width: 17%; }
+  .logged-in #social li:first-child {
+    display: none; }
+  .logged-in #social .logout {
+    display: inline-block; }
 
 #views-exposed-form-members-page .views-exposed-widget.views-submit-button {
   margin: 5% 0;
