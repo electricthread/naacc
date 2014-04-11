@@ -60,7 +60,7 @@ function naacc_profiles_field_default_field_instances() {
       'commerce_user_profile_pane' => 0,
       'commerce_user_profile_pane_required' => 0,
       'text_processing' => 0,
-      'user_register_form' => 0,
+      'user_register_form' => 1,
     ),
     'widget' => array(
       'active' => 1,
@@ -123,7 +123,7 @@ function naacc_profiles_field_default_field_instances() {
       'commerce_user_profile_pane' => 0,
       'commerce_user_profile_pane_required' => 0,
       'text_processing' => 0,
-      'user_register_form' => 0,
+      'user_register_form' => 1,
     ),
     'widget' => array(
       'active' => 1,
@@ -188,7 +188,7 @@ function naacc_profiles_field_default_field_instances() {
       'commerce_user_profile_pane' => 1,
       'commerce_user_profile_pane_required' => 0,
       'text_processing' => 0,
-      'user_register_form' => 0,
+      'user_register_form' => 1,
     ),
     'widget' => array(
       'active' => 1,
@@ -252,7 +252,7 @@ function naacc_profiles_field_default_field_instances() {
       'commerce_user_profile_pane' => 1,
       'commerce_user_profile_pane_required' => 0,
       'text_processing' => 0,
-      'user_register_form' => 0,
+      'user_register_form' => 1,
     ),
     'widget' => array(
       'active' => 1,
@@ -315,7 +315,7 @@ function naacc_profiles_field_default_field_instances() {
       'commerce_user_profile_pane' => 0,
       'commerce_user_profile_pane_required' => 0,
       'text_processing' => 0,
-      'user_register_form' => 0,
+      'user_register_form' => 1,
     ),
     'widget' => array(
       'active' => 1,
@@ -379,7 +379,7 @@ function naacc_profiles_field_default_field_instances() {
       'commerce_user_profile_pane' => 0,
       'commerce_user_profile_pane_required' => 0,
       'text_processing' => 0,
-      'user_register_form' => 0,
+      'user_register_form' => 1,
     ),
     'widget' => array(
       'active' => 1,
@@ -444,7 +444,7 @@ function naacc_profiles_field_default_field_instances() {
       'commerce_user_profile_pane' => 1,
       'commerce_user_profile_pane_required' => 0,
       'text_processing' => 0,
-      'user_register_form' => 0,
+      'user_register_form' => 1,
     ),
     'widget' => array(
       'active' => 1,
@@ -508,7 +508,7 @@ function naacc_profiles_field_default_field_instances() {
       'commerce_user_profile_pane' => 1,
       'commerce_user_profile_pane_required' => 0,
       'text_processing' => 0,
-      'user_register_form' => 0,
+      'user_register_form' => 1,
     ),
     'widget' => array(
       'active' => 1,
@@ -638,7 +638,7 @@ function naacc_profiles_field_default_field_instances() {
       'commerce_user_profile_pane' => 1,
       'commerce_user_profile_pane_required' => 0,
       'text_processing' => 0,
-      'user_register_form' => 0,
+      'user_register_form' => 1,
     ),
     'widget' => array(
       'active' => 1,
@@ -823,7 +823,7 @@ function naacc_profiles_field_default_field_instances() {
       'commerce_user_profile_pane' => 1,
       'commerce_user_profile_pane_required' => 0,
       'text_processing' => 0,
-      'user_register_form' => 0,
+      'user_register_form' => 1,
     ),
     'widget' => array(
       'active' => 1,
@@ -887,7 +887,7 @@ function naacc_profiles_field_default_field_instances() {
       'commerce_user_profile_pane' => 1,
       'commerce_user_profile_pane_required' => 0,
       'text_processing' => 0,
-      'user_register_form' => 0,
+      'user_register_form' => 1,
     ),
     'widget' => array(
       'active' => 1,
@@ -903,7 +903,7 @@ function naacc_profiles_field_default_field_instances() {
   // Exported field_instance: 'user-user-field_specialties'
   $field_instances['user-user-field_specialties'] = array(
     'bundle' => 'user',
-    'default_value' => array(),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -929,10 +929,10 @@ function naacc_profiles_field_default_field_instances() {
     'settings' => array(
       'commerce_user_profile_pane' => 1,
       'commerce_user_profile_pane_required' => 0,
-      'user_register_form' => 0,
+      'user_register_form' => 1,
     ),
     'widget' => array(
-      'active' => 0,
+      'active' => 1,
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
@@ -967,7 +967,7 @@ function naacc_profiles_field_default_field_instances() {
     'settings' => array(
       'commerce_user_profile_pane' => 0,
       'commerce_user_profile_pane_required' => 0,
-      'user_register_form' => 0,
+      'user_register_form' => 1,
     ),
     'widget' => array(
       'active' => 1,
@@ -1030,7 +1030,7 @@ function naacc_profiles_field_default_field_instances() {
       'commerce_user_profile_pane' => 1,
       'commerce_user_profile_pane_required' => 0,
       'text_processing' => 0,
-      'user_register_form' => 0,
+      'user_register_form' => 1,
     ),
     'widget' => array(
       'active' => 1,
@@ -1087,7 +1087,7 @@ function naacc_profiles_field_default_field_instances() {
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 0,
-      'user_register_form' => 0,
+      'user_register_form' => 1,
       'validate_url' => 1,
     ),
     'widget' => array(
@@ -1149,7 +1149,7 @@ function naacc_profiles_field_default_field_instances() {
       'commerce_user_profile_pane' => 0,
       'commerce_user_profile_pane_required' => 0,
       'text_processing' => 0,
-      'user_register_form' => 0,
+      'user_register_form' => 1,
     ),
     'widget' => array(
       'active' => 1,

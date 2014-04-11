@@ -166,7 +166,7 @@ function commerce_sp_field_default_field_instances() {
     'settings' => array(
       'commerce_user_profile_pane' => 0,
       'commerce_user_profile_pane_required' => 0,
-      'user_register_form' => 0,
+      'user_register_form' => 1,
     ),
     'widget' => array(
       'active' => 1,
@@ -209,7 +209,7 @@ function commerce_sp_field_default_field_instances() {
       'default_value2' => 'blank',
       'default_value_code' => '',
       'default_value_code2' => '',
-      'user_register_form' => 0,
+      'user_register_form' => 1,
     ),
     'widget' => array(
       'active' => 1,
