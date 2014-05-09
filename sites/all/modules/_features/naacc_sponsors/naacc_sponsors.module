@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the NAACC Sponsors feature.
+ */
+
+include_once 'naacc_sponsors.features.inc';

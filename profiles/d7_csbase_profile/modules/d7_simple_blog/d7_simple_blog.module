@@ -1,0 +1,19 @@
+<?php
+/**
+ * @file
+ * Code for the Simple Blog feature.
+ */
+
+include_once('d7_simple_blog.features.inc');
+
+function d7_simple_blog_preprocess_node(&$variables) {
+  if ($variables['type'] == 'blog') {
+    drupal_add_css(drupal_get_path('module', 'd7_simple_blog') .'/simple-blog.css');
+  }
+}
+
+function d7_simple_blog_views_pre_render(&$view) {
+  if($view->name == 'blog') {
+    drupal_add_css(drupal_get_path('module', 'd7_simple_blog') .'/simple-blog.css');
+  }
+}

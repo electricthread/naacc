@@ -1,0 +1,11 @@
+/* -------------------------
+  Staff
+------------------------- */
+/* Node View */
+.field-name-field-first-name, .field-name-field-last-name {
+    float: left;
+    margin-right:.5%;
+}
+.group_name {
+    overflow: hidden;
+}

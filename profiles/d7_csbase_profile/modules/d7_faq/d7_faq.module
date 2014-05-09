@@ -1,0 +1,13 @@
+<?php
+/**
+ * @file
+ * Code for the FAQ feature.
+ */
+
+include_once 'd7_faq.features.inc';
+
+function d7_faq_views_pre_render(&$view) {
+  if($view->name == 'faq') {
+    drupal_add_css(drupal_get_path('module', 'd7_faq') .'/faq.css');
+  }
+}

@@ -1,0 +1,86 @@
+@import "bourbon/bourbon";
+@import "grid-settings";
+@import "neat/neat";
+@import "defaults";
+
+// Font Usage
+// font-family: 'Esteban', serif;
+// font-family: 'Lato', sans-serif;
+
+.profile-title {
+  @include tablet {
+    float: left;
+    width: 64%;
+  }
+  @include desk {
+    width: 73%;
+  }
+  h2 {
+    color: #fff;
+    float: left;
+    font-size: 2.2em;
+    margin: 7px 0 0.3824em;
+  }
+}
+#title-area #counselors {
+  border-left: 1px solid #49afd5;
+  display: none;
+  float: left;
+  margin: 3% 2%;
+  padding-left: 2%;
+  @include tablet {
+    display:block;
+  }
+}
+h1 {
+  color: $dkblue;
+  font-size: 2em;
+  width: auto;
+  @include desk {
+    float: left;
+  }
+}
+.profile {
+  font-size: .95em;
+  margin-top: 0;
+}
+.group-title-section {
+  overflow: hidden;
+}
+.field-name-field-title {
+  color: $blue;
+  float: left;
+  font: 1em 'Lato', sans-serif;
+  margin: 3.5% 1%;
+}
+.field-name-field-image {
+  clear: both;
+  float: left;
+  margin-right: 2%;
+  width: 45%;
+  @include tablet {
+    width: auto;
+  }
+  img {
+    border:5px solid #dfdfdf;
+    display: block;
+  }
+}
+.field-name-field-specialties {
+  overflow: hidden;
+  .field-item {
+    float: left;
+    &:after {
+      color: #000;
+      content: "/";
+      display: inline;
+      margin:0 3%;
+    }
+  }
+}
+label {
+  margin-top: 15px;
+}
+.field-name-field-bio {
+  margin-top: 20px;
+}

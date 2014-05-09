@@ -1,0 +1,13 @@
+<?php
+/**
+ * @file
+ * Code for the Photos feature.
+ */
+
+include_once('d7_photos.features.inc');
+
+function d7_photos_views_pre_render(&$view) {
+  if($view->name == 'photos') {
+    drupal_add_css(drupal_get_path('module', 'd7_photos') .'/photos.css');
+  }
+}

@@ -1,0 +1,9 @@
+/* -------------------------
+  Photos
+------------------------- */
+/* Page View */
+.view-photos .item-list ul .views-row {
+  float: left;
+  margin: 0 1% 1% 0;
+  min-height: 220px;
+}

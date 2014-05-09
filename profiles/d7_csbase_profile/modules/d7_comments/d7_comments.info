@@ -1,0 +1,15 @@
+name = Comments
+description = Add Commenting functionality to a site.
+core = 7.x
+package = Base Features
+version = 7.x-1.0-beta2
+project = d7_comments
+dependencies[] = comment
+dependencies[] = ctools
+dependencies[] = features
+features[features_api][] = api:2
+features[user_permission][] = access comments
+features[user_permission][] = administer comments
+features[user_permission][] = edit own comments
+features[user_permission][] = post comments
+features[user_permission][] = skip comment approval

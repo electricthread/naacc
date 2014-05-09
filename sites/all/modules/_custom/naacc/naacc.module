@@ -1,0 +1,61 @@
+<?php
+/**
+ * @file
+ * Module for defining random custom Seed Company hooks
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function naacc_menu() {
+  $items['home'] = array(
+    'title' => 'Home',
+    'page callback' => 'get_homepage',
+    'access arguments' => array('access content'),
+    'type' => MENU_SUGGESTED_ITEM,
+  );
+
+  return $items;
+}
+
+function get_homepage()
+{
+  return '';
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function naacc_form_alter(&$form, &$form_state, $form_id) {
+  // Set First Name and Last Name fields to be required.
+  if (!empty($form_state['build_info']['base_form_id'])) {
+    if ($form_state['build_info']['base_form_id'] == 'mailchimp_lists_user_subscribe_form') {
+      foreach ($form['mailchimp_lists'] as $field_id => $field_content) {
+        if (substr($field_id, 0, 9) == 'mailchimp') {
+          $form['mailchimp_lists'][$field_id]['mergevars']['EMAIL']['#attributes']['placeholder'] = t('Email address');
+        }
+      }
+    }
+  }
+  // Placeholders for exposed member form
+  if ($form_id == 'views_exposed_form') {
+    $form['combine']['#attributes']['placeholder'] = t('First or Last Name');
+    $form['field_city_value']['#attributes']['placeholder'] = t('City Name');
+    $form['field_state_value']['#options']['All'] = t("Any State");
+    $form['field_specialties_value']['#options']['All'] = t("Any Specialty");
+  }
+  // Commerce Product Form Alter
+  if (commerce_form_callback($form_id, $form_state) == "commerce_cart_add_to_cart_form") {
+    if (isset($form['line_item_fields']['field_donation_field'])) {
+      $form['submit']['#attributes']['title'] = $form['submit']['#attributes']['value'] = t('Donate');
+    }
+  }
+  // Checkout form
+  if ($form_id == 'commerce_checkout_form_checkout') {
+    $path = drupal_get_path('theme', 'naacc');
+    drupal_add_css($path .'/assets/js/vendor/chosen_v1.1.0/chosen.min.css', array('group' => CSS_DEFAULT));
+    drupal_add_js($path .'/assets/js/vendor/chosen_v1.1.0/chosen.jquery.min.js', array('group' => JS_LIBRARY));
+    drupal_add_js($path .'/assets/js/checkout.js', array('group' => JS_THEME));
+    $form['buttons']['continue']['#value'] = 'Submit Payment';
+  }
+}

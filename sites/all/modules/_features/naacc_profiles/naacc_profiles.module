@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the NAACC Profiles feature.
+ */
+
+include_once 'naacc_profiles.features.inc';

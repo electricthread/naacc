@@ -1,0 +1,370 @@
+// Colors
+$base: #777;
+$dark: #333;
+$green: #85cf66;
+$dkgreen:#62964d;
+$blue:#1596c4;
+$dkblue: #0e7296;
+$red:#cf4242;
+
+// Sitewide fonts
+@font-face {
+  font-family: 'naacc';
+  src:url('../fonts/naacc.eot');
+  src:url('../fonts/naacc.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/naacc.woff') format('woff'),
+    url('../fonts/naacc.ttf') format('truetype'),
+    url('../fonts/naacc.svg#naacc') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin sprite($pos) {
+  background: url(../images/sprite.png) no-repeat scroll 0 0;
+  background-position: $pos;
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+@mixin btn {
+  background-color: $green;
+  border-radius: 3px;
+  box-shadow: 0px 5px 0px 0px $dkgreen;
+  color: #fff;
+  display: block;
+  font:500 1em 'Lato', sans-serif;
+  letter-spacing: 1px;
+  max-width: 250px;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  &:hover {
+    background-color:$dkgreen;
+    box-shadow: 0 6px 0px 0px #447037;
+    color: #fff;
+    text-decoration: none;
+    top: -2px;
+  }
+  &:active {
+    box-shadow:0px 0px 4px #7f7f7f inset;
+    top:0;
+  }
+}
+@mixin blue {
+  background-color: $blue;
+  box-shadow: 0px 5px 0px 0px $dkblue;
+  &:hover {
+    background-color:$dkblue;
+    box-shadow: 0px 7px 0px 0px #005672;
+  }
+  &:active {
+    box-shadow:0px 0px 4px #7f7f7f inset;
+  }
+}
+
+input[type="submit"] {
+  @include btn;
+  @include blue;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  padding:10px;
+}
+
+@mixin smalltitle {
+  border-bottom: 1px solid #ccc;
+  color: $blue;
+  display: block;
+  font-size: 1.2em;
+  margin-bottom: 22px;
+  padding-bottom: 12px;
+  text-transform: uppercase;
+}
+@mixin show {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+// Mixin will pull into app.css & editor.css, which can be used for consistent wysiwyg styling
+@mixin editorstyles {
+
+  body {
+    color: $base;
+    font-family: "Lato", sans-serif;
+    font-size: 100%;
+    line-height: 2em;
+  }
+
+  /* Tables */
+  table, thead, td, tr, th {
+    border: none;
+  }
+  tr {
+    border-bottom: 1px solid #ccc;
+  }
+  td, th {
+    padding: 7px 20px;
+  }
+  strong {
+    color: #333;
+  }
+  #admin-menu strong {
+    color: #fff;
+  }
+
+  // General Content Styles
+  .page, .page p {
+    color: $base;
+    font: 1em/1.5em 'Esteban', serif;
+  }
+  a {
+    color: $blue;
+    text-decoration: none;
+    &:hover {
+      color: $dkblue;
+      text-decoration: underline;
+    }
+  }
+  li a.active {
+    color: #fff;
+    font-weight: 500;
+  }
+  .page a.active {
+    color: $dkblue;
+    font-weight: 700;
+  }
+  .page p {
+    margin-bottom: 2.5em;
+  }
+
+  // Typography Basics - from Gridless http://thatcoolguy.github.com/gridless-boilerplate/
+  h1, h2, h3, h4, h5, h6 {
+    color: $base;
+    font: normal 1em 'Esteban', serif;
+  }
+  h3, h4 {
+    font: bold 1em Lato, sans-serif;
+  }
+  h1 {
+    color: #fff;
+    font-size: 2.2em;
+    margin: 7px 0 0.3824em;
+    @include tablet {
+      float: left;
+      width: 64%;
+    }
+    @include desk {
+      width: 73%;
+    }
+  }
+
+  h2 {
+    color: $dkblue;
+    font-size: 2.2em;
+    margin: 0 0 0.419em;
+  }
+
+  h3 {
+    color: $dark;
+    font-size:1.45em;
+    margin: 0 0 .6em;
+    text-transform: uppercase;
+  }
+  h4 {
+    border-bottom: 1px solid #ccc;
+    font-size:1.45em;
+    margin: 0 0 18px;
+    padding-bottom: 12px;
+  }
+  h5 {
+    color: $blue;
+    font-size:1.45em;
+    margin: 0 0 15px;
+    padding-bottom: 10px;
+  }
+  .page blockquote, blockquote {
+    border-left: 3px solid #333;
+    clear: both;
+    color: $base;
+    position: relative;
+    padding: 0 0 0 3%;
+    margin: 3% 6% 5% 0;
+    p {
+      color: $base;
+      font-weight: 700;
+      margin:0;
+    }
+  }
+  .btn, button {
+    @include btn;
+  }
+  .outline {
+    background-color:transparent;
+    border:3px solid $green;
+    box-shadow:none;
+    color: $green;
+    font-weight: 900;
+    position: static;
+    @include transition (all .3s);
+    &:hover {
+      background-color:$green;
+      box-shadow:none;
+      color: #fff;
+    }
+  }
+  table {
+    width: 100%;
+  }
+}
+
+//
+//  Drupal-specific defaults
+//
+.sidebar .block {
+  clear: both;
+  margin-bottom: 20px;
+}
+// Default view list styles - mothership may override these classes by default
+.view-content ul, .view-content ol {
+  margin: 0;
+  padding: 0;
+}
+.item-list ul li.views-row, .views-row {
+  list-style: none;
+  margin:0;
+  padding: 0;
+  position: relative;
+}
+// tabs
+ul.primary {
+  height: 27px;
+  margin-left: 0;
+  padding-left: 1%;
+  li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    a {
+      border-radius: 3px 3px 0 0;
+      color: $base;
+      font-size: .8em;
+      padding: 6px;
+    }
+  }
+}
+// Forms
+form small, form .description {
+  color: #5f5f5f;
+  display: block;
+}
+.marker, .form-required {
+  color: $red;
+}
+label, label.required {
+  color: #333;
+  display: block;
+  font: 900 12px 'Lato', sans-serif;
+  margin: 20px 0 5px;
+  text-transform: uppercase;
+  &.required {
+    color: $red;
+  }
+}
+label.required:after {
+  content: "*";
+  color: #c41230;
+  margin-left: 3px;
+}
+input[type="text"], input[type="password"], input[type="email"] {
+  background-color:#f6f6f6;
+  border: none;
+  border-radius: 3px;
+  box-shadow:0 -4px 0 #d1d1d1;
+  color: #999;
+  margin: 10px 0;
+  max-width: 100%;
+  padding: 11px 15px 11px;
+}
+textarea {
+  border:none;
+  border-radius:5px 5px 0 0;
+  padding: 9px;
+}
+
+// responsive images, videos
+img, object, video {
+  height: auto;
+  max-width: 100%;
+}
+
+// Overrides for Media module to make fitVids work
+.media-youtube-outer-wrapper, .media-youtube-preview-wrapper, .media-vimeo-outer-wrapper, .media-vimeo-preview-wrapper {
+    height: auto !important;
+    width: auto !important;
+}
+
+.down-arrow {
+  &:after {
+    border:5px solid;
+    border-bottom-color:transparent;
+    border-left-color:transparent;
+    border-right-color:transparent;
+    content: " ";
+    left: 5px;
+    display: inline-block;
+    position: relative;
+    top: 2px;
+  }
+}
+
+.show {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+// Chosen overrides
+.chosen-container-single .chosen-single {
+  background:#fff;
+  border-color: #ccc;
+  border-radius: 4px;
+  box-shadow: 0 0 2px #aaa inset;
+  color: #aaa;
+  font-size: 1.3em;
+  margin-top: 5px;
+  padding:11px 11px 34px;
+}
+.chosen-container-single .chosen-single div {
+  b {
+    background:none;
+  }
+  &:after {
+    border:12px solid $blue;
+    border-bottom-color:transparent;
+    border-left:9px solid transparent;
+    border-right:9px solid transparent;
+    content: " ";
+    position: relative;
+    right: 16px;
+    top: -17px;
+  }
+}
+
+.back-link {
+  @include btn;
+  margin: 20px 0;
+}
+.drupal-messages {
+    margin-bottom: 22px;
+}
+.messages {
+    border-radius: 4px;
+}

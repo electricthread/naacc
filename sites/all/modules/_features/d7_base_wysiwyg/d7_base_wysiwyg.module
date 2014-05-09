@@ -1,0 +1,12 @@
+<?php
+/**
+ * @file
+ * Code for the Base wysiwyg feature.
+ */
+
+include_once 'd7_base_wysiwyg.features.inc';
+/**
+ * @file
+ */
+
+// Drupal needs this blank file.
