@@ -1,7 +1,7 @@
 staging:
   domain:
     name: "nashvilleaacc.org@s188051.gridserver.com"
-  deploy_to: "/var/www/s"
+  deploy_to: "~/domains/nashvilleaacc.org/html"
   repository: "git@github.com:ewillhite/naacc.git"
   branch: "master"
 
