@@ -75,6 +75,27 @@ function naacc_commerce_default_rules_configuration() {
       ]
     }
   }');
+  $items['rules_load_commerce_product_and_add_to_user_field'] = entity_import('rules_config', '{ "rules_load_commerce_product_and_add_to_user_field" : {
+      "LABEL" : "Load Commerce Product and add to User field",
+      "PLUGIN" : "rule",
+      "OWNER" : "rules",
+      "REQUIRES" : [ "rules" ],
+      "USES VARIABLES" : {
+        "line_item" : { "label" : "Line Item", "type" : "commerce_line_item" },
+        "user" : { "label" : "User", "type" : "user" }
+      },
+      "IF" : [
+        { "entity_has_field" : { "entity" : [ "line-item" ], "field" : "commerce_product" } }
+      ],
+      "DO" : [
+        { "data_set" : {
+            "data" : [ "user:field-memberships-purchased-need" ],
+            "value" : [ "line-item:commerce-product" ]
+          }
+        }
+      ]
+    }
+  }');
   $items['rules_redirect_to_cart'] = entity_import('rules_config', '{ "rules_redirect_to_cart" : {
       "LABEL" : "Redirect to Cart",
       "PLUGIN" : "reaction rule",
@@ -82,6 +103,28 @@ function naacc_commerce_default_rules_configuration() {
       "REQUIRES" : [ "rules", "commerce_cart" ],
       "ON" : { "commerce_cart_product_add" : [] },
       "DO" : [ { "redirect" : { "url" : "cart" } } ]
+    }
+  }');
+  $items['rules_remove_all_except_current_cart_item'] = entity_import('rules_config', '{ "rules_remove_all_except_current_cart_item" : {
+      "LABEL" : "Remove All Except Current Cart Item",
+      "PLUGIN" : "reaction rule",
+      "OWNER" : "rules",
+      "REQUIRES" : [ "rules", "commerce_cart" ],
+      "ON" : { "commerce_cart_product_add" : [] },
+      "IF" : [
+        { "list_contains" : {
+            "list" : [ "commerce-order:commerce-line-items" ],
+            "item" : [ "commerce-order:commerce-line-items:1" ]
+          }
+        }
+      ],
+      "DO" : [
+        { "list_remove" : {
+            "list" : [ "commerce-order:commerce-line-items" ],
+            "item" : [ "commerce-order:commerce-line-items:0" ]
+          }
+        }
+      ]
     }
   }');
   return $items;

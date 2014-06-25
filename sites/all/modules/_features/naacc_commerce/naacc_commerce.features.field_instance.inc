@@ -804,11 +804,11 @@ function naacc_commerce_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 4,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -880,7 +880,7 @@ function naacc_commerce_field_default_field_instances() {
           'show_single_product_attributes' => 0,
         ),
         'type' => 'commerce_cart_add_to_cart_form',
-        'weight' => 3,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -923,10 +923,49 @@ function naacc_commerce_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-membership-field_sort_order'
+  $field_instances['node-membership-field_sort_order'] = array(
+    'bundle' => 'membership',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Determines the ordering of products on the Membership listing page (0 shows up highest and 10 shows up lowest)',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_sort_order',
+    'label' => 'Sort Order',
+    'required' => 0,
+    'settings' => array(
+      'commerce_user_profile_pane' => 0,
+      'commerce_user_profile_pane_required' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 3,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Address');
   t('Description');
+  t('Determines the ordering of products on the Membership listing page (0 shows up highest and 10 shows up lowest)');
   t('Display path');
   t('Donation Amount');
   t('Donation Description');
@@ -934,6 +973,7 @@ function naacc_commerce_field_default_field_instances() {
   t('Price');
   t('Product');
   t('Product Info');
+  t('Sort Order');
   t('Total');
   t('Unit price');
 

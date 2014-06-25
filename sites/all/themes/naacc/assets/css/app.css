@@ -10,7 +10,6 @@
   src: url("../fonts/naacc.eot?#iefix") format("embedded-opentype"), url("../fonts/naacc.woff") format("woff"), url("../fonts/naacc.ttf") format("truetype"), url("../fonts/naacc.svg#naacc") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 input[type="submit"] {
   background-color: #85cf66;
   border-radius: 3px;
@@ -332,16 +331,14 @@ table {
   width: 100%; }
 
 .outer-container, footer {
-  *zoom: 1;
   max-width: 960px;
   margin-left: auto;
   margin-right: auto;
   padding: 0 4%;
   position: relative; }
-  .outer-container:before, .outer-container:after, footer:before, footer:after {
-    content: " ";
-    display: table; }
   .outer-container:after, footer:after {
+    content: "";
+    display: table;
     clear: both; }
   @media screen and (min-width: 1024px) {
     .outer-container, footer {

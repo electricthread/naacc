@@ -9,7 +9,6 @@
   src: url("../fonts/naacc.eot?#iefix") format("embedded-opentype"), url("../fonts/naacc.woff") format("woff"), url("../fonts/naacc.ttf") format("truetype"), url("../fonts/naacc.svg#naacc") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 input[type="submit"] {
   background-color: #85cf66;
   border-radius: 3px;

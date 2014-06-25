@@ -21,7 +21,7 @@ function naacc_profiles_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 20,
+        'weight' => 19,
       ),
       'full' => array(
         'label' => 'above',
@@ -84,7 +84,7 @@ function naacc_profiles_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 22,
+        'weight' => 21,
       ),
       'full' => array(
         'label' => 'above',
@@ -148,7 +148,7 @@ function naacc_profiles_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 8,
+        'weight' => 6,
       ),
       'full' => array(
         'label' => 'above',
@@ -212,7 +212,7 @@ function naacc_profiles_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 9,
       ),
       'full' => array(
         'label' => 'inline',
@@ -276,7 +276,7 @@ function naacc_profiles_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 14,
       ),
       'full' => array(
         'label' => 'above',
@@ -339,7 +339,7 @@ function naacc_profiles_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 12,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -404,7 +404,7 @@ function naacc_profiles_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 5,
+        'weight' => 3,
       ),
       'full' => array(
         'label' => 'above',
@@ -468,7 +468,7 @@ function naacc_profiles_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 10,
       ),
       'full' => array(
         'label' => 'inline',
@@ -598,7 +598,7 @@ function naacc_profiles_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 7,
+        'weight' => 5,
       ),
       'full' => array(
         'label' => 'above',
@@ -665,7 +665,7 @@ function naacc_profiles_field_default_field_instances() {
           'image_style' => 'medium',
         ),
         'type' => 'image',
-        'weight' => 3,
+        'weight' => 1,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -718,7 +718,7 @@ function naacc_profiles_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 13,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -783,7 +783,7 @@ function naacc_profiles_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 6,
+        'weight' => 4,
       ),
       'full' => array(
         'label' => 'above',
@@ -836,6 +836,44 @@ function naacc_profiles_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'user-user-field_memberships_purchased_need'
+  $field_instances['user-user-field_memberships_purchased_need'] = array(
+    'bundle' => 'user',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
+      ),
+    ),
+    'entity_type' => 'user',
+    'field_name' => 'field_memberships_purchased_need',
+    'label' => 'Memberships Purchased (needed for Commerce SP)',
+    'required' => 0,
+    'settings' => array(
+      'commerce_user_profile_pane' => 0,
+      'commerce_user_profile_pane_required' => 0,
+      'field_injection' => 0,
+      'referenceable_types' => array(
+        'commerce_sp_subscription' => 'commerce_sp_subscription',
+        'donation' => 0,
+        'product' => 0,
+      ),
+      'user_register_form' => 0,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 34,
+    ),
+  );
+
   // Exported field_instance: 'user-user-field_phone'
   $field_instances['user-user-field_phone'] = array(
     'bundle' => 'user',
@@ -847,7 +885,7 @@ function naacc_profiles_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 11,
       ),
       'full' => array(
         'label' => 'inline',
@@ -912,7 +950,7 @@ function naacc_profiles_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 4,
+        'weight' => 2,
       ),
       'full' => array(
         'label' => 'above',
@@ -951,7 +989,7 @@ function naacc_profiles_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 16,
+        'weight' => 15,
       ),
       'full' => array(
         'label' => 'above',
@@ -1054,7 +1092,7 @@ function naacc_profiles_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 8,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -1110,7 +1148,7 @@ function naacc_profiles_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 18,
+        'weight' => 17,
       ),
       'full' => array(
         'label' => 'above',
@@ -1176,6 +1214,7 @@ function naacc_profiles_field_default_field_instances() {
   t('Hourly Rate');
   t('Last Name');
   t('License');
+  t('Memberships Purchased (needed for Commerce SP)');
   t('Phone');
   t('Profile Photo');
   t('Specialties');

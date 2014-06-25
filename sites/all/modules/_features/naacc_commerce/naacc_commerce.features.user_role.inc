@@ -13,7 +13,7 @@ function naacc_commerce_user_default_roles() {
   // Exported role: member.
   $roles['member'] = array(
     'name' => 'member',
-    'weight' => 2,
+    'weight' => 3,
   );
 
   return $roles;

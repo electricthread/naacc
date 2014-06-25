@@ -27,7 +27,7 @@ function get_homepage()
  * Implements hook_form_alter().
  */
 function naacc_form_alter(&$form, &$form_state, $form_id) {
-  // Set First Name and Last Name fields to be required.
+  // Mailchimp - Set First Name and Last Name fields to be required.
   if (!empty($form_state['build_info']['base_form_id'])) {
     if ($form_state['build_info']['base_form_id'] == 'mailchimp_lists_user_subscribe_form') {
       foreach ($form['mailchimp_lists'] as $field_id => $field_content) {
@@ -57,5 +57,10 @@ function naacc_form_alter(&$form, &$form_state, $form_id) {
     drupal_add_js($path .'/assets/js/vendor/chosen_v1.1.0/chosen.jquery.min.js', array('group' => JS_LIBRARY));
     drupal_add_js($path .'/assets/js/checkout.js', array('group' => JS_THEME));
     $form['buttons']['continue']['#value'] = 'Submit Payment';
+  }
+  // User Profile Form
+  if ($form_id == 'user_profile_form') {
+    // Disable Memberships Purchased field (also hidden in CSS)
+    $form['field_memberships_purchased_need']['und']['#attributes']['disabled'] = TRUE;
   }
 }
