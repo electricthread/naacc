@@ -215,10 +215,10 @@ $databases = array (
   array (
     'default' =>
     array (
-      'database' => 'naacc',
-      'username' => 'root',
-      'password' => 'root',
-      'host' => '127.0.0.1',
+      'database' => 'db188051_naacc',
+      'username' => 'db188051',
+      'password' => 'I6kp8XUEoF!',
+      'host' => 'internal-db.s188051.gridserver.com',
       'port' => '',
       'driver' => 'mysql',
       'prefix' => '',
