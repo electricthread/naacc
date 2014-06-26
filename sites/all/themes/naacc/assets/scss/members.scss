@@ -116,7 +116,7 @@
     @include desk {
       border-right: 2px solid #ccc;
       float: left;
-      margin-right: 3%;
+      margin-right: 2%;
       padding-right: 2%;
       width: 67%;
     }
@@ -128,6 +128,13 @@
     }
     strong {
       margin-right: 1%;
+    }
+  }
+  .right {
+    padding: 2%;
+    width: 31%;
+    p {
+      font: 1em/1.5em 'Esteban', serif;
     }
   }
   img {

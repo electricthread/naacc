@@ -80,13 +80,13 @@ form small, form .description {
 .marker, .form-required {
   color: #cf4242; }
 
-label, label.required {
+label, label.required, .label {
   color: #333;
   display: block;
   font: 900 12px 'Lato', sans-serif;
   margin: 20px 0 5px;
   text-transform: uppercase; }
-  label.required, label.required.required {
+  label.required, label.required.required, .label.required {
     color: #cf4242; }
 
 label.required:after {
@@ -189,6 +189,19 @@ img, object, video {
 
 .messages {
   border-radius: 4px; }
+
+.right {
+  background-color: #eee;
+  float: left;
+  padding: 2%;
+  width: 31%;
+  padding: 7%;
+  width: 100%; }
+  .right p {
+    color: #2f2f2f;
+    font: 1em/1.5em 'Lato', sans-serif;
+    margin: 0 0 9px;
+    word-wrap: break-word; }
 
 body {
   color: #777777;

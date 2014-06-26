@@ -79,13 +79,13 @@ form small, form .description {
 .marker, .form-required {
   color: #cf4242; }
 
-label, label.required {
+label, label.required, .label {
   color: #333;
   display: block;
   font: 900 12px 'Lato', sans-serif;
   margin: 20px 0 5px;
   text-transform: uppercase; }
-  label.required, label.required.required {
+  label.required, label.required.required, .label.required {
     color: #cf4242; }
 
 label.required:after {
@@ -189,6 +189,19 @@ img, object, video {
 .messages {
   border-radius: 4px; }
 
+.right {
+  background-color: #eee;
+  float: left;
+  padding: 2%;
+  width: 31%;
+  padding: 7%;
+  width: 100%; }
+  .right p {
+    color: #2f2f2f;
+    font: 1em/1.5em 'Lato', sans-serif;
+    margin: 0 0 9px;
+    word-wrap: break-word; }
+
 #block-views-exp-members-page {
   background-color: #f4be69;
   border-bottom: 6px solid #c79d56;
@@ -280,7 +293,7 @@ img, object, video {
     .member-list .left {
       border-right: 2px solid #ccc;
       float: left;
-      margin-right: 3%;
+      margin-right: 2%;
       padding-right: 2%;
       width: 67%; } }
   @media screen and (min-width: 1024px) {
@@ -289,6 +302,11 @@ img, object, video {
       width: 70%; } }
   .member-list .left strong {
     margin-right: 1%; }
+  .member-list .right {
+    padding: 2%;
+    width: 31%; }
+    .member-list .right p {
+      font: 1em/1.5em 'Esteban', serif; }
   .member-list img {
     float: left;
     margin-right: 2%;

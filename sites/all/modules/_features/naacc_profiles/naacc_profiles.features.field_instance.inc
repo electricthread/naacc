@@ -21,7 +21,7 @@ function naacc_profiles_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 19,
+        'weight' => 20,
       ),
       'full' => array(
         'label' => 'above',
@@ -84,7 +84,7 @@ function naacc_profiles_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 21,
+        'weight' => 22,
       ),
       'full' => array(
         'label' => 'above',
@@ -139,7 +139,11 @@ function naacc_profiles_field_default_field_instances() {
   // Exported field_instance: 'user-user-field_bio'
   $field_instances['user-user-field_bio'] = array(
     'bundle' => 'user',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'value' => '',
+      ),
+    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -187,7 +191,7 @@ function naacc_profiles_field_default_field_instances() {
       ),
       'commerce_user_profile_pane' => 1,
       'commerce_user_profile_pane_required' => 0,
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => 1,
     ),
     'widget' => array(
@@ -212,7 +216,7 @@ function naacc_profiles_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 10,
       ),
       'full' => array(
         'label' => 'inline',
@@ -276,7 +280,7 @@ function naacc_profiles_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 15,
       ),
       'full' => array(
         'label' => 'above',
@@ -339,7 +343,7 @@ function naacc_profiles_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 13,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -468,7 +472,7 @@ function naacc_profiles_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 11,
       ),
       'full' => array(
         'label' => 'inline',
@@ -718,7 +722,7 @@ function naacc_profiles_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 14,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -847,7 +851,7 @@ function naacc_profiles_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 8,
       ),
     ),
     'entity_type' => 'user',
@@ -885,7 +889,7 @@ function naacc_profiles_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 12,
       ),
       'full' => array(
         'label' => 'inline',
@@ -947,10 +951,9 @@ function naacc_profiles_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 2,
+        'type' => 'hidden',
+        'weight' => 7,
       ),
       'full' => array(
         'label' => 'above',
@@ -989,7 +992,7 @@ function naacc_profiles_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 16,
       ),
       'full' => array(
         'label' => 'above',
@@ -1092,7 +1095,7 @@ function naacc_profiles_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 9,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -1148,7 +1151,7 @@ function naacc_profiles_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 18,
       ),
       'full' => array(
         'label' => 'above',

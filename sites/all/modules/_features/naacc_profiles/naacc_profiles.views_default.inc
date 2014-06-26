@@ -912,6 +912,19 @@ function naacc_profiles_views_default_views() {
   $handler->display->display_options['fields']['field_website']['alter']['text'] = '<p><strong>Web: </strong>[field_website]</p>';
   $handler->display->display_options['fields']['field_website']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_website']['click_sort_column'] = 'url';
+  /* Field: User: E-mail */
+  $handler->display->display_options['fields']['mail']['id'] = 'mail';
+  $handler->display->display_options['fields']['mail']['table'] = 'users';
+  $handler->display->display_options['fields']['mail']['field'] = 'mail';
+  $handler->display->display_options['fields']['mail']['label'] = '';
+  $handler->display->display_options['fields']['mail']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['mail']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['mail']['alter']['text'] = '<a class="btn" href="mailto:[mail]">Send an Email</a>';
+  $handler->display->display_options['fields']['mail']['element_type'] = '0';
+  $handler->display->display_options['fields']['mail']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['mail']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['mail']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['mail']['link_to_user'] = '0';
   /* Field: Right - Address */
   $handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
   $handler->display->display_options['fields']['nothing_1']['table'] = 'views';
@@ -920,7 +933,8 @@ function naacc_profiles_views_default_views() {
   $handler->display->display_options['fields']['nothing_1']['label'] = '';
   $handler->display->display_options['fields']['nothing_1']['alter']['text'] = '[field_address]
 [field_phone]
-[field_website]';
+[field_website]
+[mail]';
   $handler->display->display_options['fields']['nothing_1']['element_type'] = '0';
   $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['nothing_1']['element_wrapper_type'] = 'div';
@@ -947,6 +961,55 @@ function naacc_profiles_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+
+  /* Display: Specialties */
+  $handler = $view->new_display('entity_view', 'Specialties', 'entity_view_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: User: Specialties */
+  $handler->display->display_options['fields']['field_specialties']['id'] = 'field_specialties';
+  $handler->display->display_options['fields']['field_specialties']['table'] = 'field_data_field_specialties';
+  $handler->display->display_options['fields']['field_specialties']['field'] = 'field_specialties';
+  $handler->display->display_options['fields']['field_specialties']['alter']['text'] = '[field_specialties]';
+  $handler->display->display_options['fields']['field_specialties']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_specialties']['element_label_class'] = 'label';
+  $handler->display->display_options['fields']['field_specialties']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_specialties']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_specialties']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_specialties']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_specialties']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_specialties']['separator'] = ' / ';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: User: Uid */
+  $handler->display->display_options['arguments']['uid']['id'] = 'uid';
+  $handler->display->display_options['arguments']['uid']['table'] = 'users';
+  $handler->display->display_options['arguments']['uid']['field'] = 'uid';
+  $handler->display->display_options['arguments']['uid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['uid']['default_argument_type'] = 'user';
+  $handler->display->display_options['arguments']['uid']['default_argument_options']['user'] = FALSE;
+  $handler->display->display_options['arguments']['uid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['uid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['uid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  $handler->display->display_options['entity_type'] = 'user';
+  $handler->display->display_options['bundles'] = array(
+    0 => 'user',
+  );
   $export['members'] = $view;
 
   return $export;

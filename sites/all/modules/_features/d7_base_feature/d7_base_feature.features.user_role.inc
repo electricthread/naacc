@@ -13,7 +13,7 @@ function d7_base_feature_user_default_roles() {
   // Exported role: client.
   $roles['client'] = array(
     'name' => 'client',
-    'weight' => 3,
+    'weight' => 4,
   );
 
   return $roles;

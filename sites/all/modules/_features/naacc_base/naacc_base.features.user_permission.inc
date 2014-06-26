@@ -53,6 +53,7 @@ function naacc_base_user_default_permissions() {
   $permissions['administer account settings'] = array(
     'name' => 'administer account settings',
     'roles' => array(
+      'client' => 'client',
       'developer' => 'developer',
     ),
     'module' => 'user_settings_access',
