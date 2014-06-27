@@ -297,6 +297,7 @@ function naacc_base_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'roleassign_roles';
   $strongarm->value = array(
+    6 => '6',
     5 => '5',
     3 => '3',
     4 => 0,
