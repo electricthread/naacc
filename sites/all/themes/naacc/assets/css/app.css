@@ -578,7 +578,7 @@ header {
   #pre-content .chosen-results {
     color: #777777;
     text-align: left; }
-  #pre-content #edit-field-state-value {
+  #pre-content #edit-field-city-value {
     width: 215px; }
   #pre-content #edit-field-specialties-value {
     width: 215px; }
@@ -668,7 +668,8 @@ header {
         margin-right: 0; } }
   .sidebar > div {
     font: .9em 'Lato', sans-serif;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    overflow: hidden; }
     @media screen and (min-width: 768px) {
       .sidebar > div {
         float: left;
@@ -761,6 +762,8 @@ footer {
     margin-bottom: 22px;
     padding-bottom: 12px;
     text-transform: uppercase; }
+  .node-news-article.node-teaser p {
+    margin-bottom: 10px; }
 
 .field-name-field-tags .field-item {
   display: inline-block;
@@ -768,13 +771,11 @@ footer {
 
 .inline .node-readmore {
   display: none;
-  padding: 0;
-  position: absolute;
-  right: 0;
-  top: 6px; }
+  padding: 0; }
   @media screen and (min-width: 768px) {
     .inline .node-readmore {
-      display: block; } }
+      display: block;
+      margin-top: 10px; } }
   .inline .node-readmore a {
     font: .9em 'Lato', sans-serif;
     text-transform: capitalize; }
@@ -876,3 +877,6 @@ footer {
 #node_event_full_group_left_content_group {
   float: left;
   width: 48%; }
+
+#edit-field-memberships-purchased-need {
+  display: none; }

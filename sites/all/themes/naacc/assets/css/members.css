@@ -217,8 +217,7 @@ img, object, video {
   @media screen and (min-width: 768px) {
     #views-exposed-form-members-page .views-exposed-widget {
       float: left;
-      padding: .5em 1em 0 0;
-      width: 210px; } }
+      padding: .5em 1em 0 0; } }
   #views-exposed-form-members-page .views-exposed-widget input[type="text"], #views-exposed-form-members-page .views-exposed-widget input[type="submit"] {
     max-width: none;
     width: 100%; }
@@ -226,6 +225,16 @@ img, object, video {
       #views-exposed-form-members-page .views-exposed-widget input[type="text"], #views-exposed-form-members-page .views-exposed-widget input[type="submit"] {
         max-width: 100%;
         width: auto; } }
+#views-exposed-form-members-page #edit-field-city-value-wrapper {
+  width: 100%; }
+  @media screen and (min-width: 768px) {
+    #views-exposed-form-members-page #edit-field-city-value-wrapper {
+      width: 155px; } }
+#views-exposed-form-members-page #edit-field-city-value {
+  width: 100%; }
+  @media screen and (min-width: 768px) {
+    #views-exposed-form-members-page #edit-field-city-value {
+      width: 140px; } }
 #views-exposed-form-members-page #edit-field-state-value {
   width: 100%; }
   @media screen and (min-width: 768px) {

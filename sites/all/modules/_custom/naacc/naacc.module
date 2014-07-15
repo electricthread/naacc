@@ -43,6 +43,30 @@ function naacc_form_alter(&$form, &$form_state, $form_id) {
     $form['field_city_value']['#attributes']['placeholder'] = t('City Name');
     $form['field_state_value']['#options']['All'] = t("Any State");
     $form['field_specialties_value']['#options']['All'] = t("Any Specialty");
+    // Only alter forms with City field
+    $field_id = 'field_city';
+    if (isset($form[$field_id .'_value'])) {
+      // Build a query to get all node ids having the specified field
+      $query = new EntityFieldQuery();
+      $results = $query->entityCondition('entity_type', 'user')
+                        ->fieldCondition($field_id, 'value', 'NULL', '!=')
+                        ->fieldOrderBy($field_id, 'value', 'ASC')
+                        ->execute();
+      // Attach the field values to the users
+      $users = $results['user'];
+      field_attach_load('user', $users, FIELD_LOAD_CURRENT, array('field_id' => $field_id));
+      // Add a default so the filter is optional
+      $options = array('' => 'City Name');
+      // Buld the options array based on the query results, overwriting duplicate entries
+      foreach($users as $uid => $user) {
+        $value = $user->field_city['und'][0]['value'];
+        $options[$value] = $value;
+      }
+      // Alter the field
+      $form[$field_id .'_value']['#type'] = 'select';
+      $form[$field_id .'_value']['#options'] = $options;
+      $form[$field_id .'_value']['#size'] = 1;
+    }
   }
   // Commerce Product Form Alter
   if (commerce_form_callback($form_id, $form_state) == "commerce_cart_add_to_cart_form") {
@@ -62,5 +86,9 @@ function naacc_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'user_profile_form') {
     // Disable Memberships Purchased field (also hidden in CSS)
     $form['field_memberships_purchased_need']['und']['#attributes']['disabled'] = TRUE;
+    $path = drupal_get_path('theme', 'naacc');
+    drupal_add_css($path .'/assets/js/vendor/chosen_v1.1.0/chosen.min.css', array('group' => CSS_DEFAULT));
+    drupal_add_js($path .'/assets/js/vendor/chosen_v1.1.0/chosen.jquery.min.js', array('group' => JS_LIBRARY));
+    drupal_add_js($path .'/assets/js/user.js', array('group' => JS_THEME));
   }
 }

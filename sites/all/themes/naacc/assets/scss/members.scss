@@ -24,7 +24,6 @@
     @include tablet {
       float: left;
       padding:.5em 1em 0 0;
-      width: 210px;
     }
     input[type="text"], input[type="submit"] {
       max-width: none;
@@ -33,6 +32,18 @@
         max-width: 100%;
         width: auto;
       }
+    }
+  }
+  #edit-field-city-value-wrapper {
+    width: 100%;
+    @include tablet {
+      width: 155px;
+    }
+  }
+  #edit-field-city-value {
+    width: 100%;
+    @include tablet {
+      width: 140px;
     }
   }
   #edit-field-state-value {

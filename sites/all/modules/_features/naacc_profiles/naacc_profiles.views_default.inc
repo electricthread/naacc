@@ -30,7 +30,6 @@ function naacc_profiles_views_default_views() {
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['exposed_form']['options']['submit_button'] = 's';
-  $handler->display->display_options['exposed_form']['options']['expose_sort_order'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '30';
   $handler->display->display_options['style_plugin'] = 'table';
@@ -504,9 +503,29 @@ function naacc_profiles_views_default_views() {
   $handler->display->display_options['filters']['field_city_value']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
+    6 => 0,
     5 => 0,
     3 => 0,
     4 => 0,
+  );
+  $handler->display->display_options['filters']['field_city_value']['group_info']['label'] = 'City';
+  $handler->display->display_options['filters']['field_city_value']['group_info']['identifier'] = 'field_city_value';
+  $handler->display->display_options['filters']['field_city_value']['group_info']['group_items'] = array(
+    1 => array(
+      'title' => 'City',
+      'operator' => '=',
+      'value' => 'Nashville',
+    ),
+    2 => array(
+      'title' => '',
+      'operator' => '=',
+      'value' => '',
+    ),
+    3 => array(
+      'title' => '',
+      'operator' => '=',
+      'value' => '',
+    ),
   );
   /* Filter criterion: User: State (field_state) */
   $handler->display->display_options['filters']['field_state_value']['id'] = 'field_state_value';

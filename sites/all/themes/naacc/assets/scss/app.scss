@@ -273,7 +273,7 @@ header {
     color: $base;
     text-align: left;
   }
-  #edit-field-state-value {
+  #edit-field-city-value {
     width: 215px;
   }
   #edit-field-specialties-value {
@@ -365,6 +365,7 @@ header {
   > div {
     font: .9em 'Lato', sans-serif;
     margin-bottom: 20px;
+    overflow: hidden;
     @include tablet {
       float: left;
       margin-right: 1%;
@@ -495,6 +496,9 @@ footer {
     padding-bottom: 12px;
     text-transform: uppercase;
   }
+  p {
+    margin-bottom: 10px;
+  }
 }
 .field-name-field-tags .field-item {
   display: inline-block;
@@ -503,11 +507,9 @@ footer {
 .inline .node-readmore {
   display: none;
   padding:0;
-  position: absolute;
-  right: 0;
-  top: 6px;
   @include tablet {
     display: block;
+    margin-top: 10px;
   }
   a {
     font:.9em 'Lato', sans-serif;
@@ -634,4 +636,9 @@ footer {
 #node_event_full_group_left_content_group {
   float: left;
   width: 48%;
+}
+
+// User Edit
+#edit-field-memberships-purchased-need {
+  display: none;
 }

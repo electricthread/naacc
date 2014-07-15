@@ -73,7 +73,7 @@ function naacc_preprocess_views_exposed_form(&$vars) {
   if ($vars['form']['#id'] == 'views-exposed-form-members-page') {
     if ($vars['is_front']) {
       // Remove unnecessary homepage filters
-      unset($vars['widgets']['filter-combine'], $vars['widgets']['filter-field_city_value']);
+      unset($vars['widgets']['filter-combine'], $vars['widgets']['filter-field_state_value']);
     }
   }
 }
