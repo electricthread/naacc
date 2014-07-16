@@ -659,7 +659,7 @@ function naacc_profiles_field_default_field_instances() {
   $field_instances['user-user-field_image'] = array(
     'bundle' => 'user',
     'deleted' => 0,
-    'description' => '',
+    'description' => '<div class="image-help"><em>Upload a photo and select a focal point. This will make sure your photo gets cropped correctly for the homepage and member listing pages.</em><img src="/sites/all/themes/naacc/assets/images/upload.gif" /></div>',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -693,9 +693,12 @@ function naacc_profiles_field_default_field_instances() {
       'default_image' => 0,
       'file_directory' => 'profiles',
       'file_extensions' => 'png gif jpg jpeg',
+      'focus' => 1,
+      'focus_lock_ratio' => 1,
+      'focus_min_size' => '230x127',
       'max_filesize' => '',
       'max_resolution' => '',
-      'min_resolution' => '',
+      'min_resolution' => '230x127',
       'title_field' => 0,
       'user_register_form' => 0,
     ),
@@ -1205,6 +1208,7 @@ function naacc_profiles_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('<div class="image-help"><em>Upload a photo and select a focal point. This will make sure your photo gets cropped correctly for the homepage and member listing pages.</em><img src="/sites/all/themes/naacc/assets/images/upload.gif" /></div>');
   t('Address');
   t('Address 2');
   t('Bio');

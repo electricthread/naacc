@@ -997,6 +997,31 @@ div.add-or-remove-shortcuts {
 /* -------------------------
 Custom for NAACC
 ---------------------------*/
-#edit-field-memberships-purchased-need {
+#edit-field-memberships-purchased-need,
+.form-item-field-image-und-0-focus-rect,
+.form-item-field-image-und-0-crop-rect {
   display: none;
+}
+/* Profile Photo Upload */
+div.image-widget-data {
+  clear: both;
+}
+#edit-field-image {
+    position: relative;
+}
+#edit-field-image .description {
+    position: absolute;
+    width: 40%;
+    margin-right: 6%;
+    top: 0;
+    right: 0;
+}
+#edit-field-image .description img {
+    display: block;
+    margin-top: 10px;
+    max-width: 100%;
+    border: 2px solid #000;
+}
+.imagefield-focus.focus-box {
+  clear: both;
 }

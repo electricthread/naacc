@@ -642,3 +642,32 @@ footer {
 #edit-field-memberships-purchased-need {
   display: none;
 }
+/* Profile Photo Upload */
+.focus-box {
+  margin-top: 20px;
+}
+div.image-widget-data, .imagefield-focus.focus-box {
+  clear: both;
+}
+#edit-field-image {
+    position: relative;
+    small {
+      display: none;
+      position: absolute;
+      width: 80%;
+      margin-right: 0;
+      top: 0;
+      left: 85%;
+      border: 2px solid;
+      padding: 2%;
+      @include desk {
+        display: block;
+      }
+      img {
+        display: block;
+        margin-top: 10px;
+        max-width: 100%;
+        border: 2px solid #eee;
+    }
+  }
+}

@@ -60,20 +60,21 @@ function naacc_profiles_image_default_styles() {
     'name' => '230x127',
     'label' => '230x127',
     'effects' => array(
-      1 => array(
-        'label' => 'Scale and crop',
-        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
-        'effect callback' => 'image_scale_and_crop_effect',
-        'dimensions callback' => 'image_resize_dimensions',
-        'form callback' => 'image_resize_form',
-        'summary theme' => 'image_resize_summary',
-        'module' => 'image',
-        'name' => 'image_scale_and_crop',
+      6 => array(
+        'label' => 'Focus Scale And Crop',
+        'help' => 'Scale and crop based on data provided by <em>ImageField Focus</em>.',
+        'effect callback' => 'imagefield_focus_scale_and_crop_effect',
+        'form callback' => 'imagefield_focus_scale_and_crop_form',
+        'summary theme' => 'imagefield_focus_scale_and_crop_summary',
+        'module' => 'imagefield_focus',
+        'name' => 'imagefield_focus_scale_and_crop',
         'data' => array(
           'width' => 230,
           'height' => 127,
+          'strength' => 'high',
+          'fallback' => 'smartcrop',
         ),
-        'weight' => 1,
+        'weight' => -9,
       ),
       2 => array(
         'label' => 'Desaturate',
@@ -83,7 +84,7 @@ function naacc_profiles_image_default_styles() {
         'module' => 'image',
         'name' => 'image_desaturate',
         'data' => array(),
-        'weight' => 2,
+        'weight' => -8,
       ),
     ),
   );
