@@ -142,6 +142,7 @@ function naacc_profiles_field_default_field_instances() {
     'default_value' => array(
       0 => array(
         'value' => '',
+        'format' => 'full_html',
       ),
     ),
     'deleted' => 0,
@@ -174,17 +175,17 @@ function naacc_profiles_field_default_field_instances() {
           'plain_text' => 'plain_text',
         ),
         'allowed_formats_toggle' => 0,
-        'default_order_toggle' => 0,
+        'default_order_toggle' => 1,
         'default_order_wrapper' => array(
           'formats' => array(
             'filtered_html' => array(
-              'weight' => -9,
+              'weight' => -50,
             ),
             'full_html' => array(
-              'weight' => -10,
+              'weight' => -49,
             ),
             'plain_text' => array(
-              'weight' => -8,
+              'weight' => -48,
             ),
           ),
         ),
