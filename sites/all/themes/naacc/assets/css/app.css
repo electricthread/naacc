@@ -19,6 +19,7 @@ input[type="submit"] {
   font: 500 1em 'Lato', sans-serif;
   letter-spacing: 1px;
   max-width: 250px;
+  min-height: 40px;
   padding: 10px;
   position: relative;
   text-align: center;
@@ -168,6 +169,7 @@ img, object, video {
   font: 500 1em 'Lato', sans-serif;
   letter-spacing: 1px;
   max-width: 250px;
+  min-height: 40px;
   padding: 10px;
   position: relative;
   text-align: center;
@@ -310,6 +312,7 @@ h5 {
   font: 500 1em 'Lato', sans-serif;
   letter-spacing: 1px;
   max-width: 250px;
+  min-height: 40px;
   padding: 10px;
   position: relative;
   text-align: center;
@@ -907,3 +910,12 @@ div.image-widget-data, .imagefield-focus.focus-box {
       margin-top: 10px;
       max-width: 100%;
       border: 2px solid #eee; }
+
+#advanced-forum-forum-topic-list-sort-form .container-inline {
+  margin: 20px 0; }
+
+#advanced-forum-forum-topic-list-sort-form input, #advanced-forum-forum-topic-list-sort-form .form-item {
+  margin-top: 10px !important; }
+
+.forum-node-create-links .forum-add-node {
+  margin-bottom: 10px; }

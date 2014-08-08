@@ -78,6 +78,14 @@ function naacc_preprocess_views_exposed_form(&$vars) {
   }
 }
 
+/**
+ * Implementation of hook_preprocess_author_pane().
+ */
+function naacc_preprocess_author_pane(&$vars) {
+  // Add your variable(s) like this:
+  $vars['naacc_picture'] = $vars['account']->field_image;
+}
+
 /*
 function naacc_preprocess_region(&$vars,$hook) {
   //  kpr($vars['content']);

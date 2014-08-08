@@ -671,3 +671,18 @@ div.image-widget-data, .imagefield-focus.focus-box {
     }
   }
 }
+
+// Forum Styles
+#advanced-forum-forum-topic-list-sort-form {
+  .container-inline {
+    margin:20px 0;
+  }
+}
+#advanced-forum-forum-topic-list-sort-form {
+  input, .form-item {
+    margin-top: 10px !important;
+  }
+}
+.forum-node-create-links .forum-add-node {
+  margin-bottom: 10px;
+}

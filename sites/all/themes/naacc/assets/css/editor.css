@@ -20,6 +20,7 @@ input[type="submit"] {
   font: 500 1em 'Lato', sans-serif;
   letter-spacing: 1px;
   max-width: 250px;
+  min-height: 40px;
   padding: 10px;
   position: relative;
   text-align: center;
@@ -169,6 +170,7 @@ img, object, video {
   font: 500 1em 'Lato', sans-serif;
   letter-spacing: 1px;
   max-width: 250px;
+  min-height: 40px;
   padding: 10px;
   position: relative;
   text-align: center;
@@ -311,6 +313,7 @@ h5 {
   font: 500 1em 'Lato', sans-serif;
   letter-spacing: 1px;
   max-width: 250px;
+  min-height: 40px;
   padding: 10px;
   position: relative;
   text-align: center;

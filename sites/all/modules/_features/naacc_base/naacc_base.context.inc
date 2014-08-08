@@ -73,6 +73,9 @@ function naacc_base_context_default_contexts() {
         'members' => 'members',
         'sponsors' => 'sponsors',
         'events' => 'events',
+        'forum' => 'forum',
+        'forum/*' => 'forum/*',
+        'comment/reply/*' => 'comment/reply/*',
       ),
     ),
   );
