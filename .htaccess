@@ -66,7 +66,7 @@ DirectoryIndex index.php index.html index.htm
   # Attempt to redirect all traffic to https
   RewriteCond %{HTTPS} off [OR]
   RewriteCond %{HTTP_HOST} ^nashvilleaacc\.org*
-  RewriteRule ^(.*)$ https://www.nashvilleaacc.org/$1 [L,R=301]
+  RewriteRule ^(.*)$ https://nashvilleaacc.org/$1 [L,R=301]
 
   # Make sure Authorization HTTP header is available to PHP
   # even when running as CGI or FastCGI.
