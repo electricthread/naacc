@@ -76,6 +76,7 @@ function naacc_base_context_default_contexts() {
         'forum' => 'forum',
         'forum/*' => 'forum/*',
         'comment/reply/*' => 'comment/reply/*',
+        'cart' => 'cart',
       ),
     ),
   );
