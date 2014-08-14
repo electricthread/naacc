@@ -142,7 +142,7 @@ function naacc_profiles_field_default_field_instances() {
     'default_value' => array(
       0 => array(
         'value' => '',
-        'format' => 'full_html',
+        'format' => 'filtered_html',
       ),
     ),
     'deleted' => 0,
