@@ -460,6 +460,17 @@ header {
   #block-system-main-menu .expanded {
     list-style: none;
     position: relative; }
+    #block-system-main-menu .expanded > a:after {
+      border: 5px solid #fff;
+      border-bottom-color: transparent;
+      border-right-color: transparent;
+      border-top-color: transparent;
+      content: " ";
+      display: inline-block;
+      margin-left: 8px; }
+      @media screen and (min-width: 768px) {
+        #block-system-main-menu .expanded > a:after {
+          display: none; } }
     #block-system-main-menu .expanded ul {
       display: none; }
       @media screen and (min-width: 768px) {
@@ -924,3 +935,19 @@ div.image-widget-data, .imagefield-focus.focus-box {
 
 .forum-node-create-links .forum-add-node {
   margin-bottom: 10px; }
+
+.page-cart .page {
+  min-height: 400px; }
+.page-cart .views-field-edit-delete,
+.page-cart .views-field-commerce-total {
+  display: none; }
+  @media screen and (min-width: 768px) {
+    .page-cart .views-field-edit-delete,
+    .page-cart .views-field-commerce-total {
+      display: table-cell; } }
+
+.page-checkout .views-field-quantity {
+  display: none; }
+  @media screen and (min-width: 768px) {
+    .page-checkout .views-field-quantity {
+      display: table-cell; } }

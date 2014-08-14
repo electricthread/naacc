@@ -125,6 +125,18 @@ header {
   .expanded {
     list-style: none;
     position:relative;
+    > a:after {
+      border:5px solid #fff;
+      border-bottom-color:transparent;
+      border-right-color:transparent;
+      border-top-color:transparent;
+      content: " ";
+      display: inline-block;
+      margin-left: 8px;
+      @include tablet {
+        display: none;
+      }
+    }
     ul {
       display: none;
       @include tablet {
@@ -685,4 +697,28 @@ div.image-widget-data, .imagefield-focus.focus-box {
 }
 .forum-node-create-links .forum-add-node {
   margin-bottom: 10px;
+}
+
+// Cart
+.page-cart {
+  .page {
+    min-height:400px;
+  }
+  .views-field-edit-delete,
+  .views-field-commerce-total {
+    display: none;
+    @include tablet {
+      display: table-cell;
+    }
+  }
+}
+
+// Checkout
+.page-checkout {
+  .views-field-quantity {
+    display: none;
+    @include tablet {
+      display: table-cell;
+    }
+  }
 }

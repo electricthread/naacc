@@ -13,7 +13,7 @@
     $('a[data-toggle="dropdown"]').dropdown()
 
     # Desklg +
-    if $(".social").css('top') == '4px'
+    if $("#block-system-main-menu").css('position') == 'static'
       # Bootstrap Drop-down converted to hover
       $('a[data-toggle="dropdown"]').parent().hoverIntent (->
         $(this).addClass 'open'

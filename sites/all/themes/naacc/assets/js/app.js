@@ -9,7 +9,7 @@
       };
       $('#block-system-main-menu .expanded ul').prev('a').attr('data-toggle', 'dropdown');
       $('a[data-toggle="dropdown"]').dropdown();
-      if ($(".social").css('top') === '4px') {
+      if ($("#block-system-main-menu").css('position') === 'static') {
         $('a[data-toggle="dropdown"]').parent().hoverIntent((function() {
           $(this).addClass('open');
           return topLevelClick();
