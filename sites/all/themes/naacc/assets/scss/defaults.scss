@@ -275,7 +275,11 @@ label, label.required, .label {
     color: $red;
   }
 }
-label.required:after {
+#payment-details label {
+  color: $red;
+}
+label.required:after,
+#payment-details label:after {
   content: "*";
   color: #c41230;
   margin-left: 3px;

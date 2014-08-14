@@ -91,7 +91,11 @@ label, label.required, .label {
   label.required, label.required.required, .label.required {
     color: #cf4242; }
 
-label.required:after {
+#payment-details label {
+  color: #cf4242; }
+
+label.required:after,
+#payment-details label:after {
   content: "*";
   color: #c41230;
   margin-left: 3px; }
