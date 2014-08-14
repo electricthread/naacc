@@ -320,7 +320,12 @@ img, object, video {
     margin-right: 1%; }
   .member-list .right {
     padding: 2%;
-    width: 31%; }
+    margin: 2% 0;
+    width: 100%; }
+    @media screen and (min-width: 768px) {
+      .member-list .right {
+        margin: 0;
+        width: 31%; } }
     .member-list .right p {
       font: 1em/1.5em 'Esteban', serif; }
   .member-list img {
