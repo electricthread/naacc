@@ -360,7 +360,7 @@ function d7_base_feature_user_default_permissions() {
   $permissions['cancel account'] = array(
     'name' => 'cancel account',
     'roles' => array(
-      'authenticated user' => 'authenticated user',
+      'client' => 'client',
       'developer' => 'developer',
     ),
     'module' => 'user',
