@@ -931,7 +931,7 @@ function naacc_profiles_field_default_field_instances() {
         ),
       ),
       'commerce_user_profile_pane' => 1,
-      'commerce_user_profile_pane_required' => 0,
+      'commerce_user_profile_pane_required' => 1,
       'text_processing' => 0,
       'user_register_form' => 1,
     ),
