@@ -112,11 +112,7 @@ function naacc_commerce_default_rules_configuration() {
       "REQUIRES" : [ "rules", "commerce_cart" ],
       "ON" : { "commerce_cart_product_add" : [] },
       "IF" : [
-        { "list_contains" : {
-            "list" : [ "commerce-order:commerce-line-items" ],
-            "item" : [ "commerce-order:commerce-line-items:1" ]
-          }
-        }
+        { "NOT data_is_empty" : { "data" : [ "commerce-order:commerce-line-items:1" ] } }
       ],
       "DO" : [
         { "list_remove" : {
