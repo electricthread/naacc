@@ -175,7 +175,7 @@ function naacc_profiles_field_default_field_instances() {
           'plain_text' => 'plain_text',
         ),
         'allowed_formats_toggle' => 1,
-        'default_order_toggle' => 1,
+        'default_order_toggle' => 0,
         'default_order_wrapper' => array(
           'formats' => array(
             'filtered_html' => array(
