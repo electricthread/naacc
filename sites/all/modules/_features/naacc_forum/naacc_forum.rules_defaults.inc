@@ -18,7 +18,7 @@ function naacc_forum_default_rules_configuration() {
       "ON" : { "node_insert--forum" : { "bundle" : "forum" } },
       "DO" : [
         { "mail_to_users_of_role" : {
-            "roles" : { "value" : { "5" : "5" } },
+            "roles" : { "value" : { "6" : "6", "5" : "5", "3" : "3" } },
             "subject" : "NAACC Forum - [node:title]",
             "message" : "Dear member,\\r\\n\\r\\nA new forum topic, [node:title], has been created. Log in below to join the conversation!\\r\\n\\r\\n[site:login-url]?destination=node\\/[node:nid]\\r\\n\\r\\nThanks,\\r\\nNashville Area Association of Christian Counselors"
           }
