@@ -77,6 +77,15 @@ function naacc_base_user_default_permissions() {
     'module' => 'mailchimp',
   );
 
+  // Exported permission: 'administer mailsystem'.
+  $permissions['administer mailsystem'] = array(
+    'name' => 'administer mailsystem',
+    'roles' => array(
+      'developer' => 'developer',
+    ),
+    'module' => 'mailsystem',
+  );
+
   // Exported permission: 'administer main-menu menu items'.
   $permissions['administer main-menu menu items'] = array(
     'name' => 'administer main-menu menu items',
@@ -85,6 +94,15 @@ function naacc_base_user_default_permissions() {
       'developer' => 'developer',
     ),
     'module' => 'menu_admin_per_menu',
+  );
+
+  // Exported permission: 'administer mandrill'.
+  $permissions['administer mandrill'] = array(
+    'name' => 'administer mandrill',
+    'roles' => array(
+      'developer' => 'developer',
+    ),
+    'module' => 'mandrill',
   );
 
   // Exported permission: 'administer menu attributes'.
