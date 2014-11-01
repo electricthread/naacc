@@ -115,6 +115,6 @@
     $menu = menu_navigation_links('main-menu');
     print theme('links__system_main_menu', array('links' => $menu));
   ?>
-  <p>&copy;<?php print date('Y'); ?> Nashville Area Association of Christian Counselors</p>
+  <p>&copy;<?php print date('Y'); ?> Nashville Area Association of Christian Counselors. Crafted by <a href="http://electricthread.com" target="_blank">Electric Thread</a>.</p>
 </footer>
 
