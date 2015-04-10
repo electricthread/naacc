@@ -1,8 +1,8 @@
-staging:
+prod:
   domain:
     name: "nashvilleaacc.org@s188051.gridserver.com"
   deploy_to: "/home/188051/users/.home/domains/nashvilleaacc.org/html"
-  repository: "git@github.com:ewillhite/naacc.git"
+  repository: "git@github.com:electricthread/naacc.git"
   branch: "master"
 
 # production:
