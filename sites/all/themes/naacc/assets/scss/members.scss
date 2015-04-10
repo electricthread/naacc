@@ -34,6 +34,11 @@
       }
     }
   }
+  #edit-combine-wrapper {
+    @include tablet {
+      width: 270px;
+    }
+  }
   #edit-field-city-value-wrapper {
     width: 100%;
     @include tablet {
