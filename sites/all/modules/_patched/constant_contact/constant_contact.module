@@ -545,7 +545,6 @@ function constant_contact_user_insert(&$edit, $account, $category)
     $field_mappings = constant_contact_build_field_mappings();
 
     if($subscribe_method == 'checkbox'):
-        sdpm($account);
         if(isset($account->cc_newsletter)):
             if(!$account->cc_newsletter):
                 return; // user does not want to subscribe
