@@ -81,6 +81,97 @@ function naacc_form_alter(&$form, &$form_state, $form_id) {
     drupal_add_js($path .'/assets/js/vendor/chosen_v1.1.0/chosen.jquery.min.js', array('group' => JS_LIBRARY));
     drupal_add_js($path .'/assets/js/checkout.js', array('group' => JS_THEME));
     $form['buttons']['continue']['#value'] = 'Submit Payment';
+
+    // CONSTANT CONTACT JAZZ
+
+    // $subscribe_method = variable_get('cc_register_page_method', CC_REGISTER_PAGE_METHOD);
+    // $list_format = variable_get('cc_list_selection_format',CC_LIST_SELECTION_FORMAT);
+    // $default_opt_in = variable_get('cc_default_opt_in', CC_DEFAULT_OPT_IN);
+    // $show_format_choice = variable_get('cc_show_format_choice',CC_SHOW_FORMAT_CHOICE);
+    // $default_subscribe_format = variable_get('cc_subscribe_format',CC_SUBSCRIBE_FORMAT);
+
+    // if($subscribe_method == 'none'):
+    //   return;
+    // endif;
+
+    // $cc = constant_contact_create_object();
+
+    // if(!is_object($cc)):
+    //   return;
+    // endif;
+
+    // $selected_lists = array();
+
+    // if($subscribe_method == 'lists'):
+    //   $show_lists = variable_get('cc_lists',array());
+
+    //   $lists = constant_contact_get_lists($cc);
+
+    //   // select all lists by default, if enabled
+    //   if($lists && $default_opt_in):
+    //   foreach($lists as $list_id => $list_name):
+    //     $selected_lists[] = $list_id;
+    //   endforeach;
+    //   endif;
+
+    //   $options = array();
+    //       // if they have selected some lists to show build them otherwise show all lists
+    //       if(count($show_lists) > 0):
+    //           foreach($show_lists as $list_id):
+    //               if(array_key_exists($list_id, $lists)):
+    //                   $options[$list_id] = $lists[$list_id];
+    //               endif;
+    //           endforeach;
+    //       else:
+    //           // displaqy all lists
+    //           $options = $lists;
+    //       endif;
+
+
+    //   if(count($options) > 0):
+    //     if($list_format == 'select'):
+    //       $field_type = 'select';
+    //     else:
+    //       $field_type = 'checkboxes';
+    //     endif;
+
+    //     $form['commerce_user_profile_pane']['cc_newsletter_lists'] = array(
+    //       '#type' => $field_type,
+    //       '#title' => variable_get('cc_signup_title', CC_SIGNUP_TITLE),
+    //       '#description' => variable_get('cc_signup_description',CC_SIGNUP_DESCRIPTION),
+    //       '#options' => $options,
+    //       '#weight' => 11,
+    //       '#default_value' => $selected_lists,
+    //     );
+
+    //     if($list_format == 'select'):
+    //       $field_size = ($options && count($options)>25) ? 25 : count($options);
+    //       $form['commerce_user_profile_pane']['cc_newsletter_lists']['#multiple'] = true;
+    //       $form['commerce_user_profile_pane']['cc_newsletter_lists']['#size'] = $field_size;
+    //     endif;
+    //   endif;
+    // else:
+    //   $form['commerce_user_profile_pane']['cc_newsletter'] = array(
+    //     '#type' => 'checkbox',
+    //     '#title' => variable_get('cc_signup_title', CC_SIGNUP_TITLE),
+    //     '#description' => variable_get('cc_signup_description',CC_SIGNUP_DESCRIPTION),
+    //     '#weight' => 10,
+    //     '#default_value' => $default_opt_in,
+    //   );
+    // endif;
+
+    // if($show_format_choice):
+    //   $form['commerce_user_profile_pane']['cc_email_format'] = array(
+    //     '#type' => 'radios',
+    //     '#title' => t('Email Format'),
+    //     '#description' => 'You can receive emails in Text or HTML format',
+    //     '#weight' => 12,
+    //     '#default_value' => $default_subscribe_format,
+    //     '#options' => ($default_subscribe_format == 'HTML') ? array('HTML' => t('HTML'), 'Text' => t('Text')) : array('Text' => t('Text'), 'HTML' => t('HTML')),
+    //   );
+    // endif;
+
+    // return $form;
   }
   // User Profile Form
   if ($form_id == 'user_profile_form') {
