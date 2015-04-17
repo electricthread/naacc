@@ -538,6 +538,13 @@ footer {
   display: none;
 }
 
+// Constant Contact Lists
+#cc_signup_form_1 {
+  label {
+    display: none;
+  }
+}
+
 // Checkout
 .views-field-edit-quantity input[type="text"] {
   width: 70px;

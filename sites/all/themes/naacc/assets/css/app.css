@@ -805,6 +805,9 @@ footer {
 #mailchimp-lists-user-subscribe-form-general-signup label {
   display: none; }
 
+#cc_signup_form_1 label {
+  display: none; }
+
 .views-field-edit-quantity input[type="text"] {
   width: 70px; }
 

@@ -28,14 +28,18 @@ function get_homepage()
  */
 function naacc_form_alter(&$form, &$form_state, $form_id) {
   // Mailchimp - Set First Name and Last Name fields to be required.
-  if (!empty($form_state['build_info']['base_form_id'])) {
-    if ($form_state['build_info']['base_form_id'] == 'mailchimp_lists_user_subscribe_form') {
-      foreach ($form['mailchimp_lists'] as $field_id => $field_content) {
-        if (substr($field_id, 0, 9) == 'mailchimp') {
-          $form['mailchimp_lists'][$field_id]['mergevars']['EMAIL']['#attributes']['placeholder'] = t('Email address');
-        }
-      }
-    }
+  // if (!empty($form_state['build_info']['base_form_id'])) {
+  //   if ($form_state['build_info']['base_form_id'] == 'mailchimp_lists_user_subscribe_form') {
+  //     foreach ($form['mailchimp_lists'] as $field_id => $field_content) {
+  //       if (substr($field_id, 0, 9) == 'mailchimp') {
+  //         $form['mailchimp_lists'][$field_id]['mergevars']['EMAIL']['#attributes']['placeholder'] = t('Email address');
+  //       }
+  //     }
+  //   }
+  // }
+  // Constant Contact form
+  if ($form_id == 'constant_contact_signup_form_1') {
+    $form['cc_email_1']['#attributes']['placeholder'] = t('Email Address');
   }
   // Placeholders for exposed member form
   if ($form_id == 'views_exposed_form') {

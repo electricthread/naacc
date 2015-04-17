@@ -130,22 +130,30 @@ function naacc_base_context_default_contexts() {
     ),
   );
   $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'mailchimp_lists-general_signup' => array(
+          'module' => 'mailchimp_lists',
+          'delta' => 'general_signup',
+          'region' => 'sidebar',
+          'weight' => '-10',
+        ),
+      ),
+    ),
     'region' => array(
-      'nexus' => array(
+      'naacc' => array(
         'disable' => array(
-          'preface_first' => 'preface_first',
-          'preface_middle' => 'preface_middle',
-          'preface_last' => 'preface_last',
-          'sidebar_first' => 0,
+          'page_top' => 0,
+          'page_bottom' => 0,
           'header' => 0,
-          'content_top' => 0,
+          'hero' => 0,
+          'pre_content' => 0,
           'content' => 0,
-          'help' => 0,
+          'post_content' => 0,
+          'sidebar' => 0,
           'footer' => 0,
-          'footer_first' => 0,
-          'footer_second' => 0,
-          'footer_third' => 0,
-          'footer_fourth' => 0,
+          'help' => 0,
+          'highlighted' => 0,
         ),
       ),
       'seven' => array(
@@ -189,9 +197,9 @@ function naacc_base_context_default_contexts() {
           'region' => 'header',
           'weight' => '-10',
         ),
-        'mailchimp_lists-general_signup' => array(
-          'module' => 'mailchimp_lists',
-          'delta' => 'general_signup',
+        'constant_contact-1' => array(
+          'module' => 'constant_contact',
+          'delta' => '1',
           'region' => 'sidebar',
           'weight' => '-10',
         ),
