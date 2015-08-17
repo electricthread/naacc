@@ -141,7 +141,7 @@ function naacc_base_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'mail_system';
   $strongarm->value = array(
-    'default-system' => 'DefaultMailSystem',
+    'default-system' => 'MandrillMailSystem',
     'mandrill_test' => 'MandrillMailSystem',
   );
   $export['mail_system'] = $strongarm;

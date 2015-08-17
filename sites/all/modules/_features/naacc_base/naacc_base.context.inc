@@ -130,16 +130,6 @@ function naacc_base_context_default_contexts() {
     ),
   );
   $context->reactions = array(
-    'block' => array(
-      'blocks' => array(
-        'mailchimp_lists-general_signup' => array(
-          'module' => 'mailchimp_lists',
-          'delta' => 'general_signup',
-          'region' => 'sidebar',
-          'weight' => '-10',
-        ),
-      ),
-    ),
     'region' => array(
       'naacc' => array(
         'disable' => array(
