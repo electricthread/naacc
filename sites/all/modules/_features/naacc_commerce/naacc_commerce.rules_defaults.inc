@@ -68,7 +68,7 @@ function naacc_commerce_default_rules_configuration() {
         { "mail" : {
             "to" : "[user:mail]",
             "subject" : "Your NAACC membership will expire in 1 month.",
-            "message" : "Dear [user:field-first-name],\\r\\n\\r\\nYour NAACC membership will expire in 1 month. To renew your membership, click the link below.\\r\\n\\r\\n\\u003Ca href=\\u0022[site:url]\\/join\\u0022\\u003ERenew Your Membership\\u003C\\/a\\u003E\\r\\n\\r\\nThanks,\\r\\nNAACC",
+            "message" : "Dear [user:field-first-name],\\r\\n\\r\\nYour NAACC membership will expire in 1 month. To renew your membership, click the link below.\\r\\n\\r\\nRenew Your Membership: [site:url]join\\r\\n\\r\\nThanks,\\r\\nNAACC",
             "language" : [ "" ]
           }
         }
